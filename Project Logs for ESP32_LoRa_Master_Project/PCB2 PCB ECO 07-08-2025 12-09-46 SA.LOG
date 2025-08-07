@@ -1,4 +1,0 @@
-Added Component: Designator=R30(R0603)
-Added Pin To Net: NetName=NetR30_1 Pin=R30-1
-Added Pin To Net: NetName=NetQ7_1 Pin=R30-2
-Added Member To Class: ClassName=Fan_Block Member=Component R30 1K

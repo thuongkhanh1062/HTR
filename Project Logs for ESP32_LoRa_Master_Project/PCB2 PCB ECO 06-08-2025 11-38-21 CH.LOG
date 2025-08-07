@@ -1,4 +1,0 @@
-Added Component: Designator=R35(R0603)
-Added Pin To Net: NetName=NetR35_1 Pin=R35-1
-Added Pin To Net: NetName=NetIO1_1 Pin=R35-2
-Added Member To Class: ClassName=U_MCU Member=Component R35 560R
