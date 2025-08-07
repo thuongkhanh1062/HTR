@@ -1,0 +1,22 @@
+Removed Member From Class: ClassName=Button_Block Member=R25
+Removed Member From Class: ClassName=Button_Block Member=R26
+Removed Member From Class: ClassName=Fan_Block Member=R34
+Removed Member From Class: ClassName=Button_Block Member=R35
+Removed Member From Class: ClassName=RTC_Block Member=R35
+Removed Member From Class: ClassName=Button_Block Member=R36
+Removed Member From Class: ClassName=RTC_Block Member=R36
+Removed Member From Class: ClassName=U_MCU Member=R36
+Removed Member From Class: ClassName=RTC_Block Member=R37
+Removed Member From Class: ClassName=U_MCU Member=R37
+Added Member To Class: ClassName=Button_Block Member=Component R21 10K
+Added Member To Class: ClassName=Button_Block Member=Component R22 10K
+Added Member To Class: ClassName=Button_Block Member=Component R23 10K
+Added Member To Class: ClassName=Button_Block Member=Component R24 10K
+Added Member To Class: ClassName=RTC_Block Member=Component R25 10K
+Added Member To Class: ClassName=RTC_Block Member=Component R27 10K
+Added Member To Class: ClassName=RTC_Block Member=Component R28 10K
+Added Member To Class: ClassName=RTC_Block Member=Component R29 10K
+Added Member To Class: ClassName=Fan_Block Member=Component R30 1K
+Added Member To Class: ClassName=U_MCU Member=Component R31 10K
+Added Member To Class: ClassName=U_MCU Member=Component R32 10K
+Added Member To Class: ClassName=U_MCU Member=Component R33 560R
