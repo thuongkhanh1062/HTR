@@ -1,0 +1,98 @@
+(ExpressProject "ESP32_LORA"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\esp32_lora.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\ESP32_LORA.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\esp32_lora.dsn")
+      (Path "Design Resources" ".\esp32_lora.dsn" "TOP")
+      (Path "Design Resources" ".\esp32_lora.dsn" "RTC")
+      (Path "Outputs")
+      (Select "Design Resources" ".\esp32_lora.dsn" "TOP" "TOP"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 319"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1282 52 410")
+        (Scroll "0 100")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "D:\DATN\ESP32_LORA\ESP32_LORA.DSN")
+      (Schematic "TOP")
+      (Page "TOP"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 26 1256 26 384")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/BUZZER"))
+      (Path "D:\DATN\ESP32_LORA\ESP32_LORA.DSN")
+      (Schematic "BUZZER")
+      (Page "BUZZER")))
+  (PartMRUSelector
+    (HEADER1X5
+      (FullPartName "HEADER1X5.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (POL_CAP
+      (FullPartName "POL_CAP.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\CAPACITOR.OLB")
+      (DeviceIndex "0"))
+    (TYPE_C_16P
+      (FullPartName "TYPE_C_16P.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (TestPoint
+      (FullPartName "TestPoint.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (Domino_3_400
+      (FullPartName "Domino_3_400.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (buzzer
+      (FullPartName "buzzer.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\INDUCTOR.OLB")
+      (DeviceIndex "0")))
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "ad"))

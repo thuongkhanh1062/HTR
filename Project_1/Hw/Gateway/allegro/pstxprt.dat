@@ -1,0 +1,1475 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.2.0 d001Aug-29-2025 at 18:47:17 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='ESP32_LORA';
+ POST_TIME='Nov 22 2016 17:05:28';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ B1 'BUZZER_BUZZER_SMD_THROUGH SMD':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851764@INDUCTOR.BUZZER.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851764@inductor.\buzzer.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851764@inductor.\buzzer.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C1 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674347@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674347@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674347@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15880920@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15880920@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15880920@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15880936@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15880936@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15880936@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15887001@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15887001@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15887001@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15882976@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15882976@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15882976@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759606@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759606@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759606@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759622@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759622@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759622@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'POL_CAP_C2312_100UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759638@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759638@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759638@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920927@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920927@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920927@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'NPOL_CAP_C0805_10UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920943@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920943@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920943@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C19 'NPOL_CAP_C0805_10UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920959@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920959@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920959@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674363@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674363@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674363@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C20 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920983@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920983@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920983@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'NPOL_CAP_C0603_0.001UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920999@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920999@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920999@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'NPOL_CAP_C0603_470PF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15921023@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15921023@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15921023@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'NPOL_CAP_C0603_100PF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15921039@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15921039@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15921039@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'NPOL_CAP_C0603_470PF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15921159@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15921159@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15921159@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860262@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860262@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860262@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C26 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860278@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860278@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860278@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C27 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860294@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860294@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860294@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C28 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860310@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860310@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860310@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C29 'POL_CAP_RAD_SIZE_C_10UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15924819@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15924819@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15924819@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674379@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674379@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674379@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C30 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649678@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649678@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649678@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C31 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15922359@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15922359@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15922359@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C32 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649718@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649718@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649718@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C33 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649846@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649846@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649846@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'NPOL_CAP_C0603_33PF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15675105@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15675105@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15675105@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'POL_CAP_C2312_100UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15879508@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15879508@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15879508@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876270@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876270@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876270@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15879705@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15879705@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15879705@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876842@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876842@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876842@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15881420@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15881420@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15881420@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D10 'LED_D0603_0805':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15869838@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15869838@bjt_fet.\led.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15869838@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D11 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851181@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851181@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851181@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D12 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY@ESP32_LORA.RELAY(SCH_1):INS15851142@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay@esp32_lora.relay(sch_1):ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay@esp32_lora.relay(sch_1):page1_ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D13 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY2@ESP32_LORA.RELAY(SCH_1):INS15851142@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay2@esp32_lora.relay(sch_1):ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay2@esp32_lora.relay(sch_1):page1_ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D14 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY1@ESP32_LORA.RELAY(SCH_1):INS15851142@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay1@esp32_lora.relay(sch_1):ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay1@esp32_lora.relay(sch_1):page1_ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D15 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY3@ESP32_LORA.RELAY(SCH_1):INS15851142@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay3@esp32_lora.relay(sch_1):ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay3@esp32_lora.relay(sch_1):page1_ins15851142@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D16 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15923309@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15923309@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15923309@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D17 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15923333@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15923333@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15923333@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D18 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15923357@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15923357@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15923357@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15675061@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15675061@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15675061@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15675169@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15675169@bjt_fet.\led.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15675169@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15675185@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15675185@bjt_fet.\led.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15675185@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15923180@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15923180@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15923180@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D8 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15923160@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15923160@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15923160@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D9 'DIODE_AC_DO_214AC_RB050L':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920911@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920911@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920911@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'USB_MICRO_V3_USB_MICRO_FM_V3_US':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15877202@HEADER_CONNECTOR.USB_MICRO_V3.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15877202@header_connector.\usb_micro_v3.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15877202@header_connector.\usb_micro_v3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J10 'HEADER1X5_HEADER1X5_125_HEADER1':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15870685@HEADER_CONNECTOR.HEADER1X5.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15870685@header_connector.\header1x5.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15870685@header_connector.\header1x5.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'PWR_DC_TH_CON_PJ-002A_DC_JACK':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860654@HEADER_CONNECTOR.PWR_DC_TH.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860654@header_connector.\pwr_dc_th.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860654@header_connector.\pwr_dc_th.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER1X4_HEADER1X4_125_HEADER1':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):I2C@ESP32_LORA.I2C(SCH_1):INS15846617@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):i2c@esp32_lora.i2c(sch_1):ins15846617@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_i2c@esp32_lora.i2c(sch_1):page1_ins15846617@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'HEADER1X4_HEADER1X4_125_HEADER1':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):I2C@ESP32_LORA.I2C(SCH_1):INS15846679@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):i2c@esp32_lora.i2c(sch_1):ins15846679@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_i2c@esp32_lora.i2c(sch_1):page1_ins15846679@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'HEADER1X4_DOMINO4_200_RA_DOMINO':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15921963@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15921963@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15921963@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'HEADER1X4_DOMINO4_200_RA_DOMINO':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15875548@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15875548@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15875548@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'HEADER1X4_DOMINO4_200_RA_DOMINO':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15922010@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15922010@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15922010@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J8 'TYPE_C_0_TYPE-C-16P_TYPE C':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15884892@ESP32_LORA.TYPE_C_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15884892@esp32_lora.\type_c_0.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15884892@esp32_lora.\type_c_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J9 'HEADER1X2_HEADER1X2_127_ZH_TH_B':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649698@HEADER_CONNECTOR.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649698@header_connector.\header1x2.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649698@header_connector.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'IND_FERRITE_CHOKESIZE6MM_100UH':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920715@INDUCTOR.IND_FERRITE.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920715@inductor.\ind_ferrite.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920715@inductor.\ind_ferrite.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L2 'BEAD_L0805_100MHZ/100OHM':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920731@INDUCTOR.BEAD.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920731@inductor.\bead.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920731@inductor.\bead.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15877166@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15877166@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15877166@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15877318@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15877318@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15877318@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q3 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851241@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851241@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851241@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q4 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY@ESP32_LORA.RELAY(SCH_1):INS15851078@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay@esp32_lora.relay(sch_1):ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay@esp32_lora.relay(sch_1):page1_ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q5 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY2@ESP32_LORA.RELAY(SCH_1):INS15851078@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay2@esp32_lora.relay(sch_1):ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay2@esp32_lora.relay(sch_1):page1_ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q6 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY1@ESP32_LORA.RELAY(SCH_1):INS15851078@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay1@esp32_lora.relay(sch_1):ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay1@esp32_lora.relay(sch_1):page1_ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q7 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY3@ESP32_LORA.RELAY(SCH_1):INS15851078@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay3@esp32_lora.relay(sch_1):ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay3@esp32_lora.relay(sch_1):page1_ins15851078@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_R0805_120':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674451@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674451@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674451@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876640@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876640@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876640@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876716@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876716@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876716@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876814@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876814@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876814@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876664@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876664@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876664@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15877150@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15877150@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15877150@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15877336@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15877336@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15877336@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15882340@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15882340@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15882340@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15882137@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15882137@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15882137@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15882314@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15882314@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15882314@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_R0603_1K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15882948@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15882948@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15882948@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674479@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674479@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674479@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15854339@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15854339@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15854339@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15854355@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15854355@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15854355@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759484@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759484@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759484@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759662@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759662@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759662@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R24 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759692@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759692@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759692@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759768@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759768@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759768@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'RES_R0805_0.33':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920891@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920891@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920891@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R27 'RES_R0603_4.7K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15921055@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15921055@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15921055@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R28 'RES_R0603_1.5K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15921203@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15921203@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15921203@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R29 'RES_R0603_4K7':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15854930@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15854930@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15854930@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674495@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674495@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674495@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R30 'RES_R0603_4K7':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):INS15854946@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):ins15854946@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_ins15854946@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R31 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649782@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649782@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649782@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R32 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15869906@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15869906@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15869906@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'RES_R0603_10':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851201@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851201@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851201@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851265@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851265@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851265@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851221@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851221@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851221@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'RELAY_G6B_0_RELAY_SPST_20MX10MX':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY@ESP32_LORA.RELAY(SCH_1):INS15851050@WARRIOR_EMETER.RELAY_G6B_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay@esp32_lora.relay(sch_1):ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay@esp32_lora.relay(sch_1):page1_ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R37 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY@ESP32_LORA.RELAY(SCH_1):INS15851102@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay@esp32_lora.relay(sch_1):ins15851102@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay@esp32_lora.relay(sch_1):page1_ins15851102@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY@ESP32_LORA.RELAY(SCH_1):INS15851122@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay@esp32_lora.relay(sch_1):ins15851122@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay@esp32_lora.relay(sch_1):page1_ins15851122@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R39 'RELAY_G6B_0_RELAY_SPST_20MX10MX':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY2@ESP32_LORA.RELAY(SCH_1):INS15851050@WARRIOR_EMETER.RELAY_G6B_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay2@esp32_lora.relay(sch_1):ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay2@esp32_lora.relay(sch_1):page1_ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674773@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674773@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674773@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R40 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY2@ESP32_LORA.RELAY(SCH_1):INS15851102@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay2@esp32_lora.relay(sch_1):ins15851102@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay2@esp32_lora.relay(sch_1):page1_ins15851102@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R41 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY2@ESP32_LORA.RELAY(SCH_1):INS15851122@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay2@esp32_lora.relay(sch_1):ins15851122@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay2@esp32_lora.relay(sch_1):page1_ins15851122@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R42 'RELAY_G6B_0_RELAY_SPST_20MX10MX':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY1@ESP32_LORA.RELAY(SCH_1):INS15851050@WARRIOR_EMETER.RELAY_G6B_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay1@esp32_lora.relay(sch_1):ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay1@esp32_lora.relay(sch_1):page1_ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R43 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY1@ESP32_LORA.RELAY(SCH_1):INS15851102@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay1@esp32_lora.relay(sch_1):ins15851102@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay1@esp32_lora.relay(sch_1):page1_ins15851102@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R44 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY1@ESP32_LORA.RELAY(SCH_1):INS15851122@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay1@esp32_lora.relay(sch_1):ins15851122@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay1@esp32_lora.relay(sch_1):page1_ins15851122@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R45 'RELAY_G6B_0_RELAY_SPST_20MX10MX':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY3@ESP32_LORA.RELAY(SCH_1):INS15851050@WARRIOR_EMETER.RELAY_G6B_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay3@esp32_lora.relay(sch_1):ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay3@esp32_lora.relay(sch_1):page1_ins15851050@warrior_emeter.\relay_g6b_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R46 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY3@ESP32_LORA.RELAY(SCH_1):INS15851102@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay3@esp32_lora.relay(sch_1):ins15851102@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay3@esp32_lora.relay(sch_1):page1_ins15851102@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R47 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RELAY3@ESP32_LORA.RELAY(SCH_1):INS15851122@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):relay3@esp32_lora.relay(sch_1):ins15851122@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_relay3@esp32_lora.relay(sch_1):page1_ins15851122@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R48 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15887540@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15887540@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15887540@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R49 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15888285@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15888285@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15888285@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674799@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674799@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674799@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R50 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15870397@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15870397@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15870397@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R51 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15870413@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15870413@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15870413@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R52 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15870429@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15870429@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15870429@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R53 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LED_BUTTON@ESP32_LORA.LED_BUTTON(SCH_1):INS15870445@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):led_button@esp32_lora.led_button(sch_1):ins15870445@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_led_button@esp32_lora.led_button(sch_1):page1_ins15870445@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R54 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649762@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649762@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649762@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674887@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674887@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674887@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_R0603_56K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674919@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674919@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674919@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15675121@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15675121@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15675121@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15675137@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15675137@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15675137@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW_PUSHBUTTON_SPST_2P_BUTTON_SM':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876960@HEADER_CONNECTOR.SW_PUSHBUTTON_SPST_2P.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876960@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876960@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW2 'SW_PUSHBUTTON_SPST_2P_BUTTON_SM':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876866@HEADER_CONNECTOR.SW_PUSHBUTTON_SPST_2P.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876866@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876866@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T1 'TESTPOINT_TEST_POINT_ANT_TEST_P':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759384@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759384@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759384@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T2 'TESTPOINT_TESTPOINT_SIG_VIN':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920687@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920687@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920687@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T3 'TESTPOINT_TESTPOINT_SIG_+5V':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920701@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920701@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920701@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T4 'TESTPOINT_TESTPOINT_SIG_+3.3V':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860108@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860108@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860108@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T5 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860420@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860420@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860420@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T6 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860434@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860434@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860434@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T7 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860448@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860448@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860448@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T8 'TESTPOINT_TEST_POINT_PWR_TEST_P':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851480@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851480@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851480@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T9 'TESTPOINT_TEST_POINT_PWR_TEST_P':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):BUZZER@ESP32_LORA.BUZZER(SCH_1):INS15851494@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):buzzer@esp32_lora.buzzer(sch_1):ins15851494@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_buzzer@esp32_lora.buzzer(sch_1):page1_ins15851494@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'SN65176_2_SOIC8_SN75176B':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15674593@STREETLIGHTGATEWAY.SN65176_2.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15674593@streetlightgateway.\sn65176_2.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15674593@streetlightgateway.\sn65176_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 '74HC04_SOIC_14_74HC04D':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15676255@OTHER_IC.74HC04A.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15676255@other_ic.\74hc04a.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15676255@other_ic.\74hc04a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15676416@OTHER_IC.74HC04B.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15676416@other_ic.\74hc04b.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15676416@other_ic.\74hc04b.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='B';
+
+SECTION_NUMBER 3
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15677473@OTHER_IC.74HC04C.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15677473@other_ic.\74hc04c.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15677473@other_ic.\74hc04c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='C';
+
+SECTION_NUMBER 4
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15677707@OTHER_IC.74HC04D.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15677707@other_ic.\74hc04d.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15677707@other_ic.\74hc04d.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='D';
+
+SECTION_NUMBER 5
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15679467@OTHER_IC.74HC04E.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15679467@other_ic.\74hc04e.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15679467@other_ic.\74hc04e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='E';
+
+SECTION_NUMBER 6
+ '@ESP32_LORA.TOP(SCH_1):RS485@ESP32_LORA.RS485(SCH_1):INS15679558@OTHER_IC.74HC04F.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rs485@esp32_lora.rs485(sch_1):ins15679558@other_ic.\74hc04f.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rs485@esp32_lora.rs485(sch_1):page1_ins15679558@other_ic.\74hc04f.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='F';
+
+PART_NAME
+ U3 'ESP32_WROOM_32U_ESP32_WROOM_32U':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15876108@OTHER_IC.ESP32_WROOM_32U.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15876108@other_ic.\esp32_wroom_32u.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15876108@other_ic.\esp32_wroom_32u.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'CP2102_QFN28_0_QFN28_5X5_CP2102':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):ESP32@ESP32_LORA.ESP32(SCH_1):INS15879086@ESP32_LORA.CP2102_QFN28_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):esp32@esp32_lora.esp32(sch_1):ins15879086@esp32_lora.\cp2102_qfn28_0.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_esp32@esp32_lora.esp32(sch_1):page1_ins15879086@esp32_lora.\cp2102_qfn28_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'ANT_SMD_MINI_ANTENNA_MOUNT_SMD_':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759398@HEADER_CONNECTOR.ANT_SMD_MINI.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759398@header_connector.\ant_smd_mini.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759398@header_connector.\ant_smd_mini.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'RFM69HCW_RFM22B_S2_RFM98_433/RF':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):LORA@ESP32_LORA.LORA(SCH_1):INS15759424@OTHER_IC.RFM69HCW.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):lora@esp32_lora.lora(sch_1):ins15759424@other_ic.\rfm69hcw.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_lora@esp32_lora.lora(sch_1):page1_ins15759424@other_ic.\rfm69hcw.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'MC34063_2_SOIC8_MC34063':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15920771@SLD_HW08R03.MC34063_2.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15920771@sld_hw08r03.\mc34063_2.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15920771@sld_hw08r03.\mc34063_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'LM1117X_4P_SOT_223_3_AMS1117-3V':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):POWER@ESP32_LORA.POWER(SCH_1):INS15860134@OTHER_IC.LM1117X_4P.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):power@esp32_lora.power(sch_1):ins15860134@other_ic.\lm1117x_4p.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_power@esp32_lora.power(sch_1):page1_ins15860134@other_ic.\lm1117x_4p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U9 'DS1307_8P_SOIC8_BQ32000':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649802@OTHER_IC.DS1307_8P.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649802@other_ic.\ds1307_8p.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649802@other_ic.\ds1307_8p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y1 'XM_SM_2_CRYTAL32KHZ_32.768KHZ':;
+
+SECTION_NUMBER 1
+ '@ESP32_LORA.TOP(SCH_1):RTC@ESP32_LORA.RTC(SCH_1):INS15649738@CRYSTAL_OSC.XM_SM_2.NORMAL(CHIPS)':
+ C_PATH='@esp32_lora.top(sch_1):rtc@esp32_lora.rtc(sch_1):ins15649738@crystal_osc.\xm_sm_2.normal\(chips)',
+ P_PATH='@esp32_lora.top(sch_1):page1_rtc@esp32_lora.rtc(sch_1):page1_ins15649738@crystal_osc.\xm_sm_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

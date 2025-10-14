@@ -1,0 +1,174 @@
+(ExpressProject "sld"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\sld.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\SLD.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (MPSSessionName "ad")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "D:\DATN\Slave_module\sld.dsn")
+      (Path "Design Resources" "D:\DATN\Slave_module\sld.dsn" "TOP")
+      (Path "Design Resources" "D:\DATN\Slave_module\sld.dsn" "MISC")
+      (Path "Outputs")
+      (Select "Design Resources" "D:\DATN\Slave_module\sld.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 498"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1338 130 471")
+        (Scroll "0 28")
+        (Zoom "128")
+        (Occurrence "/"))
+      (Path "D:\DATN\SLAVE_MODULE\SLD.DSN")
+      (Schematic "TOP")
+      (Page "TOP"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 156 1364 156 497")
+        (Scroll "-270 0")
+        (Zoom "64")
+        (Occurrence "/MCU"))
+      (Path "D:\DATN\SLAVE_MODULE\SLD.DSN")
+      (Schematic "MCU")
+      (Page "MCU"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 104 1386 104 384")
+        (Scroll "86 289")
+        (Zoom "100")
+        (Occurrence "/POWER"))
+      (Path "D:\DATN\SLAVE_MODULE\SLD.DSN")
+      (Schematic "POWER")
+      (Page "POWER"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 1282 0 280")
+        (Scroll "-132 0")
+        (Zoom "100")
+        (Occurrence "/DIM"))
+      (Path "D:\DATN\SLAVE_MODULE\SLD.DSN")
+      (Schematic "DIM")
+      (Page "DIM"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 156 1364 156 497")
+        (Scroll "-95 0")
+        (Zoom "100")
+        (Occurrence "/LORA"))
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1338 130 471")
+        (Scroll "-95 0")
+        (Zoom "100")
+        (Occurrence "/RF"))
+      (Path "D:\DATN\SLAVE_MODULE\SLD.DSN")
+      (Schematic "RF")
+      (Page "RFM22B")))
+  (PartMRUSelector
+    (TestPoint
+      (FullPartName "TestPoint.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (DIODE_AC
+      (FullPartName "DIODE_AC.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\BJT_FET.OLB")
+      (DeviceIndex "0"))
+    (RES
+      (FullPartName "RES.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\RESISTOR.OLB")
+      (DeviceIndex "0"))
+    (IND_NOFERRITE
+      (FullPartName "IND_NOFERRITE.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\INDUCTOR.OLB")
+      (DeviceIndex "0"))
+    (POL_CAP
+      (FullPartName "POL_CAP.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\CAPACITOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X3
+      (FullPartName "HEADER1X3.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X2
+      (FullPartName "HEADER1X2.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (ZENER
+      (FullPartName "ZENER.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\BJT_FET.OLB")
+      (DeviceIndex "0"))
+    (ALQ_1FORM_C
+      (FullPartName "ALQ_1FORM_C.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (NPOL_CAP
+      (FullPartName "NPOL_CAP.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\CAPACITOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X4
+      (FullPartName "HEADER1X4.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (SMA_Edge_F
+      (FullPartName "SMA_Edge_F.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (ANT_SMD_MINI
+      (FullPartName "ANT_SMD_MINI.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER2X5
+      (FullPartName "HEADER2X5.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X6
+      (FullPartName "HEADER1X6.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (ACS712
+      (FullPartName "ACS712.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\OTHER_IC.OLB")
+      (DeviceIndex "0")))
+  (ISPCBBASICLICENSE "false"))
