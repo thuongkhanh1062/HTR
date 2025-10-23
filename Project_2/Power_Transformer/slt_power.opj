@@ -1,0 +1,83 @@
+(ExpressProject "slt_power"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\slt_power.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\SLT_POWER.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (Fuse
+      (FullPartName "Fuse.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\BJT_FET.OLB")
+      (DeviceIndex "0"))
+    (74HC04
+      (FullPartName "74HC04A.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\OTHER_IC.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X8
+      (FullPartName "HEADER1X8.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER2X10
+      (FullPartName "HEADER2X10.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X12
+      (FullPartName "HEADER1X12.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\slt_power.dsn")
+      (Path "Design Resources" ".\slt_power.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" ".\slt_power.dsn" "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 599"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 1717 52 544")
+        (Scroll "0 190")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "D:\HTR\PROJECT_2\POWER_TRANSFORMER\SLT_POWER.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "ad")
+  (ISPCBBASICLICENSE "false"))

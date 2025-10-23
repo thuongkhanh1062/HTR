@@ -1,0 +1,1115 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.2.0 d001Nov-04-2021 at 09:45:15 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='SLT_POWER';
+ POST_TIME='Nov 22 2016 17:05:28';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608160@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608160@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608160@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609148@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609148@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609148@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609164@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609164@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609164@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609180@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609180@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609180@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15616863@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15616863@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15616863@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15616879@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15616879@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15616879@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'NPOL_CAP_C0603_33PF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15620530@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15620530@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15620530@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15624260@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15624260@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15624260@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15624276@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15624276@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15624276@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15626929@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15626929@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15626929@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608434@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608434@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608434@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'NPOL_CAP_C1210_4.7UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608450@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608450@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608450@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'NPOL_CAP_CAP104J100V_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608470@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608470@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608470@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'POL_CAP_CASE_G_220UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608486@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608486@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608486@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'NPOL_CAP_C0603_22PF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608538@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608538@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608538@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608610@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608610@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608610@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'NPOL_CAP_C1210_4.7UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608682@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608682@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608682@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608698@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608698@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608698@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'DIODE_BRIDGE_DB_1S_DB107S':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608296@BJT_FET.DIODE_BRIDGE.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608296@bjt_fet.\diode_bridge.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608296@bjt_fet.\diode_bridge.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D10 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614127@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614127@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614127@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D11 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614297@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614297@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614297@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D12 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15619893@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15619893@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15619893@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D13 'LED_D0805_0805':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622339@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622339@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622339@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D14 'LED_D0805_0805':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622363@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622363@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622363@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D15 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15623057@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15623057@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15623057@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D16 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15623073@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15623073@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15623073@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D17 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15624058@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15624058@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15624058@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'DIODE_AC_DO_214AC_RB050L':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608418@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608418@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608418@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608820@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608820@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608820@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609888@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609888@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609888@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610168@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610168@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610168@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610436@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610436@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610436@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'DIODE_AC_DO_214AC_1N4007WDITR':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610705@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610705@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610705@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D8 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613787@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613787@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613787@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D9 'DIODE_AC_DO_214AC_US1J':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613957@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613957@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613957@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ DZ1 'ZENER_DO_214_24V':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15768204@BJT_FET.ZENER.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15768204@bjt_fet.\zener.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15768204@bjt_fet.\zener.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ F1 'FUSE_R1210_0ZCH0050FF2G':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622857@BJT_FET.FUSE.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622857@bjt_fet.\fuse.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622857@bjt_fet.\fuse.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ F2 'FUSE_R1210_0ZCH0050FF2G':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622873@BJT_FET.FUSE.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622873@bjt_fet.\fuse.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622873@bjt_fet.\fuse.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'HEADER1X12_DOMINO12_200_DOMINO1':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610989@HEADER_CONNECTOR.HEADER1X12.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610989@header_connector.\header1x12.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610989@header_connector.\header1x12.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'HEADER1X12_DOMINO12_200_DOMINO1':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15611025@HEADER_CONNECTOR.HEADER1X12.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15611025@header_connector.\header1x12.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15611025@header_connector.\header1x12.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER1X9_HEADER1X9_HEADER1X9':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15763843@HEADER_CONNECTOR.HEADER1X9.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15763843@header_connector.\header1x9.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15763843@header_connector.\header1x9.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'HEADER1X9_HEADER1X9_HEADER1X9':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15764210@HEADER_CONNECTOR.HEADER1X9.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15764210@header_connector.\header1x9.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15764210@header_connector.\header1x9.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'IND_FERRITE_CHOKESIZE6MM_6.8UH':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608192@INDUCTOR.IND_FERRITE.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608192@inductor.\ind_ferrite.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608192@inductor.\ind_ferrite.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609998@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609998@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609998@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610274@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610274@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610274@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q3 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610542@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610542@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610542@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q4 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610811@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610811@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610811@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_R0603_680K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608402@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608402@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608402@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610300@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610300@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610300@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610526@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610526@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610526@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610568@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610568@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610568@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610795@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610795@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610795@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610837@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610837@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610837@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_R0603_150K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613803@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613803@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613803@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_R0603_470':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613819@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613819@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613819@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613865@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613865@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613865@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613933@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613933@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613933@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_R0603_150K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613973@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613973@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613973@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_R0603_150K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608576@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608576@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608576@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_R0603_470':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613989@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613989@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613989@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614035@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614035@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614035@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614103@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614103@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614103@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'RES_R0603_150K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614143@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614143@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614143@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R24 'RES_R0603_470':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614159@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614159@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614159@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614205@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614205@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614205@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614273@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614273@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614273@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R27 'RES_R0603_150K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614313@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614313@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614313@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R28 'RES_R0603_470':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614329@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614329@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614329@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R29 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614375@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614375@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614375@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_R0603_56K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608630@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608630@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608630@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R30 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614443@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614443@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614443@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R31 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15619768@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15619768@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15619768@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R32 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15616823@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15616823@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15616823@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'RES_R0603_56K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15619919@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15619919@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15619919@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15621227@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15621227@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15621227@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622209@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622209@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622209@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622239@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622239@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622239@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R37 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15622690@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15622690@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15622690@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'RES_R0805_120':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15623010@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15623010@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15623010@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R39 'RES_R2512_0.01':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15768188@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15768188@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15768188@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608800@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608800@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608800@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_R0603_22K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608854@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608854@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608854@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609196@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609196@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609196@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609982@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609982@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609982@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610024@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610024@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610024@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610258@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610258@resistor.\res.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610258@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RE1 'RELAY_24V_MINI_0_RELAY_SPST_20M':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609904@SLT_POWER.RELAY_24V_MINI_0.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609904@slt_power.\relay_24v_mini_0.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609904@slt_power.\relay_24v_mini_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RE2 'RELAY_24V_MINI_0_RELAY_SPST_20M':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610184@SLT_POWER.RELAY_24V_MINI_0.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610184@slt_power.\relay_24v_mini_0.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610184@slt_power.\relay_24v_mini_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RE3 'RELAY_24V_MINI_0_RELAY_SPST_20M':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610452@SLT_POWER.RELAY_24V_MINI_0.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610452@slt_power.\relay_24v_mini_0.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610452@slt_power.\relay_24v_mini_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ RE4 'RELAY_24V_MINI_0_RELAY_SPST_20M':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15610721@SLT_POWER.RELAY_24V_MINI_0.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15610721@slt_power.\relay_24v_mini_0.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15610721@slt_power.\relay_24v_mini_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T1 'TESTPOINT_TESTPOINT_SIG_5V':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608146@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608146@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608146@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T2 'TESTPOINT_TEST_POINT_PWR_TEST_P':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608882@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608882@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608882@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T3 'TESTPOINT_TEST_POINT_PWR_TEST_P':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608896@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608896@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608896@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T4 'TESTPOINT_TEST_POINT_PWR_TEST_P':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608910@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608910@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608910@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T5 'TESTPOINT_TEST_POINT_PWR_TEST_P':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608924@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608924@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608924@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T6 'TESTPOINT_TESTPOINT_SIG_ZERO':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608946@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608946@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608946@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T7 'TESTPOINT_TESTPOINT_SIG_3.3V':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608960@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608960@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608960@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'TPS5401_MSOP-POWERPAD_10PIN_TPS':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608208@OTHER_IC.TPS5401.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608208@other_ic.\tps5401.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608208@other_ic.\tps5401.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U10 '74HC04_SOIC_14_74HC04D':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15618209@OTHER_IC.74HC04A.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15618209@other_ic.\74hc04a.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15618209@other_ic.\74hc04a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15618592@OTHER_IC.74HC04B.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15618592@other_ic.\74hc04b.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15618592@other_ic.\74hc04b.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='B';
+
+SECTION_NUMBER 3
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15618688@OTHER_IC.74HC04C.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15618688@other_ic.\74hc04c.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15618688@other_ic.\74hc04c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='C';
+
+SECTION_NUMBER 4
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15618756@OTHER_IC.74HC04D.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15618756@other_ic.\74hc04d.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15618756@other_ic.\74hc04d.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='D';
+
+SECTION_NUMBER 5
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15619014@OTHER_IC.74HC04E.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15619014@other_ic.\74hc04e.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15619014@other_ic.\74hc04e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='E';
+
+SECTION_NUMBER 6
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15619084@OTHER_IC.74HC04F.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15619084@other_ic.\74hc04f.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15619084@other_ic.\74hc04f.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='F';
+
+PART_NAME
+ U2 'ZN35150BA_0_ZN35135BA_220V24V_1':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608512@SLT_POWER.ZN35150BA_0.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608512@slt_power.\zn35150ba_0.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608512@slt_power.\zn35150ba_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'PC817_SOT254P900X350-4N_PC817':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15608974@OTHER_IC.PC817.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15608974@other_ic.\pc817.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15608974@other_ic.\pc817.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'LM1117X_4P_SOT_223_3_AMS1117-3V':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15609016@OTHER_IC.LM1117X_4P.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15609016@other_ic.\lm1117x_4p.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15609016@other_ic.\lm1117x_4p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'PC817_SOT254P900X350-4N_PC817':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15613881@OTHER_IC.PC817.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15613881@other_ic.\pc817.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15613881@other_ic.\pc817.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'PC817_SOT254P900X350-4N_PC817':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614051@OTHER_IC.PC817.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614051@other_ic.\pc817.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614051@other_ic.\pc817.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'PC817_SOT254P900X350-4N_PC817':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614221@OTHER_IC.PC817.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614221@other_ic.\pc817.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614221@other_ic.\pc817.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'PC817_SOT254P900X350-4N_PC817':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15614391@OTHER_IC.PC817.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15614391@other_ic.\pc817.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15614391@other_ic.\pc817.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U9 'SN65176_2_SOIC8_SN75176B':;
+
+SECTION_NUMBER 1
+ '@SLT_POWER.SCHEMATIC1(SCH_1):INS15616743@STREETLIGHTGATEWAY.SN65176_2.NORMAL(CHIPS)':
+ C_PATH='@slt_power.schematic1(sch_1):ins15616743@streetlightgateway.\sn65176_2.normal\(chips)',
+ P_PATH='@slt_power.schematic1(sch_1):page1_ins15616743@streetlightgateway.\sn65176_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.

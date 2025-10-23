@@ -1,0 +1,82 @@
+(ExpressProject "slt_main"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\slt_main.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\SLT_MAIN.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE"))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Working\Reference_project\slt_hw_all_version\hw02\Main\slt_main.dsn")
+      (Path "Design Resources"
+         "D:\Working\Reference_project\slt_hw_all_version\hw02\Main\slt_main.dsn"
+         "RTC")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Working\Reference_project\slt_hw_all_version\hw02\Main\slt_main.dsn"
+         "RTC"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 603"))
+      (Tab 0)))
+  (PartMRUSelector
+    (HEADER1X9
+      (FullPartName "HEADER1X9.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X4
+      (FullPartName "HEADER1X4.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (SW_PB_SPST_4
+      (FullPartName "SW_PB_SPST_4.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\BJT_FET.OLB")
+      (DeviceIndex "0"))
+    (PNP_CBE
+      (FullPartName "PNP_CBE.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\BJT_FET.OLB")
+      (DeviceIndex "0"))
+    (LED_4_DIGIT
+      (FullPartName "LED_4_DIGIT.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\BJT_FET.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "ad")
+  (ISPCBBASICLICENSE "false"))

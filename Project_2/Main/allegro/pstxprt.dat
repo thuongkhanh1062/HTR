@@ -1,0 +1,920 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.2.0 d001Feb-24-2021 at 11:11:43 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='SLT_MAIN';
+ POST_TIME='Nov 22 2016 17:05:28';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ B1 'BUZZER_BUZZER_SMD_THROUGH SMD':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):BUZZER@SLT_MAIN.BUZZER(SCH_1):INS15478992@INDUCTOR.BUZZER.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):buzzer@slt_main.buzzer(sch_1):ins15478992@inductor.\buzzer.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_buzzer@slt_main.buzzer(sch_1):page1_ins15478992@inductor.\buzzer.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C1 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675438@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675438@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675438@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651730@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651730@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651730@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651746@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651746@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651746@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651762@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651762@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651762@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675844@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675844@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675844@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649234@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649234@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649234@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649250@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649250@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649250@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649400@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649400@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649400@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'POL_CAP_C2312_100UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15652449@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15652449@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15652449@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'POL_CAP_C2312_100UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15652449@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15652449@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15652449@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'NPOL_CAP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675454@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675454@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675454@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651730@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651730@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651730@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651746@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651746@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651746@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651762@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651762@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651762@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675470@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675470@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675470@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15680026@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15680026@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15680026@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675502@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675502@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675502@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675534@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675534@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675534@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'NPOL_CAP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675550@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675550@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675550@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'POL_CAP_RAD_SIZE_D_100UF':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675566@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675566@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675566@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'LED_LED3MM_3MM':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566855@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566855@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566855@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'LED_LED3MM_3MM':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566871@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566871@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566871@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_LED3MM_3MM':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566890@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566890@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566890@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'LED_LED3MM_3MM':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566914@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566914@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566914@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'LED_LED3MM_3MM':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566939@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566939@bjt_fet.\led.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566939@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):BUZZER@SLT_MAIN.BUZZER(SCH_1):INS15478780@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):buzzer@slt_main.buzzer(sch_1):ins15478780@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_buzzer@slt_main.buzzer(sch_1):page1_ins15478780@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'HEADER1X4_HEADER1X4_HEADER1X4':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15676192@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15676192@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15676192@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'HEADER1X9_HEADER1X9_HEADER1X9':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):INS15656251@HEADER_CONNECTOR.HEADER1X9.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):ins15656251@header_connector.\header1x9.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_ins15656251@header_connector.\header1x9.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER1X2_HEADER1X2_127_ZH_TH_B':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649647@HEADER_CONNECTOR.HEADER1X2.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649647@header_connector.\header1x2.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649647@header_connector.\header1x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'HEADER1X9_HEADER1X9_HEADER1X9':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):INS15656281@HEADER_CONNECTOR.HEADER1X9.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):ins15656281@header_connector.\header1x9.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_ins15656281@header_connector.\header1x9.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'PNP_CBE_SOT_23_MMBT3906':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15504992@BJT_FET.PNP_CBE.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15504992@bjt_fet.\pnp_cbe.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15504992@bjt_fet.\pnp_cbe.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 'PNP_CBE_SOT_23_MMBT3906':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15505019@BJT_FET.PNP_CBE.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15505019@bjt_fet.\pnp_cbe.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15505019@bjt_fet.\pnp_cbe.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q3 'PNP_CBE_SOT_23_MMBT3906':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15505046@BJT_FET.PNP_CBE.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15505046@bjt_fet.\pnp_cbe.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15505046@bjt_fet.\pnp_cbe.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q4 'PNP_CBE_SOT_23_MMBT3906':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15505086@BJT_FET.PNP_CBE.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15505086@bjt_fet.\pnp_cbe.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15505086@bjt_fet.\pnp_cbe.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q5 'PNP_CBE_SOT_23_MMBT3906':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566212@BJT_FET.PNP_CBE.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566212@bjt_fet.\pnp_cbe.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566212@bjt_fet.\pnp_cbe.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q6 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):BUZZER@SLT_MAIN.BUZZER(SCH_1):INS15478834@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):buzzer@slt_main.buzzer(sch_1):ins15478834@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_buzzer@slt_main.buzzer(sch_1):page1_ins15478834@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675788@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675788@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675788@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15565501@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15565501@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15565501@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15565565@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15565565@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15565565@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15565631@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15565631@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15565631@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566196@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566196@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566196@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566302@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566302@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566302@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15565954@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15565954@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15565954@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15565990@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15565990@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15565990@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566026@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566026@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566026@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566062@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566062@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566062@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566525@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566525@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566525@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675958@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675958@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675958@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566541@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566541@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566541@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566557@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566557@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566557@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566573@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566573@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566573@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566669@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566669@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566669@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R24 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566685@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566685@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566685@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566701@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566701@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566701@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15566717@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15566717@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15566717@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R27 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15567255@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15567255@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15567255@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R28 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15567352@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15567352@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15567352@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R29 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15567474@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15567474@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15567474@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15676124@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15676124@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15676124@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R30 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15567599@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15567599@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15567599@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R31 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15567718@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15567718@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15567718@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R32 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649266@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649266@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649266@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649360@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649360@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649360@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651608@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651608@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651608@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):BUZZER@SLT_MAIN.BUZZER(SCH_1):INS15478818@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):buzzer@slt_main.buzzer(sch_1):ins15478818@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_buzzer@slt_main.buzzer(sch_1):page1_ins15478818@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):BUZZER@SLT_MAIN.BUZZER(SCH_1):INS15478860@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):buzzer@slt_main.buzzer(sch_1):ins15478860@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_buzzer@slt_main.buzzer(sch_1):page1_ins15478860@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R37 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651786@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651786@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651786@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651816@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651816@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651816@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R39 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651892@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651892@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651892@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15676140@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15676140@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15676140@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651608@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651608@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651608@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651786@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651786@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651786@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651816@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651816@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651816@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651892@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651892@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651892@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15565439@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15565439@resistor.\res.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15565439@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW_PB_SPST_4_SW_REC_6X6_4P_TH_B':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15569611@HEADER_CONNECTOR.SW_PB_SPST_4.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15569611@header_connector.\sw_pb_spst_4.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15569611@header_connector.\sw_pb_spst_4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW2 'SW_PB_SPST_4_SW_REC_6X6_4P_TH_B':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15569654@HEADER_CONNECTOR.SW_PB_SPST_4.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15569654@header_connector.\sw_pb_spst_4.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15569654@header_connector.\sw_pb_spst_4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW3 'SW_PB_SPST_4_SW_REC_6X6_4P_TH_B':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15569697@HEADER_CONNECTOR.SW_PB_SPST_4.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15569697@header_connector.\sw_pb_spst_4.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15569697@header_connector.\sw_pb_spst_4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW4 'SW_PB_SPST_4_SW_REC_6X6_4P_TH_B':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15569740@HEADER_CONNECTOR.SW_PB_SPST_4.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15569740@header_connector.\sw_pb_spst_4.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15569740@header_connector.\sw_pb_spst_4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW5 'SW_PB_SPST_4_SW_REC_6X6_4P_TH_B':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS15569783@HEADER_CONNECTOR.SW_PB_SPST_4.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins15569783@header_connector.\sw_pb_spst_4.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins15569783@header_connector.\sw_pb_spst_4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T1 'TESTPOINT_TEST_POINT_PWR_60_TES':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651508@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651508@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651508@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T2 'TESTPOINT_TEST_POINT_PWR_60_TES':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651508@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651508@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651508@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'STM32F103_0_LQFP_64_STM32F103RD':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):MCU@SLT_MAIN.MCU(SCH_1):INS15675190@STM32F103RDT6_STARTER_KIT.STM32F103_0.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):mcu@slt_main.mcu(sch_1):ins15675190@stm32f103rdt6_starter_kit.\stm32f103_0.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_mcu@slt_main.mcu(sch_1):page1_ins15675190@stm32f103rdt6_starter_kit.\stm32f103_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'ANT_SMD_MINI_ANTENNA_MOUNT_SMD_':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651522@HEADER_CONNECTOR.ANT_SMD_MINI.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651522@header_connector.\ant_smd_mini.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651522@header_connector.\ant_smd_mini.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'RFM69HCW_RFM22B_S2_RFM69HCW_868':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF@SLT_MAIN.RF(SCH_1):INS15651548@OTHER_IC.RFM69HCW.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf@slt_main.rf(sch_1):ins15651548@other_ic.\rfm69hcw.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf@slt_main.rf(sch_1):page1_ins15651548@other_ic.\rfm69hcw.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'LED_4_DIGIT_LED_4_DIGIT_LED':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):LED_BTN@SLT_MAIN.LED_BUTTON(SCH_1):INS46@BJT_FET.LED_4_DIGIT.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):led_btn@slt_main.led_button(sch_1):ins46@bjt_fet.\led_4_digit.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_led_btn@slt_main.led_button(sch_1):page1_ins46@bjt_fet.\led_4_digit.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'DS1307_8P_SOIC8_BQ32000':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649170@OTHER_IC.DS1307_8P.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649170@other_ic.\ds1307_8p.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649170@other_ic.\ds1307_8p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'ANT_SMD_MINI_ANTENNA_MOUNT_SMD_':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651522@HEADER_CONNECTOR.ANT_SMD_MINI.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651522@header_connector.\ant_smd_mini.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651522@header_connector.\ant_smd_mini.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'RFM69HCW_RFM22B_S2_RFM69HCW_868':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RF1@SLT_MAIN.RF(SCH_1):INS15651548@OTHER_IC.RFM69HCW.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rf1@slt_main.rf(sch_1):ins15651548@other_ic.\rfm69hcw.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rf1@slt_main.rf(sch_1):page1_ins15651548@other_ic.\rfm69hcw.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y1 'XM_SM_2_CRYTAL32KHZ_32.768KHZ':;
+
+SECTION_NUMBER 1
+ '@SLT_MAIN.TOP(SCH_1):RTC@SLT_MAIN.RTC(SCH_1):INS15649152@CRYSTAL_OSC.XM_SM_2.NORMAL(CHIPS)':
+ C_PATH='@slt_main.top(sch_1):rtc@slt_main.rtc(sch_1):ins15649152@crystal_osc.\xm_sm_2.normal\(chips)',
+ P_PATH='@slt_main.top(sch_1):page1_rtc@slt_main.rtc(sch_1):page1_ins15649152@crystal_osc.\xm_sm_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.
