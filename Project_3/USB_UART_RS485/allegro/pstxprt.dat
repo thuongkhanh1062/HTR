@@ -1,0 +1,665 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.2.0 d001Oct-29-2025 at 09:45:28 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='USB_UART_RS485';
+ POST_TIME='Nov 22 2016 17:05:28';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15934570@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15934570@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15934570@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15929964@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15929964@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15929964@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15929980@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15929980@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15929980@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'NPOL_CAP_C0603_33PF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930694@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930694@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930694@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'NPOL_CAP_C1206_10UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15935820@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15935820@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15935820@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'NPOL_CAP_C1206_10UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15936308@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15936308@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15936308@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15934586@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15934586@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15934586@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15934602@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15934602@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15934602@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15934618@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15934618@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15934618@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928164@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928164@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928164@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928180@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928180@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928180@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928346@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928346@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928346@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928514@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928514@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928514@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15929948@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15929948@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15929948@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928725@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928725@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928725@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930036@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930036@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930036@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930162@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930162@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930162@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930178@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930178@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930178@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930650@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930650@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930650@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930758@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930758@bjt_fet.\led.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930758@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930774@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930774@bjt_fet.\led.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930774@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'TYPE_C_0_TYPE-C-16P_TYPE C':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15927926@ESP32_LORA.TYPE_C_0.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15927926@esp32_lora.\type_c_0.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15927926@esp32_lora.\type_c_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15927998@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15927998@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15927998@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928200@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928200@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928200@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15927982@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15927982@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15927982@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930080@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930080@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930080@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930096@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930096@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930096@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930382@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930382@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930382@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930408@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930408@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930408@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930496@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930496@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930496@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_R0603_56K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930528@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930528@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930528@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930710@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930710@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930710@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930726@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930726@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930726@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15931575@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15931575@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15931575@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15931601@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15931601@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15931601@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928218@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928218@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928218@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15931627@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15931627@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15931627@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928300@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928300@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928300@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928316@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928316@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928316@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928398@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928398@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928398@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928414@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928414@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928414@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928470@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928470@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928470@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_R0603_1K':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15928486@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15928486@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15928486@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_R0805_120':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930052@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930052@resistor.\res.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930052@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T10 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932975@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932975@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932975@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T11 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932997@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932997@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932997@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T12 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15933019@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15933019@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15933019@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T13 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15933041@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15933041@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15933041@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T14 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15933063@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15933063@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15933063@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T15 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15933085@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15933085@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15933085@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T2 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932295@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932295@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932295@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T3 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932317@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932317@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932317@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T4 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932347@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932347@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932347@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T5 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932361@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932361@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932361@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T6 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932407@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932407@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932407@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T7 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932421@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932421@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932421@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T8 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932435@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932435@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932435@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T9 'TESTPOINT_TEST_POINT_PAD_45X110':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15932953@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15932953@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15932953@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'LM1117X_4P_SOT_223_3_AMS1117-3V':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15934458@OTHER_IC.LM1117X_4P.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15934458@other_ic.\lm1117x_4p.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15934458@other_ic.\lm1117x_4p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'CP2102_QFN28_0_QFN28_5X5_CP2102':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15927856@ESP32_LORA.CP2102_QFN28_0.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15927856@esp32_lora.\cp2102_qfn28_0.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15927856@esp32_lora.\cp2102_qfn28_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'SN65176_2_SOIC8_SN75176B':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930194@STREETLIGHTGATEWAY.SN65176_2.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930194@streetlightgateway.\sn65176_2.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930194@streetlightgateway.\sn65176_2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 '74HC04_SOIC_14_74HC04D':;
+
+SECTION_NUMBER 1
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930556@OTHER_IC.74HC04A.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930556@other_ic.\74hc04a.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930556@other_ic.\74hc04a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='A';
+
+SECTION_NUMBER 2
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930326@OTHER_IC.74HC04B.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930326@other_ic.\74hc04b.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930326@other_ic.\74hc04b.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='B';
+
+SECTION_NUMBER 3
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930456@OTHER_IC.74HC04C.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930456@other_ic.\74hc04c.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930456@other_ic.\74hc04c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='C';
+
+SECTION_NUMBER 4
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930354@OTHER_IC.74HC04D.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930354@other_ic.\74hc04d.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930354@other_ic.\74hc04d.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='D';
+
+SECTION_NUMBER 5
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930608@OTHER_IC.74HC04E.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930608@other_ic.\74hc04e.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930608@other_ic.\74hc04e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='E';
+
+SECTION_NUMBER 6
+ '@USB_UART_RS485.SCHEMATIC1(SCH_1):INS15930222@OTHER_IC.74HC04F.NORMAL(CHIPS)':
+ C_PATH='@usb_uart_rs485.schematic1(sch_1):ins15930222@other_ic.\74hc04f.normal\(chips)',
+ P_PATH='@usb_uart_rs485.schematic1(sch_1):page1_ins15930222@other_ic.\74hc04f.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='F';
+
+END.

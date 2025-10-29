@@ -38,37 +38,32 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\esp32_lora.dsn")
-      (Path "Design Resources" ".\esp32_lora.dsn" "TOP")
-      (Path "Design Resources" ".\esp32_lora.dsn" "RTC")
+      (Path "Design Resources" "d:\htr\project_1\hw\gateway\esp32_lora.dsn")
+      (Path "Design Resources" "d:\htr\project_1\hw\gateway\esp32_lora.dsn"
+         "TOP")
+      (Path "Design Resources" "d:\htr\project_1\hw\gateway\esp32_lora.dsn"
+         "POWER")
+      (Path "Design Resources" "d:\htr\project_1\hw\gateway\esp32_lora.dsn"
+         "RTC")
       (Path "Outputs")
-      (Select "Design Resources" ".\esp32_lora.dsn" "TOP" "TOP"))
+      (Select "Design Resources" "d:\htr\project_1\hw\gateway\esp32_lora.dsn"
+         "POWER" "POWER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 319"))
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 319"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 52 1282 52 410")
-        (Scroll "0 100")
+        (Placement "44 0 1 -1 -1 -8 -31 104 1334 104 462")
+        (Scroll "0 170")
         (Zoom "100")
-        (Occurrence "/"))
-      (Path "D:\DATN\ESP32_LORA\ESP32_LORA.DSN")
-      (Schematic "TOP")
-      (Page "TOP"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 26 1256 26 384")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/BUZZER"))
-      (Path "D:\DATN\ESP32_LORA\ESP32_LORA.DSN")
-      (Schematic "BUZZER")
-      (Page "BUZZER")))
+        (Occurrence "/POWER"))
+      (Path "D:\HTR\PROJECT_1\HW\GATEWAY\ESP32_LORA.DSN")
+      (Schematic "POWER")
+      (Page "POWER")))
   (PartMRUSelector
     (HEADER1X5
       (FullPartName "HEADER1X5.Normal")
