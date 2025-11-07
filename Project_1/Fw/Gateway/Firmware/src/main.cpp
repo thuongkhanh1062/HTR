@@ -192,28 +192,17 @@ void saveToEEPROM(int slaveId, bool isOn, int sliderValue)
 
 void saveNodeConfig()
 {
-    EEPROM.put(EEPROM_ADDR_NODECOUNT, nodeCount);
-
+    EEPROM.write(EEPROM_ADDR_NODECOUNT, nodeCount);
     for (int i = 0; i < nodeCount; i++)
     {
         NodeData data;
         data.id = nodes[i].id;
         strncpy(data.label, nodes[i].label.c_str(), MAX_LABEL_LENGTH);
         data.label[MAX_LABEL_LENGTH - 1] = '\0';
-
         int addr = EEPROM_ADDR_NODES + i * sizeof(NodeData);
         EEPROM.put(addr, data);
     }
-
-    for (int i = nodeCount; i < MAX_NODES; i++)
-    {
-        NodeData empty = {0, ""};
-        int addr = EEPROM_ADDR_NODES + i * sizeof(NodeData);
-        EEPROM.put(addr, empty);
-    }
-
     EEPROM.commit();
-    Serial.printf("✅ Saved %d nodes to EEPROM.\n", nodeCount);
 }
 
 void saveLocalRelayState()
@@ -286,30 +275,53 @@ void loadLocalRelayState()
 
 void loadNodeConfig()
 {
+    // Đọc nodeCount kiểu int
     EEPROM.get(EEPROM_ADDR_NODECOUNT, nodeCount);
+    Serial.print("Load node count eeprom");
 
     if (nodeCount < 0 || nodeCount > MAX_NODES)
     {
-        Serial.println("⚠️ EEPROM NodeCount invalid, resetting...");
+        Serial.println(" Invalid nodeCount, resetting...");
         nodeCount = 0;
         EEPROM.put(EEPROM_ADDR_NODECOUNT, nodeCount);
         EEPROM.commit();
         return;
     }
-
     for (int i = 0; i < nodeCount; i++)
     {
         NodeData data;
         int addr = EEPROM_ADDR_NODES + i * sizeof(NodeData);
         EEPROM.get(addr, data);
 
-        nodes[i].id = data.id;
-        nodes[i].label = String(data.label);
-        nodes[i].relay = false;
-        nodes[i].online = false;
+        if (data.id > 0 && strlen(data.label) > 0)
+        {
+            nodes[i].id = data.id;
+            nodes[i].label = String(data.label);
+            nodes[i].relay = false;
+            nodes[i].online = false;
+
+            Serial.println("data node: ");
+            Serial.print(nodes[i].id);
+            Serial.print("\t");
+            Serial.print(nodes[i].label);
+            Serial.print("\t");
+            Serial.print(nodes[i].relay);
+            Serial.print("\t");
+            Serial.println(nodes[i].online);
+        }
     }
 
     Serial.printf("✅ Loaded %d nodes from EEPROM.\n", nodeCount);
+}
+
+void loadSlavesFromEEPROM()
+{
+    for (int i = 0; i < total_Slave; i++)
+    {
+        int addr = EEPROM_ADDR_SLAVES + (i * 8);
+        slaves[i].isOn = EEPROM.read(addr);
+        slaves[i].sliderValue = EEPROM.read(addr + 4);
+    }
 }
 
 void sendLora(int ID, int stateLed, int valvePwm)
@@ -661,7 +673,6 @@ void handleApiWifiConfig()
     ESP.restart();
 }
 
-
 // --- SETUP ---
 void setup()
 {
@@ -671,7 +682,9 @@ void setup()
     // initBuzzer();
 
     loadNodeConfig();
-
+    loadSlavesFromEEPROM();
+    loadLocalRelayState();
+    loadMasterSchedule();
     loadLocalRelayState();
     loadMasterSchedule();
     for (int i = 0; i < 4; i++)
@@ -719,7 +732,7 @@ void setup()
     {
         slaves[i] = {i + 1, random(20, 35) / 1.0f, 0, 50, false, false};
     }
-    
+
     setupWebServer();
     xTaskCreatePinnedToCore(displayTask, "DisplayTask", 4096, NULL, 1, &displayTaskHandle, 0);
     xTaskCreatePinnedToCore(loraTask, "LoRaTask", 4096, NULL, 1, &loraTaskHandle, 1);
@@ -753,10 +766,15 @@ void data_screen()
     u8g2.drawXBM(80, 25, 10, 8, icon_Thermal);
     DateTime now = rtc.now();
     char tbuf[16];
+    char ipbuf[16];
     sprintf(tbuf, "%02d:%02d:%02d", now.hour(), now.minute(), now.second());
+    sprintf(ipbuf, "%s", WiFi.localIP().toString().c_str());
     u8g2.setFont(u8g2_font_12x6LED_mn);
-    u8g2.setCursor(33, 12);
+    u8g2.setCursor(55, 12);
     u8g2.print(tbuf);
+    u8g2.setFont(u8g2_font_04b_03_tr);
+    u8g2.setCursor(0, 5);
+    u8g2.print(ipbuf);
     u8g2.drawLine(0, 15, 127, 15);
     u8g2.drawLine(34, 15, 34, 63);
     u8g2.drawLine(92, 15, 92, 63);
@@ -773,14 +791,7 @@ void data_screen()
     u8g2.setColorIndex(digitalRead(RL4_PIN) == HIGH ? 0 : 1);
     u8g2.drawStr(99, 58, "RL4");
     u8g2.setColorIndex(1);
-    if (WiFi.status())
-    {
-        u8g2.drawXBM(115, 4, 9, 7, icon_connected);
-    }
-    else
-    {
-        u8g2.drawXBM(115, 4, 9, 7, icon_disconnect);
-    }
+
     static unsigned long lastSwitch = 0;
     static int displayIndex = 0;
     int validCount = 0;
@@ -839,6 +850,7 @@ void displayTask(void *pvParameters)
 {
     (void)pvParameters;
     u8g2.begin();
+
     while (1)
     {
         u8g2.clearBuffer();
@@ -1043,7 +1055,7 @@ void loraTask(void *pvParameters)
                 if (master.sensorValues[i] > 30.0f)
                     master.sensorValues[i] = 30.0f;
             }
-            print_data();
+            // print_data();
         }
         DateTime now = rtc.now();
         char current_time_buffer[6];

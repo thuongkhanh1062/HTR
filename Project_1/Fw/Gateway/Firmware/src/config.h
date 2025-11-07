@@ -11,6 +11,7 @@
 #include <U8g2lib.h>
 #include <WebServer.h>
 #include <Preferences.h>
+#include <WiFiManager.h>
 
 // --- HARDWARE PINS ---
 #define ss 5
@@ -37,58 +38,55 @@
 #define MAX_NODES 24
 
 // --- EEPROM Configuration ---
-#define EEPROM_ADDR_NODECOUNT 0
-#define EEPROM_ADDR_RELAYS 1
+#define EEPROM_ADDR_NODECOUNT   0
+#define EEPROM_ADDR_RELAYS      1
 // T1
-#define EEPROM_ADDR_ONHOUR1 5
-#define EEPROM_ADDR_ONMIN1 6
-#define EEPROM_ADDR_OFFHOUR1 7
-#define EEPROM_ADDR_OFFMIN1 8
+#define EEPROM_ADDR_ONHOUR1      5
+#define EEPROM_ADDR_ONMIN1       6
+#define EEPROM_ADDR_OFFHOUR1    7
+#define EEPROM_ADDR_OFFMIN1      8
 // T2
-#define EEPROM_ADDR_ONHOUR2 9
-#define EEPROM_ADDR_ONMIN2 10
-#define EEPROM_ADDR_OFFHOUR2 11
-#define EEPROM_ADDR_OFFMIN2 12
+#define EEPROM_ADDR_ONHOUR2     9
+#define EEPROM_ADDR_ONMIN2      10
+#define EEPROM_ADDR_OFFHOUR2    11
+#define EEPROM_ADDR_OFFMIN2     12
 
-#define EEPROM_ADDR_NODES 13
-#define MAX_LABEL_LENGTH 32
-#define EEPROM_SIZE 512
+// Node
+#define EEPROM_ADDR_NODES       100
+#define EEPROM_ADDR_SLAVES      900
+#define MAX_LABEL_LENGTH        32
+#define EEPROM_SIZE             1024
 // --- NTP CONFIGURATION ---
-#define NTP_SERVER "pool.ntp.org"
+#define NTP_SERVER              "pool.ntp.org" 
 // Độ lệch giờ Nepal (NPT): UTC + 5 giờ 45 phút
 // 5 giờ * 3600 giây/giờ + 45 phút * 60 giây/phút = 20700 giây
-#define GMT_OFFSET_SEC 25200
-#define DAYLIGHT_OFFSET_SEC 0 // NPT không dùng DST
+#define GMT_OFFSET_SEC          25200  
+#define DAYLIGHT_OFFSET_SEC     0     // NPT không dùng DST
 // --- DATA STRUCTURES ---
-struct NodeData
-{
+struct NodeData {
     uint8_t id;
     char label[MAX_LABEL_LENGTH];
 };
-struct MasterSchedule
-{
+struct MasterSchedule {
     int onHour;
     int onMinute;
     int offHour;
     int offMinute;
 };
-struct LoRaPacket
-{
+struct LoRaPacket {
     int id;
     bool data1;
     int data2;
 };
 extern LoRaPacket packetToSend;
-struct LoRaPacketRec
-{
+struct LoRaPacketRec {
     int id;
     float data1;
     unsigned long data2;
 };
 extern LoRaPacketRec receivedPacket;
 
-struct MasterStation
-{
+struct MasterStation {
     float sensorValues[6];
     String onTime1;
     String onTime2;
@@ -96,8 +94,7 @@ struct MasterStation
     String offTime2;
 };
 extern MasterStation master;
-struct SlaveStation
-{
+struct SlaveStation {
     int id;
     float temperature;
     int time;
@@ -147,7 +144,7 @@ extern bool screenFlip;
 extern bool editingTime;
 extern int submenuSelected;
 extern bool datascreenflag;
-extern const char *mainMenu[];
+extern const char* mainMenu[];
 extern const int mainMenuCount;
 extern unsigned long lastActivity;
 extern int setHour, setMinute, setSecond;
@@ -196,5 +193,5 @@ void setRelayLocal(int idx, bool on);
 float readInternalTemp();
 // --- FUNCTION PROTOTYPES (Thêm vào khu vực FUNCTION PROTOTYPES) ---
 void syncNTPTime();
-void checkTimeSync();
+void checkTimeSync(); 
 #endif
