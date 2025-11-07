@@ -63,9 +63,10 @@ int buzzerFrequency = 1000;
 TaskHandle_t displayTaskHandle;
 TaskHandle_t loraTaskHandle;
 TaskHandle_t ioTaskHandle;
+WiFiManager wm;
 // Other Globals
 const char *ssid = "CT32";
-const char *password = "ct32iot2025";
+const char *password = "12345678";
 String ip_addr;
 String time_now_rtc, day_now_rtc;
 int countIdSlave = 0;
@@ -191,18 +192,28 @@ void saveToEEPROM(int slaveId, bool isOn, int sliderValue)
 
 void saveNodeConfig()
 {
-    EEPROM.write(EEPROM_ADDR_NODECOUNT, nodeCount);
+    EEPROM.put(EEPROM_ADDR_NODECOUNT, nodeCount);
+
     for (int i = 0; i < nodeCount; i++)
     {
         NodeData data;
         data.id = nodes[i].id;
         strncpy(data.label, nodes[i].label.c_str(), MAX_LABEL_LENGTH);
         data.label[MAX_LABEL_LENGTH - 1] = '\0';
+
         int addr = EEPROM_ADDR_NODES + i * sizeof(NodeData);
         EEPROM.put(addr, data);
     }
+
+    for (int i = nodeCount; i < MAX_NODES; i++)
+    {
+        NodeData empty = {0, ""};
+        int addr = EEPROM_ADDR_NODES + i * sizeof(NodeData);
+        EEPROM.put(addr, empty);
+    }
+
     EEPROM.commit();
-    Serial.printf("Saved %d nodes to EEPROM.\n", nodeCount);
+    Serial.printf("✅ Saved %d nodes to EEPROM.\n", nodeCount);
 }
 
 void saveLocalRelayState()
@@ -275,31 +286,30 @@ void loadLocalRelayState()
 
 void loadNodeConfig()
 {
-    uint8_t count = EEPROM.read(EEPROM_ADDR_NODECOUNT);
+    EEPROM.get(EEPROM_ADDR_NODECOUNT, nodeCount);
 
-    if (count == 0xFF || count > MAX_NODES)
+    if (nodeCount < 0 || nodeCount > MAX_NODES)
     {
+        Serial.println("⚠️ EEPROM NodeCount invalid, resetting...");
         nodeCount = 0;
-        Serial.println("EEPROM NodeCount uninitialized/corrupted, reset to 0 and commit.");
-        EEPROM.write(EEPROM_ADDR_NODECOUNT, (uint8_t)0);
+        EEPROM.put(EEPROM_ADDR_NODECOUNT, nodeCount);
         EEPROM.commit();
-
         return;
     }
-
-    nodeCount = (int)count;
 
     for (int i = 0; i < nodeCount; i++)
     {
         NodeData data;
         int addr = EEPROM_ADDR_NODES + i * sizeof(NodeData);
         EEPROM.get(addr, data);
+
         nodes[i].id = data.id;
         nodes[i].label = String(data.label);
         nodes[i].relay = false;
         nodes[i].online = false;
     }
-    Serial.printf("Loaded %d nodes from EEPROM.\n", nodeCount);
+
+    Serial.printf("✅ Loaded %d nodes from EEPROM.\n", nodeCount);
 }
 
 void sendLora(int ID, int stateLed, int valvePwm)
@@ -658,7 +668,8 @@ void setup()
     Serial.begin(115250);
     EEPROM.begin(EEPROM_SIZE);
 
-    initBuzzer();
+    // initBuzzer();
+
     loadNodeConfig();
 
     loadLocalRelayState();
@@ -672,62 +683,25 @@ void setup()
     {
         for (int i = 0; i < 3; i++)
         {
-            buzzerBeep(2000, 100);
+            // buzzerBeep(2000, 100);
+            Serial.print("rtc loading");
             vTaskDelay(150 / portTICK_PERIOD_MS);
         }
     }
     u8g2.begin();
     String storedSsid = "";
     String storedPassword = "";
-    IPAddress local_IP(192, 168, 10, 1);
-    IPAddress gateway(192, 168, 10, 1);
-    IPAddress subnet(255, 255, 255, 0);
-    preferences.begin("wifi-config", true);
-    storedSsid = preferences.getString("ssid", "");
-    storedPassword = preferences.getString("password", "");
-    preferences.end();
-
-    if (storedSsid.length() > 0)
+    bool res;
+    res = wm.autoConnect(ssid, password);
+    if (!res)
     {
-        Serial.printf("Connecting to Wi-Fi: %s\n", storedSsid.c_str());
-        WiFi.mode(WIFI_STA);
-        WiFi.begin(storedSsid.c_str(), storedPassword.c_str());
-        int attempts = 0;
-        while (WiFi.status() != WL_CONNECTED && attempts < 40)
-        {
-            delay(500);
-            Serial.print(".");
-            attempts++;
-        }
-
-        if (WiFi.status() == WL_CONNECTED)
-        {
-            ip_addr = WiFi.localIP().toString();
-            Serial.printf("\nConnected to Wi-Fi! Access IP: %s\n", ip_addr.c_str());
-            syncNTPTime();
-        }
-        else
-        {
-            Serial.println("\nFailed to connect to configured Wi-Fi. Falling back to Access Point Mode.");
-            WiFi.mode(WIFI_AP_STA);
-            WiFi.softAPConfig(local_IP, gateway, subnet);
-            WiFi.softAP(ssid, password);
-            ip_addr = WiFi.softAPIP().toString();
-            Serial.printf("Failed to connect, using AP Mode at %s\n", ip_addr.c_str());
-        }
+        Serial.println("Failed to connect");
+        // ESP.restart();
     }
     else
     {
-        WiFi.mode(WIFI_AP);
-        WiFi.softAPConfig(local_IP, gateway, subnet);
-        WiFi.softAP(ssid, password);
-        ip_addr = WiFi.softAPIP().toString();
-        Serial.printf("ESP32 Access Point Started at %s (No Wi-Fi Config)\n", ip_addr.c_str());
+        Serial.println("connected.");
     }
-    WiFi.softAPConfig(local_IP, gateway, subnet);
-    WiFi.softAP(ssid, password);
-    ip_addr = WiFi.softAPIP().toString();
-    Serial.printf("ESP32 Access Point Started at %s\n", ip_addr.c_str());
     LoRa.setPins(ss, rst, dio0);
     if (!LoRa.begin(433E6))
     {
@@ -745,14 +719,13 @@ void setup()
     {
         slaves[i] = {i + 1, random(20, 35) / 1.0f, 0, 50, false, false};
     }
-
+    
     setupWebServer();
     xTaskCreatePinnedToCore(displayTask, "DisplayTask", 4096, NULL, 1, &displayTaskHandle, 0);
     xTaskCreatePinnedToCore(loraTask, "LoRaTask", 4096, NULL, 1, &loraTaskHandle, 1);
     xTaskCreatePinnedToCore(ioTask, "IOTask", 8192, NULL, 1, &ioTaskHandle, 1);
     xTaskCreate(timeSyncTask, "TimeSyncTask", 3072, NULL, TIME_SYNC_TASK_PRIORITY, NULL);
 }
-
 // --- LOOP ---
 void loop() {}
 // ---------------- TASK --------------------------
@@ -866,7 +839,6 @@ void displayTask(void *pvParameters)
 {
     (void)pvParameters;
     u8g2.begin();
-
     while (1)
     {
         u8g2.clearBuffer();
@@ -953,12 +925,9 @@ void displayTask(void *pvParameters)
                     }
                     else if (WiFi.getMode() == WIFI_AP || WiFi.getMode() == WIFI_AP_STA)
                     {
-                        preferences.begin("wifi-config", true);
-                        String storedSsid = preferences.getString("ssid", "ESP32_AP");
-                        preferences.end();
-
+                        wm.setConfigPortalTimeout(120);
                         u8g2.setCursor(6, 26);
-                        u8g2.printf("SSID: %s", storedSsid.c_str());
+                        u8g2.printf("SSID: %s", WiFi.SSID());
                         u8g2.setCursor(6, 38);
                         u8g2.printf("IP: %s", WiFi.softAPIP().toString().c_str());
                         u8g2.setCursor(6, 50);
@@ -1122,6 +1091,7 @@ void ioTask(void *pvParameters)
     lastActivity = millis();
     unsigned long pressStart[5] = {0, 0, 0, 0, 0};
     bool pressed[5] = {false, false, false, false, false};
+    bool pressboot = false;
     while (1)
     {
         buzzerUpdate();
@@ -1249,6 +1219,31 @@ void ioTask(void *pvParameters)
                         u8g2.setDisplayRotation(U8G2_R0);
                     while (digitalRead(BT_SEL_PIN) == LOW)
                         vTaskDelay(10);
+                }
+                if (digitalRead(BT_BCK_PIN) == LOW)
+                {
+                    buzzerBeep(900, 80);
+                    menuLevel = 1;
+                    submenuSelected = -1;
+                    while (digitalRead(BT_BCK_PIN) == LOW)
+                        vTaskDelay(10);
+                }
+            }
+            else if (menuLevel == 2 && submenuSelected == 2)
+            { // Internet setting
+                unsigned long pressedboot = 0;
+                if (digitalRead(BT_BOOT) == HIGH)
+                {
+                    pressboot = true;
+                    pressedboot = millis();
+                }
+                else
+                {
+                    if (millis() - pressedboot >= 2000)
+                    {
+                        wm.resetSettings();
+                        pressboot = false;
+                    }
                 }
                 if (digitalRead(BT_BCK_PIN) == LOW)
                 {
