@@ -1,25 +1,90 @@
 /*
-@date: 071125
-@Version: v1.0
-@feature: 
-    Display time using RTC DS1307 and sync time using NTP get time from internet. set timer for 4 Relay automatics on and off.
-    To connect to wifi press and hold boot button in 5s esp create wifi with name "ESP_TIMER" and password is "12345678".
-    use smartphone connect to this wifi and it phone is automatics popup website or not user can access to 192.168.4.1 by any web browser.
-    on this website user can choose any wifi esp32 can reached (2.4Ghz WiFi only). after enter main WiFi and password the timer is going to
-    main screen show time. to edit timer short-press boot button to jump into editing timer menu. using "+" and "-" to increase/ decrease H/M/S
-    and use "next" to switch beetwen H/M/S short-press boot button one more time to switched beetwen timer1, timer2, timer3, timer4.
-    finally user press "exit" to back to main screen.
-    to config Wifi again or remote Wifi data press and hold boot button in 5s to enter website and chosse "info", at bottom of website have 
-    button called "REMOVED WIFI INFOR".
+  =========================================================================================================
+  @date       : 07/11/2025
+  @version    : v1.5
+  @author     : [Your Name or Team]
+  @hardware   : ESP32 + RTC DS1307 + LCD I2C 16x2 + 4 Relay + 5 Buttons
+  ---------------------------------------------------------------------------------------------------------
+  @description:
+    This program controls 4 relays automatically based on user-configurable ON/OFF schedules stored in EEPROM.
+    The system displays real-time clock data on an LCD using a DS1307 RTC module and supports both manual time
+    configuration and Wi-Fi-based NTP synchronization (future feature placeholder).
+
+  ---------------------------------------------------------------------------------------------------------
+  @FEATURES:
+    1️⃣ Real-time display:
+        - Display current time (HH:MM:SS) on LCD.
+        - Blinking colons (":") for clock animation.
+
+    2️⃣ Relay automation:
+        - 4 independent relay timers.
+        - Each timer has configurable ON and OFF times.
+        - Automatically turns relay ON/OFF based on RTC time.
+        - Supports overnight schedule (e.g., ON 22:00 → OFF 06:00).
+
+    3️⃣ Menu navigation via buttons:
+        - 5 buttons: [+], [Next], [-], [Exit], [BOOT].
+        - Short press BOOT → Enter Timer Edit mode.
+        - Long press BOOT (5s) → Enter RTC Time Config mode.
+        - [+]/[-] → Increase/Decrease time values.
+        - [Next] → Move between Hours, Minutes, Seconds.
+        - [Exit] → Return to main screen.
+
+    4️⃣ EEPROM storage:
+        - All ON/OFF times for 4 timers saved permanently.
+        - Data auto-saved after each edit.
+
+    5️⃣ Menu timeout:
+        - If no button pressed within `menuinterval` (30 seconds),
+          the menu automatically exits to main screen.
+
+  ---------------------------------------------------------------------------------------------------------
+  @BUTTON FUNCTIONS SUMMARY:
+    - [BOOT short press]   → Enter Timer Edit mode / Switch between Timer 1–4.
+    - [BOOT long press 5s] → Enter Time Configuration mode.
+    - [+]                  → Increase value.
+    - [-]                  → Decrease value.
+    - [Next]               → Move to next editable field.
+    - [Exit]               → Exit current menu to main display.
+
+  ---------------------------------------------------------------------------------------------------------
+  @DISPLAY MODES:
+    🕒 MAIN SCREEN:
+        TIME
+        HH:MM:SS
+    ⚙️ TIMER EDIT SCREEN:
+        Tn ON  HH:MM:SS
+        Tn OFF HH:MM:SS
+        - Blinking field indicates currently edited value.
+
+    ⏰ TIME CONFIG SCREEN:
+        SET RTC TIME
+        HH:MM:SS
+
+  ---------------------------------------------------------------------------------------------------------
+  @EEPROM STRUCTURE (bytes per timer = 6 bytes):
+      For each timer i (0–3):
+        [0]  ON Hour
+        [1]  OFF Hour
+        [2]  ON Minute
+        [3]  OFF Minute
+        [4]  ON Second
+        [5]  OFF Second
+
+      → Total: 4 timers × 6 bytes = 24 bytes
+
+  ---------------------------------------------------------------------------------------------------------
+  @NOTES:
+    - System uses millis() for non-blocking timing and button debounce.
+    - All time logic based on RTC DS1307.
+  =========================================================================================================
 */
 
 #include <Arduino.h>
 #include <Wire.h>
-#include <WiFi.h>
 #include <time.h>
 #include <EEPROM.h>
 #include <RTClib.h>
-#include <WiFiManager.h>
 #include <LiquidCrystal_I2C.h>
 
 // --- Khai báo IO ---
@@ -36,22 +101,14 @@ unsigned long previousMillis = 0;
 unsigned long Maininterval = 1000;
 unsigned long menupreviousMillis = 0;
 unsigned long menuinterval = 30000;
-
-// --- NTP ---
-const char *ntpServer = "pool.ntp.org";
-const long gmtOffset_sec = 7 * 3600;
-const int daylightOffset_sec = 0;
-
-// --- WiFi configuration ---
-const char *ssid = "ESP_TIMER";
-const char *password = "12345678";
+unsigned long buttonholdinterval = 5000;
 
 // --- Menu chỉnh sửa ---
 enum MenuState
 {
   MENU_NONE,
   MENU_TIMER_EDIT,
-  MENU_WIFI_CONFIG
+  MENU_TIME_CONFIG
 };
 MenuState menuState = MENU_NONE;
 int editState = 0;
@@ -60,7 +117,6 @@ int currentTimer = 0;
 // --- LCD, RTC, WiFi ---
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 RTC_DS1307 rtc;
-WiFiManager wm;
 
 // Biến thời gian và chống dội nút nhấn
 unsigned long lastButtonUpTime = 0;
@@ -77,7 +133,7 @@ void saveeeprom();
 void checktime();
 void relay();
 void display();
-
+void time_config();
 void setup()
 {
   Serial.begin(115200);
@@ -86,43 +142,6 @@ void setup()
   lcd.init();
   lcd.backlight();
   lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Connecting WiFi...");
-
-  bool res = wm.autoConnect(ssid, password);
-  if (!res)
-  {
-    lcd.clear();
-    String WIFIstr = "WiFi Failed!";
-    int colTime = (16 - WIFIstr.length()) / 2;
-    lcd.setCursor(colTime, 0);
-    lcd.print(WIFIstr);
-
-    String ESPstr = "ESP Restarting...";
-    int colESPstr = (16 - ESPstr.length()) / 2;
-    lcd.setCursor(colESPstr, 1);
-    lcd.print(ESPstr);
-    delay(1000);
-    ESP.restart();
-  }
-  else
-  {
-    lcd.clear();
-    String WIFIstr = "WiFi OK";
-    int colTime = (16 - WIFIstr.length()) / 2;
-    lcd.setCursor(colTime, 0);
-    lcd.print(WIFIstr);
-
-    char IPstr[9];
-    sprintf(IPstr, "%s", WiFi.localIP());
-    int colClock = (16 - strlen(IPstr)) / 2;
-    lcd.setCursor(colClock, 1);
-    lcd.print(IPstr);
-    delay(1500);
-  }
-
-  // --- NTP ---
-  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
 
   // --- RTC ---
   if (!rtc.begin())
@@ -130,21 +149,6 @@ void setup()
     Serial.println("Không tìm thấy DS1307!");
     while (1)
       delay(10);
-  }
-  struct tm timeinfo;
-  if (getLocalTime(&timeinfo))
-  {
-    rtc.adjust(DateTime(timeinfo.tm_year + 1900, timeinfo.tm_mon + 1, timeinfo.tm_mday,
-                        timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec));
-    lcd.clear();
-    lcd.print("Time synced!");
-    Serial.println("Đã đồng bộ NTP!");
-  }
-  else
-  {
-    lcd.clear();
-    lcd.print("Sync NTP fail!");
-    Serial.println("Không thể lấy thời gian NTP!");
   }
 
   // --- EEPROM ---
@@ -161,8 +165,8 @@ void setup()
   {
     pinMode(buttonpin[i], INPUT_PULLUP);
   }
-  pinMode(buzzer, OUTPUT);
-  digitalWrite(buzzer, LOW);
+  // pinMode(buzzer, OUTPUT);
+  // digitalWrite(buzzer, LOW);
 }
 
 void loop()
@@ -184,13 +188,9 @@ void loop()
   checkBootButton();
   editTimer();
 
-  if (menuState == MENU_WIFI_CONFIG)
+  if (menuState == MENU_TIME_CONFIG)
   {
-    lcd.clear();
-    lcd.print("WiFi Config Mode");
-    delay(500);
-    wm.startConfigPortal(ssid, password);
-    ESP.restart();
+    time_config();
   }
 }
 
@@ -208,17 +208,16 @@ void checkBootButton()
   {
     bootPressed = true;
     bootPressTime = millis();
-    menupreviousMillis = millis();
   }
 
   if (!state && bootPressed)
   {
     bootPressed = false;
     unsigned long duration = millis() - bootPressTime;
-    // giữ 5s → WiFi config
-    if (duration >= 5000)
+    // giữ 5s → Time config
+    if (duration >= buttonholdinterval)
     {
-      menuState = MENU_WIFI_CONFIG;
+      menuState = MENU_TIME_CONFIG;
     }
     else
     {
@@ -226,7 +225,6 @@ void checkBootButton()
       if (menuState != MENU_TIMER_EDIT)
       {
         menuState = MENU_TIMER_EDIT;
-        menupreviousMillis = millis();
         currentTimer = 0;
         editState = 0;
       }
@@ -236,6 +234,7 @@ void checkBootButton()
         editState = 0;
       }
     }
+    menupreviousMillis = millis();
   }
 }
 
@@ -273,13 +272,12 @@ void editTimer()
     if (editState > 5)
       editState = 0;
     lastButtonNextTime = now;
-    saveeeprom(); // lưu vào eeprom
+    saveeeprom();
     menupreviousMillis = millis();
   }
   // thoát menu
   if (digitalRead(buttonpin[3]) == LOW && now - lastButtonExit > buttonDelay)
   {
-    // nếu nhấn nút back thì quay về màn hình chính
     menuState = MENU_NONE;
   }
 }
@@ -293,7 +291,6 @@ void loadeeprom()
     {
       ontime[i][j] = EEPROM.read(addr++);
       offtime[i][j] = EEPROM.read(addr++);
-      // Đảm bảo thời gian hợp lệ
       if (ontime[i][0] > 23)
         ontime[i][0] = 23;
       if (ontime[i][1] > 59)
@@ -364,7 +361,6 @@ void checktime()
 
 void relay()
 {
-  // Nếu muốn tách riêng, có thể dùng relay() để hiển thị trạng thái
   for (int i = 0; i < 4; i++)
   {
     bool state = digitalRead(relaypin[i]);
@@ -374,47 +370,187 @@ void relay()
 
 void display()
 {
+  static unsigned long lastBlink = 0;
+  static bool blinkState = false;
+  const unsigned long blinkInterval = 400;
+
+  unsigned long nowMillis = millis();
+  if (nowMillis - lastBlink > blinkInterval)
+  {
+    lastBlink = nowMillis;
+    blinkState = !blinkState;
+  }
+
+  static int lastH = -1, lastM = -1, lastS = -1;
+  static MenuState lastMenu = MENU_NONE;
+
   DateTime now = rtc.now();
 
-  lcd.clear();
+  if (menuState != lastMenu)
+  {
+    lcd.clear();
+    lastMenu = menuState;
+  }
 
   if (menuState == MENU_NONE)
   {
-    // --- String căn giữa cho Chữ Time ở dòng 1
-    String timeStr = "TIME";
-    int colTime = (16 - timeStr.length()) / 2;
-    lcd.setCursor(colTime, 0);
-    lcd.print(timeStr);
+    if (now.hour() != lastH || now.minute() != lastM || now.second() != lastS)
+    {
+      lastH = now.hour();
+      lastM = now.minute();
+      lastS = now.second();
 
-    // --- String căn giữa cho giá trị thời gian ở dòng 2
-    char clockStr[9];
-    sprintf(clockStr, "%02d:%02d:%02d", now.hour(), now.minute(), now.second());
-    int colClock = (16 - strlen(clockStr)) / 2;
-    lcd.setCursor(colClock, 1);
-    lcd.print(clockStr);
+      // --- Dòng 1: chữ TIME ---
+      String timeStr = "TIME";
+      int colTime = (16 - timeStr.length()) / 2;
+      lcd.setCursor(colTime, 0);
+      lcd.print(timeStr);
+
+      // --- Dòng 2: giá trị giờ ---
+      char clockStr[9];
+      sprintf(clockStr, "%02d%s%02d%s%02d", now.hour(), blinkState ? ":" : " ", now.minute(), blinkState ? ":" : " ", now.second());
+      int colClock = (16 - strlen(clockStr)) / 2;
+      lcd.setCursor(colClock, 1);
+      lcd.print(clockStr);
+    }
   }
+
   else if (menuState == MENU_TIMER_EDIT)
   {
-    // --- Hiển thị Ton ---
+    // Khi vào menu lần đầu mới clear
+    if (menuState != lastMenu)
+      lcd.clear();
+
+    // --- In tĩnh ---
     lcd.setCursor(0, 0);
-    lcd.printf("Timer%d %02d:%02d:%02d", currentTimer + 1,
+    lcd.printf("T%d ON  %02d:%02d:%02d", currentTimer + 1,
                ontime[currentTimer][0], ontime[currentTimer][1], ontime[currentTimer][2]);
-    // --- Hiển thị Toff ---
+
     lcd.setCursor(0, 1);
-    lcd.printf("Timer%d %02d:%02d:%02d", currentTimer + 1,
+    lcd.printf("T%d OFF %02d:%02d:%02d", currentTimer + 1,
                offtime[currentTimer][0], offtime[currentTimer][1], offtime[currentTimer][2]);
 
-    // --- Tính vị trí highlight ---
+    // --- Nhấp nháy vị trí đang chỉnh ---
     int row = (editState <= 2) ? 0 : 1;
     int pos = editState % 3;
-    int startCol = 7;
-    if (row == 1)
-      startCol = 7;
+    int colStart = 7 + pos * 3;
 
-    int cursorCol = startCol + pos * 3;
+    if (blinkState)
+    {
+      lcd.setCursor(colStart, row);
+      lcd.print("  ");
+    }
+    else
+    {
+      int value = (row == 0) ? ontime[currentTimer][pos] : offtime[currentTimer][pos];
+      lcd.setCursor(colStart, row);
+      lcd.printf("%02d", value);
+    }
+  }
+}
 
-    // --- Highlight bằng custom char block (invert màu) ---
-    lcd.setCursor(cursorCol, row);
-    lcd.blink();
+void time_config()
+{
+  static int editPos = 0;
+  static unsigned long lastButtonTime = 0;
+  static unsigned long lastRefresh = 0;
+  const unsigned long debounce = 200;
+  const unsigned long refreshInterval = 900;
+  static bool blinkState = false;
+
+  static bool initialized = false;
+  static int setH, setM, setS;
+
+  unsigned long currentMillis = millis();
+
+  if (!initialized)
+  {
+    DateTime now = rtc.now();
+    setH = now.hour();
+    setM = now.minute();
+    setS = now.second();
+
+    lcd.clear();
+    // --- Dòng 1: chữ TIME ---
+    String labeltimeStr = "SET RTC TIME";
+    int colTime = (16 - labeltimeStr.length()) / 2;
+    lcd.setCursor(colTime, 0);
+    lcd.print(labeltimeStr);
+    lcd.noBlink();
+    initialized = true;
+  }
+
+  // --- Nút tăng ---
+  if (digitalRead(buttonpin[0]) == LOW && currentMillis - lastButtonTime > debounce)
+  {
+    if (editPos == 0)
+      setH = (setH + 1) % 24;
+    else if (editPos == 1)
+      setM = (setM + 1) % 60;
+    else
+      setS = (setS + 1) % 60;
+    lastButtonTime = currentMillis;
+    menupreviousMillis = millis();
+  }
+
+  // --- Nút giảm ---
+  if (digitalRead(buttonpin[2]) == LOW && currentMillis - lastButtonTime > debounce)
+  {
+    if (editPos == 0)
+      setH = (setH - 1 + 24) % 24;
+    else if (editPos == 1)
+      setM = (setM - 1 + 60) % 60;
+    else
+      setS = (setS - 1 + 60) % 60;
+    lastButtonTime = currentMillis;
+    menupreviousMillis = millis();
+  }
+
+  // --- Nút next ---
+  if (digitalRead(buttonpin[1]) == LOW && currentMillis - lastButtonTime > debounce)
+  {
+    editPos = (editPos + 1) % 3;
+    lastButtonTime = currentMillis;
+    menupreviousMillis = millis();
+  }
+
+  // --- Nút exit ---
+  if (digitalRead(buttonpin[3]) == LOW && currentMillis - lastButtonTime > debounce)
+  {
+    DateTime now = rtc.now();
+    rtc.adjust(DateTime(now.year(), now.month(), now.day(), setH, setM, setS));
+
+    lcd.clear();
+    lcd.setCursor(2, 0);
+    lcd.print("Time Updated!");
+    lcd.noBlink();
+    delay(800);
+
+    menuState = MENU_NONE;
+    initialized = false;
+    lcd.clear();
+    return;
+  }
+
+  // --- Cập nhật hiển thị theo chu kỳ ---
+  if (currentMillis - lastRefresh > refreshInterval)
+  {
+    lastRefresh = currentMillis;
+    blinkState = !blinkState;
+
+    char buf[17];
+    sprintf(buf, "%02d:%02d:%02d", setH, setM, setS);
+    lcd.setCursor(3, 1);
+
+    // Tạo nhấp nháy cho phần đang edit
+    String timeStr = buf;
+    if (blinkState)
+    {
+      int start = editPos * 3;
+      timeStr.setCharAt(start, ' ');
+      timeStr.setCharAt(start + 1, ' ');
+    }
+
+    lcd.print(timeStr);
   }
 }
