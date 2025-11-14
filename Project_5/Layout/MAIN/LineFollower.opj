@@ -1,0 +1,154 @@
+(ExpressProject "LineFollower"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[11/14/25]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\linefollower.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "allegro")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" ".\allegro\linefollower.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420"))
+  (Folder "Layout"
+    (File ".\allegro\autosave.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\autosave.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "0"))
+    (File ".\allegro\driver.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\driver.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "0"))
+    (File ".\allegro\full.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\full.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "0"))
+    (File ".\allegro\gw_lora.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\gw_lora.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "0"))
+    (File ".\allegro\main.brd"
+      (Type "Board File")
+      (OutputBoard ".\allegro\main.brd")
+      (NetListPath ".\allegro")
+      (ActiveBoard "0")))
+  (Folder "Outputs"
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (RES
+      (FullPartName "RES.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\RESISTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X6
+      (FullPartName "HEADER1X6.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X4
+      (FullPartName "HEADER1X4.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (HEADER1X3
+      (FullPartName "HEADER1X3.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\HEADER_CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (LM1086
+      (FullPartName "LM1086.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\OTHER_IC.OLB")
+      (DeviceIndex "0"))
+    (TB6612FNG
+      (FullPartName "TB6612FNG.Normal")
+      (LibraryName "D:\WORKING\CADENCE\SYMBOL\OTHER_IC.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "ad")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\linefollower.dsn")
+      (Path "Design Resources" ".\linefollower.dsn" "TOP")
+      (Path "Design Resources" ".\linefollower.dsn" "DRIVER")
+      (Path "Design Resources" ".\linefollower.dsn" "IR")
+      (Path "Design Resources" ".\linefollower.dsn" "MCU")
+      (Path "Design Resources" ".\linefollower.dsn" "POWER")
+      (Path "Design Resources" ".\linefollower.dsn" "SENSOR")
+      (Path "Design Resources" ".\linefollower.dsn" "SERVO")
+      (Path "Layout")
+      (Path "Outputs")
+      (Select "Design Resources" ".\linefollower.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 713"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 5 1674 24 783")
+        (Scroll "0 253")
+        (Zoom "132")
+        (Occurrence "/"))
+      (Path "D:\HTR\PROJECT_5\LAYOUT\MAIN\LINEFOLLOWER.DSN")
+      (Schematic "TOP")
+      (Page "TOP"))) >>>>>>> 476df232df45deb247864e08984255c89725d963
+  (HierarchyView)
+  (Doc
+    (Type "COrCapturePMDoc")
+    (Frame
+      (Placement "44 2 3 -1 -1 -8 -31 0 200 0 296"))
+    (Tab 0))
+  (Doc
+    (Type "COrSchematicDoc")
+    (Frame <<<<<<< HEAD
+      (Placement "44 0 1 -1 -1 -8 -31 52 1691 52 525")
+      (Scroll "90 164")
+      (Zoom "200")
+      (Occurrence "/DRIVER"))
+    (Path "C:\USERS\PC\DESKTOP\BK\HK251\PROJECT\PCB\MAIN\LINEFOLLOWER.DSN")
+     =======
+    (Placement "44 0 1 -1 -1 -8 -31 52 1356 52 387")
+    (Scroll "-65 21")
+    (Zoom "116")
+    (Occurrence "/"))
+  (Path "C:\USERS\LUANMATAU\DESKTOP\BK\HK251\PROJECT\PCB\MAIN\LINEFOLLOWER.DSN")
+  (Schematic "TOP")
+  (Page "TOP")
+  (ISPCBBASICLICENSE "false")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs"))

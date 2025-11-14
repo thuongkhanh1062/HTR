@@ -1,0 +1,1010 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.2.0 d001Oct-23-2025 at 16:55:42 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='LINEFOLLOWER';
+ POST_TIME='Nov 22 2016 17:05:28';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'POL_CAP_RAD_SIZE_C_10UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928739@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928739@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928739@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'NPOL_CAP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930255@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930255@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930255@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842589@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842589@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842589@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842605@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842605@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842605@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842621@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842621@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842621@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842881@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842881@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842881@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842897@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842897@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842897@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842913@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842913@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842913@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842929@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842929@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842929@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'POL_CAP_C2312_100UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15933811@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15933811@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15933811@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C19 'POL_CAP_C2312_100UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15930733@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15930733@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15930733@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'POL_CAP_C1206_100UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928755@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928755@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928755@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C20 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935410@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935410@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935410@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15930200@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15930200@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15930200@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15930216@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15930216@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15930216@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15930882@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15930882@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15930882@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935538@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935538@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935538@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935630@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935630@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935630@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C26 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935774@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935774@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935774@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C27 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935854@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935854@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935854@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C28 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935930@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935930@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935930@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C29 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935322@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935322@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935322@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928771@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928771@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928771@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C30 'POL_CAP_CASE_G_330UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15933500@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15933500@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15933500@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C31 'NPOL_CAP_C1206_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15933623@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15933623@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15933623@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C32 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15935777@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15935777@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15935777@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928787@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928787@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928787@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'NPOL_CAP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929377@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929377@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929377@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'NPOL_CAP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929413@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929413@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929413@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929905@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929905@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929905@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'NPOL_CAP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929921@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929921@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929921@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'NPOL_CAP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930087@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930087@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930087@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928683@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928683@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928683@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'DIODE_AC_DO_214AC_1N5819':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842493@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842493@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842493@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'DIODE_AC_DO_214AC_1N5819':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842573@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842573@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842573@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ IC1 'TB6612FNG_SSOP24_TB6612FNG':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS82@OTHER_IC.TB6612FNG.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins82@other_ic.\tb6612fng.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins82@other_ic.\tb6612fng.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'USB_MICRO_V3_USB_MICRO_FM_V3_US':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928989@HEADER_CONNECTOR.USB_MICRO_V3.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928989@header_connector.\usb_micro_v3.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928989@header_connector.\usb_micro_v3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'TYPE_C_0_TYPE-C-16P_TYPE C':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929667@ESP32_LORA.TYPE_C_0.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929667@esp32_lora.\type_c_0.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929667@esp32_lora.\type_c_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER1X10_SHDRV10W102P0_254_1X':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):INS15935610@HEADER_CONNECTOR.HEADER1X10.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ins15935610@header_connector.\header1x10.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ins15935610@header_connector.\header1x10.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'HEADER1X10_SHDRV10W102P0_254_1X':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):INS15936033@HEADER_CONNECTOR.HEADER1X10.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ins15936033@header_connector.\header1x10.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ins15936033@header_connector.\header1x10.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'HEADER1X4_HEADER1X4_HEADER1X4':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):SENSOR@LINEFOLLOWER.SENSOR(SCH_1):INS15936358@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):sensor@linefollower.sensor(sch_1):ins15936358@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_sensor@linefollower.sensor(sch_1):page1_ins15936358@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'HEADER1X3_HEADER1X3_HEADER1X3':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):SERVO@LINEFOLLOWER.SERVO(SCH_1):INS15936323@HEADER_CONNECTOR.HEADER1X3.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):servo@linefollower.servo(sch_1):ins15936323@header_connector.\header1x3.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_servo@linefollower.servo(sch_1):page1_ins15936323@header_connector.\header1x3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'HEADER1X6_HEADER1X6_HEADER1X6_R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):INS15938511@HEADER_CONNECTOR.HEADER1X6.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ins15938511@header_connector.\header1x6.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ins15938511@header_connector.\header1x6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J8 'HEADER1X6_HEADER1X6_HEADER1X6_L':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):INS15938535@HEADER_CONNECTOR.HEADER1X6.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ins15938535@header_connector.\header1x6.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ins15938535@header_connector.\header1x6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'IND_FERRITE_DR127_SMD_IND_33UH':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842449@INDUCTOR.IND_FERRITE.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842449@inductor.\ind_ferrite.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842449@inductor.\ind_ferrite.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15936582@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15936582@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15936582@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q2 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15936622@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15936622@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15936622@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_R0402_0':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929213@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929213@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929213@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930155@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930155@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930155@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930211@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930211@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930211@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_R0402_1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930227@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930227@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930227@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935282@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935282@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935282@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935834@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935834@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935834@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935458@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935458@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935458@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935342@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935342@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935342@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935734@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935734@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935734@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935498@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935498@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935498@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935794@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935794@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935794@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929229@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929229@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929229@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935362@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935362@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935362@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935302@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935302@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935302@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935518@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935518@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935518@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935478@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935478@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935478@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R24 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935610@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935610@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935610@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R25 'RES_R0603_220R':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935754@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935754@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935754@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R26 'RES_R0603_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935814@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935814@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935814@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929245@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929245@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929245@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_R0402_0':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929267@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929267@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929267@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15936566@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15936566@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15936566@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15936640@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15936640@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15936640@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_R0402_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930041@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930041@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930041@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_R0402_5.1K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930057@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930057@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930057@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_R0402_10K':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15930139@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15930139@resistor.\res.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15930139@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW_PUSHBUTTON_SPST_2P_BUTTON_SM':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929393@HEADER_CONNECTOR.SW_PUSHBUTTON_SPST_2P.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929393@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929393@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW2 'SW_PUSHBUTTON_SPST_2P_BUTTON_SM':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929437@HEADER_CONNECTOR.SW_PUSHBUTTON_SPST_2P.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929437@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929437@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T2 'TESTPOINT_TEST_POINT_PWR_5V':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842403@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842403@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842403@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T3 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842695@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842695@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842695@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T4 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842709@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842709@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842709@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T45 'TESTPOINT_TEST_POINT_ANT_TEST_P':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15932665@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15932665@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15932665@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T46 'TESTPOINT_TEST_POINT_ANT_TEST_P':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15932699@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15932699@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15932699@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T47 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15932552@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15932552@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15932552@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T48 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15932566@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15932566@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15932566@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T49 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15932751@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15932751@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15932751@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T5 'TESTPOINT_TESTPOINT_SIG_+3.3V':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842723@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842723@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842723@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T50 'TESTPOINT_TEST_POINT_PWR_GND':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15932765@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15932765@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15932765@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T6 'TESTPOINT_TEST_POINT_PWR_80_TES':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15933256@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15933256@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15933256@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T7 'TESTPOINT_TEST_POINT_ANT_TEST_P':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15931475@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15931475@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15931475@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T8 'TESTPOINT_TEST_POINT_ANT_TEST_P':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):DRIVER@LINEFOLLOWER.DRIVER(SCH_1):INS15931546@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):driver@linefollower.driver(sch_1):ins15931546@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_driver@linefollower.driver(sch_1):page1_ins15931546@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T9 'TESTPOINT_TEST_POINT_PWR_80_TES':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15933270@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15933270@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15933270@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U1 'ESP32_WROOM_32U_ESP32_WROOM_32U':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15928573@OTHER_IC.ESP32_WROOM_32U.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15928573@other_ic.\esp32_wroom_32u.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15928573@other_ic.\esp32_wroom_32u.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U10 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935430@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935430@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935430@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U11 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935706@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935706@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935706@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'CP2102_QFN28_0_QFN28_5X5_CP2102':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):ESP32@LINEFOLLOWER.MCU(SCH_1):INS15929597@ESP32_LORA.CP2102_QFN28_0.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):esp32@linefollower.mcu(sch_1):ins15929597@esp32_lora.\cp2102_qfn28_0.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_esp32@linefollower.mcu(sch_1):page1_ins15929597@esp32_lora.\cp2102_qfn28_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'LM2575_TO_TO_263_5_LM2596S-5.0':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15842469@OTHER_IC.LM2575_TO.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15842469@other_ic.\lm2575_to.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15842469@other_ic.\lm2575_to.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935650@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935650@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935650@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'LM1086_0_DPAK_LM1086':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):POWER@LINEFOLLOWER.POWER(SCH_1):INS15843535@LINEFOLLOWER.LM1086_0.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):power@linefollower.power(sch_1):ins15843535@linefollower.\lm1086_0.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_power@linefollower.power(sch_1):page1_ins15843535@linefollower.\lm1086_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935874@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935874@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935874@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935382@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935382@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935382@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935678@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935678@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935678@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U9 'TCRT5000_OPTO_TCRT5000_TCRT5000':;
+
+SECTION_NUMBER 1
+ '@LINEFOLLOWER.TOP(SCH_1):IR@LINEFOLLOWER.IR(SCH_1):INS15935902@OTHER_IC.TCRT5000.NORMAL(CHIPS)':
+ C_PATH='@linefollower.top(sch_1):ir@linefollower.ir(sch_1):ins15935902@other_ic.\tcrt5000.normal\(chips)',
+ P_PATH='@linefollower.top(sch_1):page1_ir@linefollower.ir(sch_1):page1_ins15935902@other_ic.\tcrt5000.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.
