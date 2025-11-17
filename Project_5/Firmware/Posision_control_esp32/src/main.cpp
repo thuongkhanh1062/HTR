@@ -1,7 +1,7 @@
 /*
 @Author:
 @date: 1711250600
-@version: V3.2
+@version: V3.3
    ESP32 motor control with:
    - Encoder, motor driver IN1/IN2 + PWM (ledc)
    - Speed PID (non-negative) and Position PID (bidirectional)
@@ -13,6 +13,7 @@
    Notes:
    - Chart.js v2 used for lightweight realtime chart
    - SPEED PID limited to 0..255 to avoid low-RPM sign flip by default
+   - New update oled screen. 
 */
 
 #include <Arduino.h>
@@ -25,8 +26,8 @@
 #include <Preferences.h>
 
 // ---------------- USER CONFIG ----------------
-const char *ssid = "WIFI";
-const char *password = "PASSWORD";
+const char *ssid = "NGUYEN SANG TRUOC";
+const char *password = "apdkp413271a1";
 
 // ---------------- IO ----------------
 #define ENC_A 19
@@ -73,12 +74,12 @@ bool running = false;
 
 // ---------------- PID (Speed) ----------------
 double speedInput = 0, speedOutput = 0, speedSetpoint = 0;
-double speedKp = 1.5, speedKi = 0.25, speedKd = 0.05;
+double speedKp = 0.35, speedKi = 0.02, speedKd = 0.05;
 PID pidSpeed(&speedInput, &speedOutput, &speedSetpoint, speedKp, speedKi, speedKd, DIRECT);
 
 // ---------------- PID (Position) ----------------
 double posInput = 0, posOutput = 0, posSetpoint = 0;
-double posKp = 150.0, posKi = 0.0, posKd = 20.0;
+double posKp = 39.0, posKi = 0.06, posKd = 1.1;
 PID pidPos(&posInput, &posOutput, &posSetpoint, posKp, posKi, posKd, DIRECT);
 
 // ---------------- Control params ----------------
@@ -189,24 +190,31 @@ void setMotorPWM(int pwmSigned)
 }
 void stopMotor() { setMotorPWM(0); }
 
-// ---------------- Speed measurement ----------------
+// ---------------- Speed measurement with low-pass filter ----------------
 void updateSpeedMeasurement()
 {
   unsigned long now = millis();
   unsigned long dt = now - lastSpeedCalcMillis;
-  if (dt < 20)
+  if (dt < 20) // tính 50Hz trở lại, tránh update quá nhanh
     return;
+
   long cnt = encoderCount;
   long delta = cnt - lastEncoderCountForSpeed;
   lastEncoderCountForSpeed = cnt;
   lastSpeedCalcMillis = now;
+
+  // tính RPM và số vòng
   double revsOutput = (double)delta / COUNTS_PER_OUTPUT_REV;
   double minutes = (double)dt / 60000.0;
   double rpm = 0.0;
   if (minutes > 0.0)
     rpm = revsOutput / minutes;
-  currentRPM = rpm;
-  currentRounds = (double)cnt / COUNTS_PER_OUTPUT_REV;
+  double rounds = (double)cnt / COUNTS_PER_OUTPUT_REV;
+
+  // ---------------- Low-pass filter ----------------
+  const float alpha = 0.3; // 0..1, nhỏ hơn -> mượt hơn
+  currentRPM = alpha * rpm + (1 - alpha) * currentRPM;
+  currentRounds = alpha * rounds + (1 - alpha) * currentRounds;
 }
 
 // ---------------- OLED drawing ----------------
@@ -219,42 +227,61 @@ void drawOLED()
   {
     // Main page
     u8g2.setFont(u8g2_font_6x12_tr);
-    u8g2.drawStr(0, 10, mode == MODE_SPEED ? "MODE: SPEED PID" : "MODE: ROUND PID");
+    u8g2.drawStr(0, 10, mode == MODE_SPEED ? "SPEED PID" : "ROUND PID");
     if (running)
-      u8g2.drawStr(90, 10, "RUN");
+      u8g2.drawStr(100, 10, "RUN");
     else
-      u8g2.drawStr(90, 10, "STOP");
+      u8g2.drawStr(100, 10, "STOP");
 
     u8g2.setFont(u8g2_font_6x10_tr);
     if (mode == MODE_SPEED)
     {
-      snprintf(buf, sizeof(buf), "RPM: %6.1f", currentRPM);
-      u8g2.drawStr(0, 28, buf);
-      snprintf(buf, sizeof(buf), "Tar: %6.1f RPM", targetRPM);
-      u8g2.drawStr(0, 40, buf);
-      snprintf(buf, sizeof(buf), "PWM: %4d", (int)round(speedOutput));
-      u8g2.drawStr(0, 52, buf);
+      snprintf(buf, sizeof(buf), "%.0f", currentRPM);
+      u8g2.setFont(u8g2_font_fur30_tf);
+      u8g2.drawStr(0, 47, buf);
+
+      snprintf(buf, sizeof(buf), "%3.0fRPM", targetRPM);
+      u8g2.setFont(u8g2_font_9x15_me);
+      int16_t w1 = u8g2.getStrWidth(buf);
+      u8g2.drawStr(128 - w1, 27, buf);
+
+      snprintf(buf, sizeof(buf), "%4dPWM", (int)round(speedOutput));
+      int16_t w2 = u8g2.getStrWidth(buf);
+      u8g2.drawStr(128 - w2, 47, buf);
     }
     else
     {
-      snprintf(buf, sizeof(buf), "Rds: %6.3f", currentRounds);
-      u8g2.drawStr(0, 28, buf);
-      snprintf(buf, sizeof(buf), "Tar: %6.3f rd", targetRounds);
-      u8g2.drawStr(0, 40, buf);
-      snprintf(buf, sizeof(buf), "PWM: %4d", (int)round(posOutput));
-      u8g2.drawStr(0, 52, buf);
+      snprintf(buf, sizeof(buf), "%.1f", currentRounds);
+      u8g2.setFont(u8g2_font_fur30_tf);
+      u8g2.drawStr(0, 47, buf);
+
+      snprintf(buf, sizeof(buf), "%3.1frd", targetRounds);
+      u8g2.setFont(u8g2_font_9x15_me);
+      int16_t w3 = u8g2.getStrWidth(buf);
+      u8g2.drawStr(128 - w3, 27, buf);
+
+      snprintf(buf, sizeof(buf), "%4d", (int)round(posOutput));
+      int16_t w4 = u8g2.getStrWidth(buf);
+      u8g2.drawStr(128 - w4, 47, buf);
     }
   }
   else
   {
-    // PID page
-    u8g2.setFont(u8g2_font_6x10_tr);
-    u8g2.drawStr(0, 10, "SPD PID:");
-    snprintf(buf, sizeof(buf), "Kp:%5.2f I:%5.2f D:%5.2f", speedKp, speedKi, speedKd);
-    u8g2.drawStr(0, 24, buf);
-    u8g2.drawStr(0, 36, "POS PID:");
-    snprintf(buf, sizeof(buf), "Kp:%6.1f I:%5.2f D:%5.1f", posKp, posKi, posKd);
-    u8g2.drawStr(0, 50, buf);
+    // --- SPEED PID ---
+    u8g2.setFont(u8g2_font_6x12_me);
+    u8g2.drawStr(0, 10, "PID SPEED PARA");
+    snprintf(buf, sizeof(buf), "%5.2f %5.2f %5.2f", speedKp, speedKi, speedKd);
+    u8g2.setFont(u8g2_font_7x14_mf);
+    int16_t xSpeed = (128 - u8g2.getStrWidth(buf)) / 2;
+    u8g2.drawStr(xSpeed, 26, buf);
+
+    // --- ROUND PID ---
+    u8g2.setFont(u8g2_font_6x12_me);
+    u8g2.drawStr(0, 44, "PID ROUND PARA");
+    snprintf(buf, sizeof(buf), "%6.1f %5.2f %5.1f", posKp, posKi, posKd);
+    u8g2.setFont(u8g2_font_7x14_mf);
+    int16_t xRound = (128 - u8g2.getStrWidth(buf)) / 2;
+    u8g2.drawStr(xRound, 60, buf);
   }
 
   u8g2.sendBuffer();
