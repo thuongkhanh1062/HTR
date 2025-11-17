@@ -1,19 +1,19 @@
 /*
-@Author:
-@date: 1711250600
-@version: V3.3
-   ESP32 motor control with:
-   - Encoder, motor driver IN1/IN2 + PWM (ledc)
-   - Speed PID (non-negative) and Position PID (bidirectional)
-   - Web server (port 80) serves modern UI using Chart.js v2 (CDN)
-   - WebSocket server (port 81) pushes realtime JSON (every 150 ms)
-   - OLED shows status and PID page (toggle by holding ENTER 2s)
-   - Preferences persistence
-   - OTA
-   Notes:
-   - Chart.js v2 used for lightweight realtime chart
-   - SPEED PID limited to 0..255 to avoid low-RPM sign flip by default
-   - New update oled screen. 
+@Author: CHITOAN (modified)
+@date: 171125 -> updated
+@version: V4.0
+
+Features added in V4.0:
+ - Send HALL sensor value over WebSocket (field "hall")
+ - Chart.js shows 3rd dataset for Hall value
+ - New modes: MODE_POSITION (absolute position control) and MODE_HOMING (perform homing using Hall sensor)
+ - Homing routine: motor moves slowly until Hall triggered, encoder reset -> switch to POSITION mode
+ - API toggles cycle through modes: SPEED -> ROUND -> POSITION -> HOMING
+ - Hall read uses analogRead with HALL_THRESHOLD to detect trigger
+
+Notes:
+ - HALL_S pin is analog on ESP32; threshold may need tuning per your sensor.
+ - You can change HALL_THRESHOLD, HOMING_PWM, and HOMING_DIRECTION if needed.
 */
 
 #include <Arduino.h>
@@ -37,12 +37,12 @@ const char *password = "apdkp413271a1";
 #define IN2_PIN 5
 #define PWM_PIN 13
 
-#define BUTTON_UP 25    // increase keuy
+#define BUTTON_UP 25    // increase key
 #define BUTTON_DOWN 33  // decrease key
 #define BUTTON_ENTER 32 // run/stop, long-press to change screen
 #define BUTTON_MODE 35  // change mode
 
-// #define LIMIT_S 34 // optional
+#define HALL_S 34
 
 // ---------------- Display ----------------
 U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
@@ -52,15 +52,17 @@ volatile long encoderCount = 0;
 volatile uint8_t lastAB = 0;
 volatile unsigned long lastEncoderMillis = 0;
 
-const int ENCODER_PPR = 44;                                   // pulses per motor rev x4 counting
-const float GEAR_RATIO = 45.0;                                // 45 motor rev = 1 output rev
-const float COUNTS_PER_OUTPUT_REV = ENCODER_PPR * GEAR_RATIO; // 1980
+const int ENCODER_PPR = 44;
+const float GEAR_RATIO = 45.0;
+const float COUNTS_PER_OUTPUT_REV = ENCODER_PPR * GEAR_RATIO;
 
 // ---------------- Modes ----------------
 enum Mode
 {
   MODE_SPEED,
-  MODE_ROUND
+  MODE_ROUND,
+  MODE_POSITION,
+  MODE_HOMING
 };
 Mode mode = MODE_SPEED;
 
@@ -100,6 +102,11 @@ unsigned long enterPressStart = 0;
 bool enterHeld = false;
 bool showPidPage = false;
 
+// ---------------- Hall sensor ----------------
+const int HALL_THRESHOLD = 3600;
+const int HOMING_PWM = 80;
+const int HOMING_DIRECTION = -1;
+
 // ---------------- Web server & WebSocket ----------------
 WebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
@@ -121,6 +128,7 @@ void handleAPI_Load();
 void handleAPI_StatusJSON();
 void handleToggleMode();
 void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length);
+bool hallTriggered();
 
 // ---------------- Encoder ISR ----------------
 IRAM_ATTR void encoderISR_A()
@@ -188,6 +196,8 @@ void setMotorPWM(int pwmSigned)
     digitalWrite(IN2_PIN, LOW);
   }
 }
+
+// ---------------- STOP motor --------------------------------------------
 void stopMotor() { setMotorPWM(0); }
 
 // ---------------- Speed measurement with low-pass filter ----------------
@@ -195,7 +205,7 @@ void updateSpeedMeasurement()
 {
   unsigned long now = millis();
   unsigned long dt = now - lastSpeedCalcMillis;
-  if (dt < 20) // tính 50Hz trở lại, tránh update quá nhanh
+  if (dt < 20)
     return;
 
   long cnt = encoderCount;
@@ -203,7 +213,6 @@ void updateSpeedMeasurement()
   lastEncoderCountForSpeed = cnt;
   lastSpeedCalcMillis = now;
 
-  // tính RPM và số vòng
   double revsOutput = (double)delta / COUNTS_PER_OUTPUT_REV;
   double minutes = (double)dt / 60000.0;
   double rpm = 0.0;
@@ -211,10 +220,16 @@ void updateSpeedMeasurement()
     rpm = revsOutput / minutes;
   double rounds = (double)cnt / COUNTS_PER_OUTPUT_REV;
 
-  // ---------------- Low-pass filter ----------------
-  const float alpha = 0.3; // 0..1, nhỏ hơn -> mượt hơn
+  const float alpha = 0.3;
   currentRPM = alpha * rpm + (1 - alpha) * currentRPM;
   currentRounds = alpha * rounds + (1 - alpha) * currentRounds;
+}
+
+// ---------------- Hall helper ----------------
+bool hallTriggered()
+{
+  int val = analogRead(HALL_S); // 0..4095 on default ESP32 ADC
+  return val >= HALL_THRESHOLD;
 }
 
 // ---------------- OLED drawing ----------------
@@ -227,7 +242,8 @@ void drawOLED()
   {
     // Main page
     u8g2.setFont(u8g2_font_6x12_tr);
-    u8g2.drawStr(0, 10, mode == MODE_SPEED ? "SPEED PID" : "ROUND PID");
+    const char *modeStr = (mode == MODE_SPEED) ? "SPEED" : (mode == MODE_ROUND) ? "ROUND" : (mode == MODE_POSITION) ? "POSITION" : "HOMING";
+    u8g2.drawStr(0, 10, modeStr);
     if (running)
       u8g2.drawStr(100, 10, "RUN");
     else
@@ -248,10 +264,15 @@ void drawOLED()
       snprintf(buf, sizeof(buf), "%4dPWM", (int)round(speedOutput));
       int16_t w2 = u8g2.getStrWidth(buf);
       u8g2.drawStr(128 - w2, 47, buf);
+
+      snprintf(buf, sizeof(buf), "%5.2f %5.2f %5.2f", speedKp, speedKi, speedKd);
+      u8g2.setFont(u8g2_font_6x12_me);
+      int16_t xSpeed = (128 - u8g2.getStrWidth(buf)) / 2;
+      u8g2.drawStr(xSpeed, 60, buf);
     }
     else
     {
-      snprintf(buf, sizeof(buf), "%.1f", currentRounds);
+      snprintf(buf, sizeof(buf), "%.3f", currentRounds);
       u8g2.setFont(u8g2_font_fur30_tf);
       u8g2.drawStr(0, 47, buf);
 
@@ -263,11 +284,16 @@ void drawOLED()
       snprintf(buf, sizeof(buf), "%4d", (int)round(posOutput));
       int16_t w4 = u8g2.getStrWidth(buf);
       u8g2.drawStr(128 - w4, 47, buf);
+
+      snprintf(buf, sizeof(buf), "%5.2f %5.2f %5.2f", posKp, posKi, posKd);
+      u8g2.setFont(u8g2_font_6x12_me);
+      int16_t xSpeed = (128 - u8g2.getStrWidth(buf)) / 2;
+      u8g2.drawStr(xSpeed, 60, buf);
     }
   }
   else
   {
-    // --- SPEED PID ---
+    // PID PAGE
     u8g2.setFont(u8g2_font_6x12_me);
     u8g2.drawStr(0, 10, "PID SPEED PARA");
     snprintf(buf, sizeof(buf), "%5.2f %5.2f %5.2f", speedKp, speedKi, speedKd);
@@ -275,7 +301,6 @@ void drawOLED()
     int16_t xSpeed = (128 - u8g2.getStrWidth(buf)) / 2;
     u8g2.drawStr(xSpeed, 26, buf);
 
-    // --- ROUND PID ---
     u8g2.setFont(u8g2_font_6x12_me);
     u8g2.drawStr(0, 44, "PID ROUND PARA");
     snprintf(buf, sizeof(buf), "%6.1f %5.2f %5.1f", posKp, posKi, posKd);
@@ -293,254 +318,233 @@ String pageHtml()
   String s = R"rawliteral(
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ESP32 Motor - Realtime Chart</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#071028;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--target:#facc15;--current:#22d3ee;--alt:#fb923c;}
-body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#071025,#03101b);color:#e6eef8;}
-.container{max-width:1000px;margin:16px auto;padding:16px;}
-.header{display:flex;align-items:center;gap:12px;}
-.logo{width:48px;height:48px;background:linear-gradient(135deg,#2563eb,#06b6d4);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:white;}
-.title{font-size:18px;font-weight:700;}
-.grid{display:grid;grid-template-columns:1fr 360px;gap:14px;margin-top:14px;}
-.card{background:var(--card);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
-.controls{display:flex;flex-direction:column;gap:8px;}
-.controls input{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;}
-.row{display:flex;gap:8px;align-items:center;}
-.small{padding:8px;border-radius:8px;border:0;background:var(--accent);color:#042027;font-weight:700;cursor:pointer;}
-.muted{color:var(--muted);font-size:13px;}
-.chart-wrap{height:220px;padding:8px;background:linear-gradient(0deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border-radius:8px;}
-.legend{display:flex;gap:8px;margin-top:8px;align-items:center;}
-.legend .item{display:flex;gap:6px;align-items:center;}
-.dot{width:12px;height:8px;border-radius:3px;}
-.footer{margin-top:12px;color:var(--muted);font-size:12px;}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ESP32 Motor - Realtime Chart (Hall)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg:#071028; --card:#0b1220; --accent:#06b6d4; --muted:#94a3b8; }
+        body{margin:0;font-family:Inter, Arial, Helvetica, sans-serif;background:linear-gradient(180deg,#071025,#03101b);color:#e6eef8}
+        .container{max-width:1000px;margin:16px auto;padding:16px}
+        .header{display:flex;align-items:center;gap:12px}
+        .logo{width:48px;height:48px;background:linear-gradient(135deg,#2563eb,#06b6d4);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:white}
+        .title{font-size:18px;font-weight:700}
+        .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+        .card{background:var(--card);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+        .chart-wrap{height:220px;padding:8px;background:linear-gradient(0deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));border-radius:8px}
+        .small{padding:8px;border-radius:8px;border:0;background:var(--accent);color:#042027;font-weight:700;cursor:pointer}
+        .muted{color:var(--muted);font-size:13px}
+        @media(max-width:768px){.grid{grid-template-columns:1fr}}
+    </style>
 </head>
+
 <body>
-<div class="container">
-  <div class="header">
-    <div class="logo">M</div>
-    <div>
-      <div class="title">ESP32 Motor — Realtime PID Tuner & Chart</div>
-      <div class="muted">Realtime via WebSocket • Chart.js v2</div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">M</div>
+            <div>
+                <div class="title">ESP32 Motor — Realtime PID Tuner & Chart (with Hall)</div>
+                <div class="muted">Made by CHITOAN (modified)</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div>
+                        <div id="modeTitle" style="font-weight:700">Mode: SPEED</div>
+                        <div id="ipInfo" class="muted">Connecting...</div>
+                    </div>
+                    <div style="text-align:right">
+                        <div id="runBadge" style="padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)">STOP</div>
+                        <div style="height:6px"></div>
+                        <div id="rpmBadge" style="padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)">RPM: 0.0</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px" class="chart-wrap">
+                    <canvas id="chartCanvas"></canvas>
+                    <div class="legend" style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+                        <div style="display:flex;gap:6px;align-items:center;"><div class="dot" style="width:12px;height:8px;border-radius:3px;background:#facc15"></div><div class="muted">Target</div></div>
+                        <div style="display:flex;gap:6px;align-items:center;"><div class="dot" style="width:12px;height:8px;border-radius:3px;background:#22d3ee"></div><div class="muted">Current</div></div>
+                        <div style="display:flex;gap:6px;align-items:center;"><div class="dot" style="width:12px;height:8px;border-radius:3px;background:#10b981"></div><div class="muted">Hall</div></div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px" class="controls">
+                    <div style="margin-top:12px" class="muted">Controls </div>
+                    <div style="display:flex;gap:8px;">
+                        <button class="small" onclick="toggleRun()">Start/Stop</button>
+                        <button class="small" onclick="toggleMode()">Cycle Mode</button>
+                        <button class="small" onclick="savePrefs()">Save</button>
+                        <button class="small" onclick="loadPrefs()">Load</button>
+                    </div>
+
+                    <div style="display:flex;gap:8px;margin-top:8px;">
+                        <input id="targetRPM" type="number" step="1" placeholder="Target RPM">
+                        <button class="small" onclick="setTarget()">Set RPM</button>
+                    </div>
+
+                    <div style="display:flex;gap:8px;margin-top:8px;">
+                        <input id="targetR" type="number" step="0.001" placeholder="Target Rounds/Position">
+                        <button class="small" onclick="setTargetRounds()">Set Rounds</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div style="font-weight:700">PID Tuner</div>
+                <div style="margin-top:8px" class="muted">Speed PID (SPEED)</div>
+                <div style="display:flex;gap:8px;margin-top:8px;">
+                    <input id="kp" type="number" step="0.01" placeholder="Kp">
+                    <input id="ki" type="number" step="0.01" placeholder="Ki">
+                    <input id="kd" type="number" step="0.01" placeholder="Kd">
+                </div>
+                <div style="display:flex;gap:8px;margin-top:8px;"><button class="small" onclick="setPID()">Update Speed PID</button></div>
+
+                <div style="margin-top:12px" class="muted">Position PID (ROUND/POSITION)</div>
+                <div style="display:flex;gap:8px;margin-top:8px;">
+                    <input id="pkp" type="number" step="0.1" placeholder="P">
+                    <input id="pki" type="number" step="0.01" placeholder="I">
+                    <input id="pkd" type="number" step="0.1" placeholder="D">
+                </div>
+                <div style="display:flex;gap:8px;margin-top:8px;"><button class="small" onclick="setPosPID()">Update Position PID</button></div>
+
+                <div style="margin-top:14px" class="muted">Hall / Homing</div>
+                <div style="margin-top:8px">Hall value will be plotted and homing can be started by cycling modes until HOMING.</div>
+            </div>
+        </div>
+        <div style="margin-top:12px;color:#94a3b8;font-size:12px">Contact CHITOAN - Firmware version: V4.0</div>
     </div>
-  </div>
 
-  <div class="grid">
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div>
-          <div id="modeTitle" style="font-weight:700">Mode: SPEED</div>
-          <div id="ipInfo" class="muted">Connecting...</div>
-        </div>
-        <div style="text-align:right">
-          <div id="runBadge" style="padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)">STOP</div>
-          <div style="height:6px"></div>
-          <div id="rpmBadge" style="padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03)">RPM: 0.0</div>
-        </div>
-      </div>
+    <!-- Chart.js v2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
-      <div style="margin-top:12px" class="chart-wrap">
-        <canvas id="chartCanvas"></canvas>
-        <div class="legend">
-          <div class="item"><div class="dot" id="dotTarget" style="background:#facc15"></div><div class="muted">Target</div></div>
-          <div class="item"><div class="dot" id="dotCurrent" style="background:#22d3ee"></div><div class="muted">Current</div></div>
-        </div>
-      </div>
+    <script>
+        const MAX_POINTS = 150;
+        let ws;
+        let datasetTarget = [];
+        let datasetCurrent = [];
+        let hallDataset = [];
+        let labels = [];
+        let chart;
+        let currentMode = "SPEED";
 
-      <div style="margin-top:12px" class="controls">
-        <div class="row">
-          <button class="small" onclick="toggleRun()">Start/Stop</button>
-          <button class="small" onclick="toggleMode()">Toggle Mode</button>
-          <button class="small" onclick="savePrefs()">Save</button>
-          <button class="small" onclick="loadPrefs()">Load</button>
-        </div>
+        function initChart() {
+            const ctx = document.getElementById('chartCanvas').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Target',
+                        data: datasetTarget,
+                        borderColor: '#facc15',
+                        backgroundColor: 'rgba(250,204,21,0.07)',
+                        borderDash: [6, 4],
+                        fill: false,
+                        lineTension: 0
+                    }, {
+                        label: 'Current',
+                        data: datasetCurrent,
+                        borderColor: '#22d3ee',
+                        backgroundColor: 'rgba(34,211,238,0.06)',
+                        fill: false,
+                        lineTension: 0
+                    }, {
+                        label: 'Hall',
+                        data: hallDataset,
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16,185,129,0.06)',
+                        fill: false,
+                        lineTension: 0
+                    }]
+                },
+                options: {
+                    animation: false,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        xAxes: [{ display: false }],
+                        yAxes: [{ ticks: { beginAtZero: true } }]
+                    },
+                    elements: { point: { radius: 0 } }
+                }
+            });
+        }
 
-        <div class="row">
-          <input id="targetRPM" type="number" step="1" placeholder="Target RPM">
-          <button class="small" onclick="setTarget()">Set RPM</button>
-        </div>
+        function pushPoint(target, current, hall) {
+            const t = new Date().toLocaleTimeString().split(' ')[0];
+            labels.push(t);
+            datasetTarget.push(target);
+            datasetCurrent.push(current);
+            hallDataset.push(hall);
+            if (labels.length > MAX_POINTS) {
+                labels.shift(); datasetTarget.shift(); datasetCurrent.shift(); hallDataset.shift();
+            }
+            chart.update();
+        }
 
-        <div class="row">
-          <input id="targetR" type="number" step="0.1" placeholder="Target Rounds">
-          <button class="small" onclick="setTargetRounds()">Set Rounds</button>
-        </div>
-      </div>
-    </div>
+        function connectWS() {
+            const ip = location.hostname;
+            const url = "ws://" + ip + ":81/";
+            ws = new WebSocket(url);
+            ws.onopen = () => { console.log("WS open", url); document.getElementById('ipInfo').textContent = location.hostname; };
+            ws.onmessage = (evt) => {
+                try {
+                    const j = JSON.parse(evt.data);
+                    document.getElementById('modeTitle').textContent = 'Mode: ' + j.mode;
+                    currentMode = j.mode;
+                    document.getElementById('runBadge').textContent = j.running ? 'RUN' : 'STOP';
+                    document.getElementById('rpmBadge').textContent = (j.mode === 'SPEED' ? 'RPM: ' + (j.currentRPM||0).toFixed(1) : 'RDS: ' + (j.currentRounds||0).toFixed(3));
 
-    <div class="card">
-      <div style="font-weight:700">PID Tuner</div>
-      <div style="margin-top:8px" class="muted">Speed PID (SPEED)</div>
-      <div style="display:flex;gap:8px;margin-top:6px">
-        <input id="kp" type="number" step="0.01" placeholder="Kp">
-        <input id="ki" type="number" step="0.01" placeholder="Ki">
-        <input id="kd" type="number" step="0.01" placeholder="Kd">
-      </div>
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <button class="small" onclick="setPID()">Update Speed PID</button>
-      </div>
+                    if (!document.getElementById('kp').value) document.getElementById('kp').value = j.kp;
+                    if (!document.getElementById('ki').value) document.getElementById('ki').value = j.ki;
+                    if (!document.getElementById('kd').value) document.getElementById('kd').value = j.kd;
+                    if (!document.getElementById('pkp').value) document.getElementById('pkp').value = j.pos_kp;
+                    if (!document.getElementById('pki').value) document.getElementById('pki').value = j.pos_ki;
+                    if (!document.getElementById('pkd').value) document.getElementById('pkd').value = j.pos_kd;
+                    if (!document.getElementById('targetRPM').value) document.getElementById('targetRPM').value = j.targetRPM;
+                    if (!document.getElementById('targetR').value) document.getElementById('targetR').value = j.targetRounds;
 
-      <div style="margin-top:12px" class="muted">Position PID (ROUND)</div>
-      <div style="display:flex;gap:8px;margin-top:6px">
-        <input id="pkp" type="number" step="0.1" placeholder="P">
-        <input id="pki" type="number" step="0.01" placeholder="I">
-        <input id="pkd" type="number" step="0.1" placeholder="D">
-      </div>
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <button class="small" onclick="setPosPID()">Update Position PID</button>
-      </div>
+                    // choose plotted values depending on mode
+                    if (j.mode === 'SPEED') {
+                        pushPoint(parseFloat(j.targetRPM), parseFloat(j.currentRPM), parseFloat(j.hall||0));
+                        chart.data.datasets[0].borderColor = '#facc15';
+                        chart.data.datasets[1].borderColor = '#22d3ee';
+                        chart.data.datasets[2].borderColor = '#10b981';
+                    } else {
+                        pushPoint(parseFloat(j.targetRounds), parseFloat(j.currentRounds), parseFloat(j.hall||0));
+                        chart.data.datasets[0].borderColor = '#facc15';
+                        chart.data.datasets[1].borderColor = '#fb923c';
+                        chart.data.datasets[2].borderColor = '#10b981';
+                    }
+                } catch (e) { console.warn('ws parse err', e); }
+            };
+            ws.onclose = () => { console.log("WS closed, reconnect in 1s"); setTimeout(connectWS, 1000); };
+        }
+        window.onload = function () {
+            const d1 = document.createElement('div'); d1.style.display = 'none'; d1.id = 'curRPM'; document.body.appendChild(d1);
+            const d2 = document.createElement('div'); d2.style.display = 'none'; d2.id = 'curRounds'; document.body.appendChild(d2);
+            const d3 = document.createElement('div'); d3.style.display = 'none'; d3.id = 'curPWM'; document.body.appendChild(d3);
+            initChart();
+            connectWS();
+        };
 
-      <div class="footer">JSON: <code>/api/status</code> • WebSocket port 81</div>
-    </div>
-  </div>
-</div>
-
-<!-- Chart.js v2 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-
-<script>
-const MAX_POINTS = 150;
-let ws;
-let datasetTarget = [];
-let datasetCurrent = [];
-let labels = [];
-let chart;
-let currentMode = "SPEED";
-
-function initChart() {
-  const ctx = document.getElementById('chartCanvas').getContext('2d');
-  chart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [{
-        label: 'Target',
-        data: datasetTarget,
-        borderColor: '#facc15',
-        backgroundColor: 'rgba(250,204,21,0.07)',
-        borderDash: [6,4],
-        fill:false,
-        lineTension:0
-      },{
-        label: 'Current',
-        data: datasetCurrent,
-        borderColor: '#22d3ee',
-        backgroundColor: 'rgba(34,211,238,0.06)',
-        fill:false,
-        lineTension:0
-      }]
-    },
-    options: {
-      animation:false,
-      responsive:true,
-      maintainAspectRatio:false,
-      scales: {
-        xAxes:[{display:false}],
-        yAxes:[{ticks:{beginAtZero:true}}]
-      },
-      elements:{point:{radius:0}}
-    }
-  });
-}
-
-function pushPoint(target, current) {
-  const t = new Date().toLocaleTimeString().split(' ')[0];
-  labels.push(t);
-  datasetTarget.push(target);
-  datasetCurrent.push(current);
-  if (labels.length > MAX_POINTS) {
-    labels.shift();
-    datasetTarget.shift();
-    datasetCurrent.shift();
-  }
-  chart.update();
-}
-
-function connectWS() {
-  const ip = location.hostname;
-  const url = "ws://" + ip + ":81/";
-  ws = new WebSocket(url);
-  ws.onopen = () => {
-    console.log("WS open", url);
-    document.getElementById('ipInfo').textContent = location.hostname;
-  };
-  ws.onmessage = (evt) => {
-    try {
-      const j = JSON.parse(evt.data);
-      // update UI elements
-      document.getElementById('curRPM').textContent = j.currentRPM ? j.currentRPM.toFixed(1) : '0.0';
-      document.getElementById('curRounds').textContent = j.currentRounds ? j.currentRounds.toFixed(3) : '0.000';
-      document.getElementById('curPWM').textContent = j.pwm | 0;
-      document.getElementById('modeTitle').textContent = 'Mode: ' + j.mode;
-      currentMode = j.mode;
-      document.getElementById('runBadge').textContent = j.running ? 'RUN' : 'STOP';
-      document.getElementById('rpmBadge').textContent = (j.mode === 'SPEED' ? 'RPM: ' + j.currentRPM.toFixed(1) : 'RDS: ' + j.currentRounds.toFixed(3));
-      // fill pid inputs if empty
-      if (!document.getElementById('kp').value) document.getElementById('kp').value = j.kp;
-      if (!document.getElementById('ki').value) document.getElementById('ki').value = j.ki;
-      if (!document.getElementById('kd').value) document.getElementById('kd').value = j.kd;
-      if (!document.getElementById('pkp').value) document.getElementById('pkp').value = j.pos_kp;
-      if (!document.getElementById('pki').value) document.getElementById('pki').value = j.pos_ki;
-      if (!document.getElementById('pkd').value) document.getElementById('pkd').value = j.pos_kd;
-      if (!document.getElementById('targetRPM').value) document.getElementById('targetRPM').value = j.targetRPM;
-      if (!document.getElementById('targetR').value) document.getElementById('targetR').value = j.targetRounds;
-
-      // choose plotted values depending on mode
-      if (j.mode === 'SPEED') {
-        // target RPM vs current RPM
-        pushPoint(parseFloat(j.targetRPM), parseFloat(j.currentRPM));
-        // color adjustments
-        chart.data.datasets[0].borderColor = '#facc15';
-        chart.data.datasets[1].borderColor = '#22d3ee';
-      } else {
-        // target rounds vs current rounds
-        pushPoint(parseFloat(j.targetRounds), parseFloat(j.currentRounds));
-        chart.data.datasets[0].borderColor = '#facc15';
-        chart.data.datasets[1].borderColor = '#fb923c';
-      }
-    } catch(e) { console.warn('ws parse err', e); }
-  };
-  ws.onclose = () => { console.log("WS closed, reconnect in 1s"); setTimeout(connectWS,1000); };
-}
-window.onload = function(){
-  // create invisible placeholders for curRPM/curRounds/curPWM to avoid missing elements in DOM
-  const d1 = document.createElement('div'); d1.style.display='none'; d1.id='curRPM'; document.body.appendChild(d1);
-  const d2 = document.createElement('div'); d2.style.display='none'; d2.id='curRounds'; document.body.appendChild(d2);
-  const d3 = document.createElement('div'); d3.style.display='none'; d3.id='curPWM'; document.body.appendChild(d3);
-  initChart();
-  connectWS();
-};
-
-// API functions
-function setPID(){
-  const kp = document.getElementById('kp').value;
-  const ki = document.getElementById('ki').value;
-  const kd = document.getElementById('kd').value;
-  fetch(`/api/setpid?kp=${encodeURIComponent(kp)}&ki=${encodeURIComponent(ki)}&kd=${encodeURIComponent(kd)}`);
-}
-function setPosPID(){
-  const pkp = document.getElementById('pkp').value;
-  const pki = document.getElementById('pki').value;
-  const pkd = document.getElementById('pkd').value;
-  fetch(`/api/setpospid?pkp=${encodeURIComponent(pkp)}&pki=${encodeURIComponent(pki)}&pkd=${encodeURIComponent(pkd)}`);
-}
-function setTarget(){
-  const t = document.getElementById('targetRPM').value;
-  fetch(`/api/settarget?t=${encodeURIComponent(t)}`);
-}
-function setTargetRounds(){
-  const r = document.getElementById('targetR').value;
-  fetch(`/api/settarget?r=${encodeURIComponent(r)}`);
-}
-function toggleRun(){ fetch('/api/run'); }
-function toggleMode(){ fetch('/api/togglemode'); }
-function savePrefs(){ fetch('/api/save').then(()=>alert('Saved')); }
-function loadPrefs(){ fetch('/api/load').then(()=>alert('Loaded')); }
-</script>
+        // API functions
+        function setPID() { const kp = document.getElementById('kp').value; const ki = document.getElementById('ki').value; const kd = document.getElementById('kd').value; fetch(`/api/setpid?kp=${encodeURIComponent(kp)}&ki=${encodeURIComponent(ki)}&kd=${encodeURIComponent(kd)}`); }
+        function setPosPID() { const pkp = document.getElementById('pkp').value; const pki = document.getElementById('pki').value; const pkd = document.getElementById('pkd').value; fetch(`/api/setpospid?pkp=${encodeURIComponent(pkp)}&pki=${encodeURIComponent(pki)}&pkd=${encodeURIComponent(pkd)}`); }
+        function setTarget() { const t = document.getElementById('targetRPM').value; fetch(`/api/settarget?t=${encodeURIComponent(t)}`); }
+        function setTargetRounds() { const r = document.getElementById('targetR').value; fetch(`/api/settarget?r=${encodeURIComponent(r)}`); }
+        function toggleRun() { fetch('/api/run'); }
+        function toggleMode() { fetch('/api/togglemode'); }
+        function savePrefs() { fetch('/api/save').then(()=>alert('Saved')); }
+        function loadPrefs() { fetch('/api/load').then(()=>alert('Loaded')); }
+    </script>
 </body>
+
 </html>
 )rawliteral";
   return s;
@@ -639,8 +643,9 @@ void handleAPI_Load()
 
 void handleAPI_StatusJSON()
 {
+  int hallValue = analogRead(HALL_S);
   String s = "{";
-  s += "\"mode\":\"" + String(mode == MODE_SPEED ? "SPEED" : "ROUND") + "\",";
+  s += "\"mode\":\"" + String(mode == MODE_SPEED ? "SPEED" : mode == MODE_ROUND ? "ROUND" : mode == MODE_POSITION ? "POSITION" : "HOMING") + "\",";
   s += "\"running\":" + String(running ? "true" : "false") + ",";
   s += "\"currentRPM\":" + String(currentRPM, 2) + ",";
   s += "\"currentRounds\":" + String(currentRounds, 4) + ",";
@@ -653,14 +658,16 @@ void handleAPI_StatusJSON()
   s += "\"pos_ki\":" + String(posKi, 6) + ",";
   s += "\"pos_kd\":" + String(posKd, 6) + ",";
   int pwmVal = (mode == MODE_SPEED) ? (int)round(speedOutput) : (int)round(posOutput);
-  s += "\"pwm\":" + String(pwmVal);
+  s += "\"pwm\":" + String(pwmVal) + ",";
+  s += "\"hall\":" + String(hallValue);
   s += "}";
   server.send(200, "application/json", s);
 }
 
 void handleToggleMode()
 {
-  mode = (mode == MODE_SPEED) ? MODE_ROUND : MODE_SPEED;
+  // cycle modes: SPEED -> ROUND -> POSITION -> HOMING
+  mode = (Mode)((mode + 1) % 4);
   server.send(200, "text/plain", "MODE_TOGGLED");
 }
 
@@ -679,11 +686,15 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
   else if (type == WStype_CONNECTED)
   {
     IPAddress ip = webSocket.remoteIP(num);
-    Serial.printf("WS[%u] Connected from %d.%d.%d.%d\n", num, ip[0], ip[1], ip[2], ip[3]);
   }
 }
 
 // ---------------- Setup ----------------
+void startHoming() {
+    mode = MODE_HOMING;
+    running = true;
+}
+
 void setup()
 {
   Serial.begin(115200);
@@ -698,10 +709,10 @@ void setup()
   pinMode(BUTTON_DOWN, INPUT_PULLUP);
   pinMode(BUTTON_ENTER, INPUT_PULLUP);
   pinMode(BUTTON_MODE, INPUT);
-  // pinMode(LIMIT_S, INPUT_PULLUP);
+  pinMode(HALL_S, INPUT);
 
   // PWM channel
-  ledcSetup(0, 20000, 8); // 20kHz, 8-bit
+  ledcSetup(0, 20000, 8);
   ledcAttachPin(PWM_PIN, 0);
 
   // Encoder interrupts
@@ -736,12 +747,9 @@ void setup()
 
   // OTA
   ArduinoOTA.setHostname("ESP32_Motor");
-  ArduinoOTA.onStart([]()
-                     { Serial.println("OTA start"); });
-  ArduinoOTA.onEnd([]()
-                   { Serial.println("\nOTA end"); });
-  ArduinoOTA.onError([](ota_error_t e)
-                     { Serial.printf("OTA err %u\n", e); });
+  ArduinoOTA.onStart([](){ Serial.println("OTA start"); });
+  ArduinoOTA.onEnd([](){ Serial.println("\nOTA end"); });
+  ArduinoOTA.onError([](ota_error_t e){ Serial.printf("OTA err %u\n", e); });
   ArduinoOTA.begin();
 
   // PID initial config
@@ -779,6 +787,7 @@ void setup()
   Serial.println("WebSocket server started");
 
   drawOLED();
+  startHoming();
 }
 
 // ---------------- Main Loop ----------------
@@ -797,15 +806,11 @@ void loop()
   {
     if (mode == MODE_SPEED)
     {
-      targetRPM += 5.0;
-      if (targetRPM > 400.0)
-        targetRPM = 400.0;
+      targetRPM += 5.0; if (targetRPM > 400.0) targetRPM = 400.0;
     }
     else
     {
-      targetRounds += 0.1;
-      if (targetRounds > 1000.0)
-        targetRounds = 1000.0;
+      targetRounds += 0.1; if (targetRounds > 1000.0) targetRounds = 1000.0;
     }
     lastBtnUp = now;
   }
@@ -813,15 +818,11 @@ void loop()
   {
     if (mode == MODE_SPEED)
     {
-      targetRPM -= 5.0;
-      if (targetRPM < 0.0)
-        targetRPM = 0.0;
+      targetRPM -= 5.0; if (targetRPM < 0.0) targetRPM = 0.0;
     }
     else
     {
-      targetRounds -= 0.1;
-      if (targetRounds < 0.0)
-        targetRounds = 0.0;
+      targetRounds -= 0.1; if (targetRounds < 0.0) targetRounds = 0.0;
     }
     lastBtnDown = now;
   }
@@ -857,12 +858,29 @@ void loop()
 
   if (digitalRead(BUTTON_MODE) == LOW && now - lastBtnMode > DEBOUNCE_MS)
   {
-    mode = (mode == MODE_SPEED) ? MODE_ROUND : MODE_SPEED;
+    mode = (Mode)((mode + 1) % 4);
     lastBtnMode = now;
   }
 
   updateSpeedMeasurement();
-  if (now - lastPidMillis >= PID_SAMPLE_MS)
+
+  if (mode == MODE_HOMING)
+  {
+    int pwm = HOMING_PWM * HOMING_DIRECTION;
+    setMotorPWM(pwm);
+    if (hallTriggered())
+    {
+      stopMotor();
+      encoderCount = 0;
+      currentRounds = 0;
+      currentRPM = 0;
+      mode = MODE_POSITION;
+      running = false;
+      Serial.println("Homing complete: encoder reset.");
+    }
+    drawOLED();
+  }
+  else if (now - lastPidMillis >= PID_SAMPLE_MS)
   {
     lastPidMillis = now;
 
@@ -894,9 +912,8 @@ void loop()
           setMotorPWM(pwm);
         }
       }
-      else
+      else if (mode == MODE_ROUND || mode == MODE_POSITION)
       {
-        // round control
         posInput = currentRounds;
         posSetpoint = targetRounds;
         pidPos.Compute();
@@ -920,8 +937,9 @@ void loop()
   if (now - lastPush >= PUSH_INTERVAL)
   {
     lastPush = now;
+    int hallValue = analogRead(HALL_S);
     String s = "{";
-    s += "\"mode\":\"" + String(mode == MODE_SPEED ? "SPEED" : "ROUND") + "\",";
+    s += "\"mode\":\"" + String(mode == MODE_SPEED ? "SPEED" : mode == MODE_ROUND ? "ROUND" : mode == MODE_POSITION ? "POSITION" : "HOMING") + "\",";
     s += "\"running\":" + String(running ? "true" : "false") + ",";
     s += "\"currentRPM\":" + String(currentRPM, 2) + ",";
     s += "\"currentRounds\":" + String(currentRounds, 4) + ",";
@@ -934,10 +952,11 @@ void loop()
     s += "\"pos_ki\":" + String(posKi, 6) + ",";
     s += "\"pos_kd\":" + String(posKd, 6) + ",";
     int pwmVal = (mode == MODE_SPEED) ? (int)round(speedOutput) : (int)round(posOutput);
-    s += "\"pwm\":" + String(pwmVal);
+    s += "\"pwm\":" + String(pwmVal) + ",";
+    s += "\"hall\":" + String(hallValue);
     s += "}";
     webSocket.broadcastTXT(s);
+    Serial.printf("Hall Value: %d\n", hallValue);
   }
-
   delay(5);
 }
