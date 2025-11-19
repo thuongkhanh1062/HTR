@@ -1,11 +1,12 @@
 /*
-@Author: CHITOAN (modified)
+@Author: (modified)
 @date: 171125 -> updated
-@version: V5.0
+@version: V5.1
 
-Features added in V5.0:
+Features added in V5.1:
  - MODE_ANGLE: Control output shaft position in 360 degrees (0-360°)
- - BT1/BT2 increase/decrease angle by 5° increments
+ - BT1/BT2 increase/decrease angle by 1° increments
+ - BT4 for homing to zero position using hall sensor
  - Angle display on OLED
  - Automatic conversion between encoder counts and degrees
 */
@@ -25,8 +26,9 @@ Features added in V5.0:
 #define BUTTON_UP 25
 #define BUTTON_DOWN 33
 #define BUTTON_NEXT 32
+#define BUTTON_HOME 35
 
-#define HALL_S 39
+#define HALL_S 34
 
 // ---------------- ENCODER ----------------
 const float PPR = 990.0; // CHỈNH PPR THẬT (sau khi test)
@@ -50,7 +52,7 @@ U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
 // ---------------- STATE ----------------
 float targetAngle = 0;
 float currentAngle = 0;
-
+int threadhall = 3900;
 // ---------------- FILTER ----------------
 float angleFiltered = 0;
 float errorFiltered = 0;
@@ -107,7 +109,7 @@ void homing()
 
   // 1) Quay về trái cho đến khi chạm cảm biến
   motorDrive(50);
-  while (analogRead(HALL_S) < 3600)
+  while (analogRead(HALL_S) < threadhall)
   {
     delay(2);
   }
@@ -138,6 +140,7 @@ void setup()
   pinMode(BUTTON_UP, INPUT_PULLUP);
   pinMode(BUTTON_DOWN, INPUT_PULLUP);
   pinMode(BUTTON_NEXT, INPUT_PULLUP);
+  pinMode(BUTTON_HOME, INPUT);
 
   pinMode(HALL_S, INPUT);
 
@@ -154,7 +157,6 @@ void setup()
 // ========================= LOOP =========================
 void loop()
 {
-
   // ------------------- UP/DOWN Điều khiển góc -------------------
   if (!digitalRead(BUTTON_UP))
   {
@@ -170,6 +172,13 @@ void loop()
     if (targetAngle < -180)
       targetAngle = -180;
     delay(120);
+  }
+  if (!digitalRead(BUTTON_HOME))
+  {
+    homing();
+    targetAngle = 0;
+    currentAngle = 0;
+    delay(500);
   }
 
   // ------------------- PID Adjust Buttons -------------------
