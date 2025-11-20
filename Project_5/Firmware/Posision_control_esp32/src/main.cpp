@@ -28,7 +28,7 @@ Features added in V5.1:
 #define BUTTON_NEXT 32
 #define BUTTON_HOME 35
 
-#define HALL_S 34
+#define HALL_S 14
 
 // ---------------- ENCODER ----------------
 const float PPR = 990.0; // CHỈNH PPR THẬT (sau khi test)
@@ -53,6 +53,7 @@ U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0);
 float targetAngle = 0;
 float currentAngle = 0;
 int threadhall = 3900;
+int screen = 0;
 // ---------------- FILTER ----------------
 float angleFiltered = 0;
 float errorFiltered = 0;
@@ -181,13 +182,15 @@ void loop()
     delay(500);
   }
 
-  // ------------------- PID Adjust Buttons -------------------
+  // ------------------- Change Screen Buttons -------------------
   if (!digitalRead(BUTTON_NEXT))
   {
-    pidIndex = (pidIndex + 1) % 3;
+    screen = (screen + 1) % 2;
+    if (screen > 2)
+      screen = 0;
     delay(200);
   }
-
+  
   // ------------------- ENCODER to Angle -------------------
   float rawAngle = encoderCount * DEG_PER_PULSE;
   angleFiltered = angleFiltered * 0.85 + rawAngle * 0.15;
@@ -211,17 +214,32 @@ void loop()
 
   // ------------------- OLED -------------------
   u8g2.clearBuffer();
-  u8g2.setFont(u8g2_font_6x13_tf);
+  if (screen == 0){
+    u8g2.setFont(u8g2_font_6x13_tf);
 
-  u8g2.setCursor(0, 12);
-  u8g2.printf("Target: %.1f", targetAngle);
-  u8g2.setCursor(0, 26);
-  u8g2.printf("Pos   : %.1f | %.0f", currentAngle, analogRead(HALL_S));
-  u8g2.setCursor(0, 40);
-  u8g2.printf("Err   : %.1f", errorFiltered);
+    u8g2.setCursor(0, 12);
+    u8g2.printf("Target: %.1f", targetAngle);
+    u8g2.setCursor(0, 26);
+    u8g2.printf("Pos   : %.1f | %.0f", currentAngle, analogRead(HALL_S));
+    u8g2.setCursor(0, 40);
+    u8g2.printf("Err   : %.1f", errorFiltered);
 
-  u8g2.setCursor(0, 58);
-  u8g2.printf("p:%.2f i:%.3f d:%.2f", Kp, Ki, Kd);
-  Serial.println(analogRead(HALL_S));
+    u8g2.setCursor(0, 58);
+    u8g2.printf("p:%.2f i:%.3f d:%.2f", Kp, Ki, Kd);
+    Serial.println(analogRead(HALL_S));
+  }
+  else if (screen == 1)
+  {
+    u8g2.setFont(u8g2_font_t0_11_tf);
+    char buf[20];
+    snprintf(buf, sizeof(buf), "POSITION CONTROL");
+    int x1 = (128 - u8g2.getStrWidth(buf)) / 2;
+    u8g2.drawStr(x1, 20, buf);
+    
+    char buf1[20];
+    snprintf(buf1, sizeof(buf1), "MADE BY HTR");
+    int x2 = (128 - u8g2.getStrWidth(buf1)) / 2;
+    u8g2.drawStr(x2, 30, buf1);
+  }
   u8g2.sendBuffer();
 }
