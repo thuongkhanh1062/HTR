@@ -1,0 +1,80 @@
+Added Component: Designator=C1(Cap-Rad-Cer-D6.0-L3.0-P7.5)
+Added Component: Designator=C2(Cap-Rad-Cer-D6.0-L3.0-P7.5)
+Added Component: Designator=C3(Cap-Rad-Cer-D6.0-L3.0-P7.5)
+Added Component: Designator=H1(HDR-M-2.54-3P)
+Added Component: Designator=H2(HDR-M-2.54-2P)
+Added Component: Designator=P?(3296X)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "3296x Potentionmeter Square Trimpot Series"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.bourns.com/docs/product-datasheets/3296.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=R1(Res Axial 0.5)
+Added Component: Designator=R2(Res Axial 0.3 Vertical)
+Added Component: Designator=R3(Res Axial 0.5)
+Added Component: Designator=R4(Res Axial 0.3 Vertical)
+Added Component: Designator=R5(Res Axial 0.3 Vertical)
+Added Component: Designator=R6(Res Axial 0.5)
+Added Component: Designator=R7(Res Axial 0.3 Vertical)
+Added Component: Designator=R8(Res Axial 0.3 Vertical)
+Added Component: Designator=R?(Res Axial 0.5)
+Added Component: Designator=U1(DIP8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "LM358M Datasheets"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm158-n"; VariantName = "[No Variations]"
+Added Component: Designator=U2(DIP8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "LM358M Datasheets"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm158-n"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=C1-1
+Added Pin To Net: NetName=+5 Pin=H1-1
+Added Pin To Net: NetName=+5 Pin=R6-2
+Added Pin To Net: NetName=+5 Pin=R8-1
+Added Pin To Net: NetName=+5 Pin=U1-8
+Added Pin To Net: NetName=+5 Pin=U2-8
+Added Net: Name=+5
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=H1-3
+Added Pin To Net: NetName=GND Pin=H2-2
+Added Pin To Net: NetName=GND Pin=R7-2
+Added Pin To Net: NetName=GND Pin=R?-2
+Added Pin To Net: NetName=GND Pin=U1-4
+Added Pin To Net: NetName=GND Pin=U2-4
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=R6-1
+Added Pin To Net: NetName=NetC2_2 Pin=R?-1
+Added Pin To Net: NetName=NetC2_2 Pin=U1-3
+Added Net: Name=NetC2_2
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=H2-1
+Added Pin To Net: NetName=NetC3_2 Pin=R8-2
+Added Pin To Net: NetName=NetC3_2 Pin=U1-5
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetH1_2 Pin=H1-2
+Added Pin To Net: NetName=NetH1_2 Pin=R4-1
+Added Pin To Net: NetName=NetH1_2 Pin=U2-1
+Added Net: Name=NetH1_2
+Added Pin To Net: NetName=NetP?_2 Pin=P?-2
+Added Pin To Net: NetName=NetP?_2 Pin=R5-1
+Added Pin To Net: NetName=NetP?_2 Pin=U1-6
+Added Net: Name=NetP?_2
+Added Pin To Net: NetName=NetP?_3 Pin=P?-3
+Added Pin To Net: NetName=NetP?_3 Pin=R2-2
+Added Pin To Net: NetName=NetP?_3 Pin=U1-2
+Added Net: Name=NetP?_3
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=R2-1
+Added Pin To Net: NetName=NetR1_1 Pin=U1-1
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=R4-2
+Added Pin To Net: NetName=NetR1_2 Pin=U2-2
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=R7-1
+Added Pin To Net: NetName=NetR3_1 Pin=U2-3
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=R5-2
+Added Pin To Net: NetName=NetR3_2 Pin=U1-7
+Added Net: Name=NetR3_2
+Added Class: Name=Sheet-PT-100
+Added Room: Name=Sheet-PT-100

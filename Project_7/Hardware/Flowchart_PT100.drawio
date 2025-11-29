@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" version="29.1.1">
+  <diagram name="Trang-1" id="jyu-4MXKwLhABX9y2mT4">
+    <mxGraphModel dx="899" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BM6IAblDEYYY4d71AoyL-17" edge="1" parent="1" source="BM6IAblDEYYY4d71AoyL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" target="BM6IAblDEYYY4d71AoyL-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" value="BEGIN" vertex="1">
+          <mxGeometry height="80" width="120" x="520" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-18" edge="1" parent="1" source="BM6IAblDEYYY4d71AoyL-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" target="BM6IAblDEYYY4d71AoyL-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-4" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;" value="Khởi Động màn hình&lt;br&gt;Khai báo chân IO&lt;br&gt;&lt;div style=&quot;&quot;&gt;Cài đặt độ phân giải ADC&lt;br&gt;Giới hạn Vin.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="480" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;" value="END." vertex="1">
+          <mxGeometry height="80" width="120" x="520" y="667" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-12" edge="1" parent="1" source="BM6IAblDEYYY4d71AoyL-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="BM6IAblDEYYY4d71AoyL-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-9" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;" value="Đọc giá trị ADC&lt;br&gt;chuyển đổi giá trị ADC thành giá trị điện áp&lt;br&gt;lọc nhiễu giá trị điện áp&lt;br&gt;Chuyển đổi giá trị điện áp thành giá trị nhiệt độ" vertex="1">
+          <mxGeometry height="60" width="270" x="445" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-13" edge="1" parent="1" source="BM6IAblDEYYY4d71AoyL-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" target="BM6IAblDEYYY4d71AoyL-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="560" />
+              <mxPoint x="760" y="414" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-16" connectable="0" parent="BM6IAblDEYYY4d71AoyL-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="False" vertex="1">
+          <mxGeometry relative="1" x="-0.5454" as="geometry">
+            <mxPoint x="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-19" edge="1" parent="1" source="BM6IAblDEYYY4d71AoyL-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="BM6IAblDEYYY4d71AoyL-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-20" connectable="0" parent="BM6IAblDEYYY4d71AoyL-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="True" vertex="1">
+          <mxGeometry relative="1" x="-0.0256" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BM6IAblDEYYY4d71AoyL-11" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;" value="Giá trị định thời lớn hơn 400mili giây" vertex="1">
+          <mxGeometry height="80" width="150" x="505" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

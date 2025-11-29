@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=+5 Pin=H1-1
+Removed Pin From Net: NetName=GND Pin=H1-3
+Removed Pin From Net: NetName=NetR1_2 Pin=R2-1
+Removed Pin From Net: NetName=NetP1_3 Pin=R2-2
+Removed Member From Class: ClassName=Sheet-PT-100 Member=H1
+Change Component Footprint: Designator=R2 Old Footprint=Res Axial 0.3 Vertical New Footprint=Res Axial 0.3
+Added Component: Designator=D?(SSD1306-0.96-12832-I2C)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "WEO012832DWPP3N00008"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.winstar.com.tw/d/447/WEO012832DWPP3N00008.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=U?(ESP32-WROOM-32-38PIN)
+Added Pin To Net: NetName=GND Pin=D?-1
+Added Pin To Net: NetName=+5 Pin=D?-2
+Added Pin To Net: NetName=NetP1_3 Pin=R2-1
+Added Pin To Net: NetName=NetR1_2 Pin=R2-2
+Added Pin To Net: NetName=+5 Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-38
+Added Pin To Net: NetName=NetD?_3 Pin=D?-3
+Added Pin To Net: NetName=NetD?_3 Pin=U?-36
+Added Net: Name=NetD?_3
+Added Pin To Net: NetName=NetD?_4 Pin=D?-4
+Added Pin To Net: NetName=NetD?_4 Pin=U?-33
+Added Net: Name=NetD?_4
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=U2-1
+Added Pin To Net: NetName=NetR4_1 Pin=U?-37
+Added Net: Name=NetR4_1
+Added Member To Class: ClassName=Sheet-PT-100 Member=Component D? SSD1306-0.96-128X32-I2C
+Added Member To Class: ClassName=Sheet-PT-100 Member=Component U? ESP32-DEV-KIT

@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=+5 Pin=R8-1
+Removed Pin From Net: NetName=NetC3_2 Pin=R8-2
+Removed Member From Class: ClassName=Sheet-PT-100 Member=R?
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=R? NewDesignator=R8
+Added Component: Designator=R9(Res Axial 0.3)
+Added Pin To Net: NetName=NetC3_2 Pin=R9-1
+Added Pin To Net: NetName=+5 Pin=R9-2
+Change Net Name : Old Net Name=NetP?_2 New Net Name=NetP1_2
+Change Net Name : Old Net Name=NetP?_3 New Net Name=NetP1_3
+Added Member To Class: ClassName=Sheet-PT-100 Member=Component R9 3.3K

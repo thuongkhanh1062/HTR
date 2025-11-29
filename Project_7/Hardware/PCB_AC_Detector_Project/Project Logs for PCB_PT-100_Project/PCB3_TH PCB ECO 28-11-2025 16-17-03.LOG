@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=C1 Old Footprint=Cap-Rad-Cer-D6.0-L3.0-P7.5 New Footprint=Cap-Rad-Cer-D3.5-L1.5-P2.5
+Change Component Footprint: Designator=C2 Old Footprint=Cap-Rad-Cer-D6.0-L3.0-P7.5 New Footprint=Cap-Rad-Cer-D3.5-L1.5-P2.5
+Change Component Footprint: Designator=C3 Old Footprint=Cap-Rad-Cer-D6.0-L3.0-P7.5 New Footprint=Cap-Rad-Cer-D3.5-L1.5-P2.5
+Change Component Footprint: Designator=R1 Old Footprint=Res Axial 0.5 New Footprint=Res Axial 0.3
+Change Component Footprint: Designator=R3 Old Footprint=Res Axial 0.5 New Footprint=Res Axial 0.3
+Change Component Footprint: Designator=R6 Old Footprint=Res Axial 0.5 New Footprint=Res Axial 0.3
+Change Component Footprint: Designator=R? Old Footprint=Res Axial 0.5 New Footprint=Res Axial 0.3
