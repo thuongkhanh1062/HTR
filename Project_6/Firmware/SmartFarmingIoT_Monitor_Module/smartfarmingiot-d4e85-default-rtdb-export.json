@@ -1,0 +1,93 @@
+{
+  "smart_farm_iot": {
+    "user_data": {
+      "user_1": {
+        "config": {
+          "custom_names": {
+            "node1": "Cảm Biến",
+            "node2": "Động Lực",
+            "relay1": "Quạt",
+            "relay2": "Bơm",
+            "relay3": "Đèn",
+            "relay4": "RL4"
+          }
+        },
+        "data": {
+          "button_1": false,
+          "button_2": false,
+          "button_3": false,
+          "button_4": false,
+          "dht_humid": 63,
+          "dht_temp": 32,
+          "evironment_temp": 20,
+          "flow_rate": 1.6,
+          "light": 56,
+          "mcu_temp1": 75,
+          "mcu_temp2": 53,
+          "mcu_temp3": 0,
+          "motor_temp": 92,
+          "node1_state": true,
+          "node3_state": false,
+          "pwm_value": 15,
+          "relay_1state": false,
+          "relay_2state": false,
+          "relay_3state": false,
+          "relay_4state": false,
+          "soil_moisture": 64,
+          "weather_air": "good",
+          "weather_humid": 50,
+          "weather_rise": "05:35",
+          "weather_set": "17:55",
+          "weather_state": "cloudy",
+          "weather_temp": 27,
+          "weather_windspeed": 5
+        },
+        "email": "admin@smartfarm.iot.com",
+        "id": "admin",
+        "name": "adminstrator",
+        "password": "Admin"
+      },
+      "user_2": {
+        "data": {
+          "button_1": false,
+          "button_2": false,
+          "button_3": false,
+          "button_4": false,
+          "dht_humid": 45,
+          "dht_temp": 30,
+          "evironment_temp": 75,
+          "flow_rate": 0,
+          "mcu_temp1": 55,
+          "mcu_temp2": 54,
+          "mcu_temp3": 56,
+          "motor_temp": 85,
+          "node1_state": false,
+          "node3_state": false,
+          "pwm_value": 0,
+          "relay_1state": false,
+          "relay_2state": false,
+          "relay_3state": false,
+          "relay_4state": false,
+          "weather_air": "good",
+          "weather_humid": 45,
+          "weather_rise": "05:55",
+          "weather_set": "18:00",
+          "weather_state": "cloudy",
+          "weather_temp": 23,
+          "weather_windspeed": 1
+        },
+        "email": "espressif@esp32.com",
+        "id": "esp32",
+        "name": "espressif",
+        "password": "Esp32"
+      },
+      "user_3": {
+        "created_at": "2025-12-07T04:07:13.220Z",
+        "email": "phanchibatoan@gmail.com",
+        "name": "Chitoan",
+        "password": "chitoan",
+        "phone": "0798031281"
+      }
+    }
+  }
+}
