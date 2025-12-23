@@ -1,0 +1,25 @@
+Project structure.
+
+
+SMART-FARMING-IOT/
+├── app/
+│   ├── (tabs)/
+│   │   ├── _layout.tsx         - This file will make what will display on bottom navigation bar.
+│   │   ├── about.tsx           - all information and data of node will display at this screen.
+│   │   ├── home.tsx            - home screen.
+│   │   ├── notification.tsx    - notification screen.
+│   │   └── setting.tsx         - setting screen.
+│   ├── index.tsx               - this file make login.tsx is main file when user open app.
+│   ├── login.tsx               - login screen.
+│   ├── register.tsx            - register account screen.
+│   ├── restore.tsx             - restoration of password screen.
+│   └── settings/               - settings folder tabs.
+│       ├── appinfo.tsx         - application information tab.
+│       ├── managenode.tsx      - management of node tab
+│       ├── nodeconfig.tsx      - configuation of node tab.
+│       └── personinfo.tsx      - personal information tab.
+├── assets/                     - assets folder.
+│   ├── images                  - images folder.
+│   │   └── icon_imgpack.png    - icon image.
+│   └── backgrounds1.jpg        - background image.
+└── firebaseConfig.js           - this file include url of firebase, API key, etc.
