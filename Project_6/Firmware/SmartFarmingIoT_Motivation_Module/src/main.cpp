@@ -1,309 +1,336 @@
 #include <DHT.h>
 #include <WiFi.h>
-#include <esp_now.h>
+#include <FirebaseESP32.h>
+#include <time.h>
 #include <Arduino.h>
-#include <ArduinoOTA.h>
-#include <rom/rtc.h>
 
-// Định nghĩa các chân IO
+// --- Định nghĩa chân IO ---
+#define BOOT_BUTTON_PIN 0
 #define RL1_PIN 12
 #define RL2_PIN 14
 #define RL3_PIN 27
 #define RL4_PIN 26
 #define LED_PIN 25
+#define BUZZER_PIN 4
+#define FLOW_PIN 33
+
+#define TIMEZONE_OFFSET_SEC (7 * 3600)
+#define DST_OFFSET_SEC 0
+#define NTP_MAX_RETRY 20
 
 #define DHT_PIN 5
 #define DHT_TYPE DHT11
+#define RELAY_ACTIVE_LOW false
 
-#define FLOW_PIN 18
-#define FLOW_SENSOR_K_FACTOR 7.5
+// --- Thông số cấu hình ---
+#define API_KEY "AIzaSyAgVge-VC6S9RocrJQibOWFqY1De7nz3eM"
+#define DATABASE_URL "https://smartfarmingiot-78911-default-rtdb.asia-southeast1.firebasedatabase.app"
+#define USER_EMAIL "admin@gmail.com"
+#define USER_PASS "admins"
 
-// Địa chỉ MAC của Node 2 (Master)
-uint8_t MAC_NODE2[6] = {0xF4, 0x65, 0x0B, 0xA9, 0x52, 0x4C};
-uint8_t BROADCAST_MAC[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+// --- Đối tượng Firebase & Biến hệ thống ---
+FirebaseData fbdo_stream;
+FirebaseData fbdo_action;
+FirebaseAuth auth;
+FirebaseConfig config;
 
-DHT dht(DHT_PIN, DHT_TYPE);
-
-const uint8_t id_node3 = 3;
-
-// --- Cấu trúc gói tin ---
-typedef struct
-{
-  float mcu_temp;
-  float temp;
-  float humid;
-  int flow_rate;
-  uint8_t led_status;
-  uint8_t relay_1_status;
-  uint8_t relay_2_status;
-  uint8_t relay_3_status;
-  uint8_t relay_4_status;
-  uint8_t nodeID;
-} esp_struct_node3_in;
-
-typedef struct
-{
-  uint8_t relay_1_cmd;
-  uint8_t relay_2_cmd;
-  uint8_t relay_3_cmd;
-  uint8_t relay_4_cmd;
-} esp_struct_node3_out;
-
-typedef struct
-{
-  uint8_t nodeID;
-  uint8_t type;
-} esp_struct_reg;
-
-// --- Khai báo biến ---
-esp_struct_node3_in outgoing_data;
-esp_struct_node3_out incoming_command;
-esp_struct_reg regMsg = {id_node3, 1};
-
-unsigned long lastRegTime = 0;
-const unsigned long regInterval = 30000;
-
-unsigned long lastSendTime = 0;
-const long sendInterval = 1000;
-
-// Biến đo lưu lượng
-volatile unsigned long pulseCount = 0;
-unsigned long flowCalcLastTime = 0;
-float currentFlowRate = 0;
-
-// Trạng thái hiện tại của Relay
-volatile uint8_t relay_status[4] = {0, 0, 0, 0};
 const int relay_pins[4] = {RL1_PIN, RL2_PIN, RL3_PIN, RL4_PIN};
+uint8_t relay_status[4] = {0, 0, 0, 0}; // Trạng thái thực tế trên chân Pin
+
+volatile unsigned long pulseCount = 0;
+float currentFlowRate = 0;
+unsigned long lastFlowMillis = 0;
+unsigned long lastFirebaseUpload = 0;
+unsigned long lastTimerFetch = 0;
+unsigned long pressStartTime = 0;
+bool isPressing = false;
+bool smartConfigActive = false;
+
+struct TimerJob
+{
+  String id;
+  bool enabled = false;
+  uint8_t relayIndex = 0;
+  uint16_t startMinutes = 0;
+  uint32_t durationSec = 0;
+  int lastRunDay = -1;
+  bool running = false;
+  unsigned long endMillis = 0;
+};
+
+TimerJob timers[12];
+uint8_t timerCount = 0;
 
 // =========================================================================
-//                             FUNCTIONS
+//                                FUNCTIONS
 // =========================================================================
 
-// Hàm ngắt ngoài
-void IRAM_ATTR pulseCounter()
+void IRAM_ATTR pulseCounter() { pulseCount++; }
+
+void startBuzzerBeep()
 {
-  pulseCount++;
+  ledcWrite(0, 128);
+  delay(100);
+  ledcWrite(0, 0);
 }
 
-/**
- * @brief Tính toán lưu lượng dòng chảy dựa trên số xung đếm được.
- * Lưu lượng (L/phút) = (Xung * 1000 / Thời gian (ms)) / K_FACTOR
- */
-float calculateFlowRate()
+void syncTimeNTP()
 {
-  unsigned long currentTime = millis();
-  unsigned long timeDelta = currentTime - flowCalcLastTime;
-  if (timeDelta > 100)
+  configTime(TIMEZONE_OFFSET_SEC, DST_OFFSET_SEC, "pool.ntp.org", "time.nist.gov");
+  struct tm timeinfo;
+  int retry = 0;
+  while (!getLocalTime(&timeinfo) && retry < NTP_MAX_RETRY)
   {
-    detachInterrupt(FLOW_PIN);
-    float frequency = (float)pulseCount * 1000.0 / timeDelta;
-    currentFlowRate = frequency / FLOW_SENSOR_K_FACTOR;
-    pulseCount = 0;
-    flowCalcLastTime = currentTime;
-    attachInterrupt(FLOW_PIN, pulseCounter, FALLING);
+    delay(500);
+    retry++;
   }
-  return currentFlowRate;
-}
-
-// Hàm đọc nhiệt độ internal MCU
-float readInternalTemperature()
-{
-  return temperatureRead();
-}
-
-// Hàm giả lập dữ liệu
-void readSensorData()
-{
-  outgoing_data.mcu_temp = readInternalTemperature();
-  outgoing_data.temp = dht.readTemperature();
-  outgoing_data.humid = dht.readHumidity();
-  outgoing_data.flow_rate = calculateFlowRate();
-  outgoing_data.led_status = digitalRead(LED_PIN);
-  outgoing_data.nodeID = id_node3;
-
-  outgoing_data.relay_1_status = digitalRead(RL1_PIN);
-  outgoing_data.relay_2_status = digitalRead(RL2_PIN);
-  outgoing_data.relay_3_status = digitalRead(RL3_PIN);
-  outgoing_data.relay_4_status = digitalRead(RL4_PIN);
-
-  Serial.printf("MCU: %.1f\tTemp: %.1f\tHumid: %.1f\tFlow: %.1f\n", outgoing_data.mcu_temp, outgoing_data.temp, outgoing_data.humid, outgoing_data.flow_rate);
-}
-
-// Hàm điều khiển Relay
-void controlRelays()
-{
-  // Relay 1
-  if (incoming_command.relay_1_cmd != relay_status[0])
+  if (retry >= NTP_MAX_RETRY)
   {
-    relay_status[0] = incoming_command.relay_1_cmd;
-    digitalWrite(relay_pins[0], !relay_status[0]); // Giả sử Relay kích mức LOW
-    Serial.printf("Relay 1 set to: %d\n", relay_status[0]);
-  }
-
-  // Relay 2
-  if (incoming_command.relay_2_cmd != relay_status[1])
-  {
-    relay_status[1] = incoming_command.relay_2_cmd;
-    digitalWrite(relay_pins[1], !relay_status[1]);
-    Serial.printf("Relay 2 set to: %d\n", relay_status[1]);
-  }
-
-  // Relay 3
-  if (incoming_command.relay_3_cmd != relay_status[2])
-  {
-    relay_status[2] = incoming_command.relay_3_cmd;
-    digitalWrite(relay_pins[2], !relay_status[2]);
-    Serial.printf("Relay 3 set to: %d\n", relay_status[2]);
-  }
-
-  // Relay 4
-  if (incoming_command.relay_4_cmd != relay_status[3])
-  {
-    relay_status[3] = incoming_command.relay_4_cmd;
-    digitalWrite(relay_pins[3], !relay_status[3]);
-    Serial.printf("Relay 4 set to: %d\n", relay_status[3]);
-  }
-}
-
-// Hàm gửi dữ liệu đến Node 2
-void sendData()
-{
-  readSensorData(); // Lấy dữ liệu cảm biến và trạng thái hiện tại
-
-  esp_err_t result = esp_now_send(MAC_NODE2, (uint8_t *)&outgoing_data, sizeof(outgoing_data));
-
-  if (result == ESP_OK)
-  {
-    Serial.println("Send data to Node 2 successful.");
+    Serial.println("[TIME] NTP sync failed");
   }
   else
   {
-    Serial.println("Error sending data to Node 2.");
+    char buf[32];
+    strftime(buf, sizeof(buf), "%F %T", &timeinfo);
+    Serial.printf("[TIME] Synced: %s\n", buf);
   }
 }
 
-// Hàm xử lý gói tin nhận được
-void onReceive(const uint8_t *mac, const uint8_t *data, int len)
+void setRelayState(uint8_t index, bool on, bool syncFirebase = false)
 {
-  if (len == sizeof(incoming_command))
+  if (index >= 4)
+    return;
+  uint8_t desired = on ? (RELAY_ACTIVE_LOW ? LOW : HIGH) : (RELAY_ACTIVE_LOW ? HIGH : LOW);
+
+  if (digitalRead(relay_pins[index]) != desired)
   {
-    memcpy(&incoming_command, data, sizeof(incoming_command));
-    Serial.println("Received command from Node 2:");
-    Serial.printf(" R1_CMD: %d, R2_CMD: %d, R3_CMD: %d, R4_CMD: %d\n",
-                  incoming_command.relay_1_cmd, incoming_command.relay_2_cmd,
-                  incoming_command.relay_3_cmd, incoming_command.relay_4_cmd);
-    controlRelays();
+    digitalWrite(relay_pins[index], desired);
+    relay_status[index] = desired;
+    startBuzzerBeep();
+
+    if (syncFirebase)
+    {
+      String path = "/smart_farm_iot/data/node3/relay" + String(index + 1) + "_state";
+      Firebase.setBool(fbdo_action, path, on);
+    }
   }
 }
 
-// Hàm xử lý gói tin gửi đi
-void onSend(const uint8_t *mac_addr, esp_now_send_status_t status)
+void fetchTimers()
 {
-  Serial.print("\nLast Packet Send Status: ");
-  if (status == ESP_NOW_SEND_SUCCESS)
+  if (!Firebase.ready())
+    return;
+  if (Firebase.getJSON(fbdo_action, "/smart_farm_iot/config/timers"))
   {
-    Serial.println("Delivery Success");
-  }
-  else
-  {
-    Serial.println("Delivery Fail");
+    FirebaseJson &json = fbdo_action.jsonObject();
+    size_t len = json.iteratorBegin();
+    String key, value;
+    int type;
+    timerCount = 0;
+    for (size_t i = 0; i < len && timerCount < 12; i++)
+    {
+      json.iteratorGet(i, type, key, value);
+      if (type == FirebaseJson::JSON_OBJECT)
+      {
+        FirebaseJson timerObj;
+        timerObj.setJsonData(value);
+        FirebaseJsonData data;
+
+        timers[timerCount].id = key;
+        timerObj.get(data, "enabled");
+        timers[timerCount].enabled = data.boolValue;
+        timerObj.get(data, "duration");
+        timers[timerCount].durationSec = data.intValue;
+        timerObj.get(data, "relayKey");
+        String rk = data.stringValue;
+        timers[timerCount].relayIndex = (rk == "RL1") ? 0 : (rk == "RL2") ? 1
+                                                        : (rk == "RL3")   ? 2
+                                                                          : 3;
+        timerObj.get(data, "time");
+        String ts = data.stringValue;
+        int colon = ts.indexOf(':');
+        if (colon > 0)
+          timers[timerCount].startMinutes = ts.substring(0, colon).toInt() * 60 + ts.substring(colon + 1).toInt();
+        timers[timerCount].running = false;
+        timerCount++;
+      }
+    }
+    json.iteratorEnd();
+    Serial.printf("[TIMER] Loaded %d jobs\n", timerCount);
   }
 }
 
-// Hàm đăng ký
-void sendRegistration()
+void startSmartConfig()
 {
-  esp_now_send(BROADCAST_MAC, (uint8_t *)&regMsg, sizeof(regMsg));
-  Serial.printf("Node 3: Sent registration (ID: %d) to Broadcast.\n", id_node3);
+  smartConfigActive = true;
+  WiFi.disconnect(true, true);
+  delay(1000);
+  WiFi.beginSmartConfig();
+  Serial.println("[WIFI] SmartConfig Started...");
+  while (!WiFi.smartConfigDone())
+  {
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    delay(300);
+  }
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+  }
+  smartConfigActive = false;
+  digitalWrite(LED_PIN, HIGH);
+  Serial.println("[WIFI] Connected via SmartConfig");
+}
+
+void streamCallback(StreamData data)
+{
+  String path = data.dataPath();
+  if (path.indexOf("relay") != -1)
+  {
+    int idx = (path.indexOf("1") != -1) ? 0 : (path.indexOf("2") != -1) ? 1
+                                          : (path.indexOf("3") != -1)   ? 2
+                                          : (path.indexOf("4") != -1)   ? 3
+                                                                        : -1;
+    if (idx != -1)
+    {
+      bool val = data.boolData();
+      bool isLocked = false;
+      for (int i = 0; i < timerCount; i++)
+        if (timers[i].running && timers[i].relayIndex == idx)
+          isLocked = true;
+      if (!isLocked)
+        setRelayState(idx, val);
+    }
+  }
 }
 
 // =========================================================================
-//                             SETUP & LOOP
+//                               MAIN SETUP
 // =========================================================================
-// Hàm setup wifi
-void setupWiFi()
-{
-  WiFi.mode(WIFI_STA);
-  Serial.print("Node 3 MAC Address: ");
-  Serial.println(WiFi.macAddress());
-}
-
-// Hàm setup ESP-NOW
-void setupESP_NOW()
-{
-  if (esp_now_init() != ESP_OK)
-  {
-    Serial.println("Error initializing ESP-NOW");
-    return;
-  }
-
-  esp_now_register_recv_cb(onReceive);
-  esp_now_register_send_cb(onSend);
-
-  // Thêm peer Node 2
-  esp_now_peer_info_t peerInfo;
-  memcpy(peerInfo.peer_addr, MAC_NODE2, 6);
-  peerInfo.channel = 0;
-  peerInfo.encrypt = false;
-
-  // Thêm Broadcast Peer để gửi gói đăng ký
-  esp_now_peer_info_t peer_bcast = {};
-  memcpy(peer_bcast.peer_addr, BROADCAST_MAC, 6);
-  peer_bcast.channel = 0;
-  peer_bcast.encrypt = false;
-  esp_now_add_peer(&peer_bcast);
-
-  if (esp_now_add_peer(&peerInfo) != ESP_OK)
-  {
-    Serial.println("Failed to add peer Node 2");
-    return;
-  }
-}
 
 void setup()
 {
   Serial.begin(115200);
-  dht.begin();
 
-  // Khởi tạo chân Relay và LED
-  pinMode(RL1_PIN, OUTPUT);
-  pinMode(RL2_PIN, OUTPUT);
-  pinMode(RL3_PIN, OUTPUT);
-  pinMode(RL4_PIN, OUTPUT);
+  for (int i = 0; i < 4; i++)
+  {
+    pinMode(relay_pins[i], OUTPUT);
+    digitalWrite(relay_pins[i], RELAY_ACTIVE_LOW ? HIGH : LOW);
+  }
   pinMode(LED_PIN, OUTPUT);
-
-  // Khởi tạo trạng thái ban đầu của Relay là OFF
-  digitalWrite(RL1_PIN, LOW);
-  digitalWrite(RL2_PIN, LOW);
-  digitalWrite(RL3_PIN, LOW);
-  digitalWrite(RL4_PIN, LOW);
-
-  // LED Status ON
-  digitalWrite(LED_PIN, HIGH);
-
+  pinMode(BOOT_BUTTON_PIN, INPUT_PULLUP);
   pinMode(FLOW_PIN, INPUT_PULLUP);
-
-  setupWiFi();
-  setupESP_NOW();
-
-  Serial.println("Node 3 (Slave) Initialized.");
-
-  // --- Cấu hình Ngắt Ngoài cho Flow Sensor ---
   attachInterrupt(digitalPinToInterrupt(FLOW_PIN), pulseCounter, FALLING);
-  flowCalcLastTime = millis();
+
+  ledcSetup(0, 2000, 8);
+  ledcAttachPin(BUZZER_PIN, 0);
+
+  // WiFi & NTP
+  WiFi.begin();
+  int timeout = 0;
+  while (WiFi.status() != WL_CONNECTED && timeout < 20)
+  {
+    delay(500);
+    timeout++;
+  }
+  if (WiFi.status() == WL_CONNECTED)
+    digitalWrite(LED_PIN, HIGH);
+
+  syncTimeNTP();
+
+  // Firebase
+  config.api_key = API_KEY;
+  config.database_url = DATABASE_URL;
+  auth.user.email = USER_EMAIL;
+  auth.user.password = USER_PASS;
+  Firebase.begin(&config, &auth);
+  Firebase.reconnectWiFi(true);
+
+  if (Firebase.ready())
+  {
+    Firebase.beginStream(fbdo_stream, "/smart_farm_iot/data/node3");
+    Firebase.setStreamCallback(fbdo_stream, streamCallback, [](bool) {});
+    fetchTimers();
+  }
 }
+
+// =========================================================================
+//                               MAIN LOOP
+// =========================================================================
 
 void loop()
 {
-  if (millis() - lastSendTime > sendInterval)
+  unsigned long now = millis();
+
+  // 1. Kiểm tra nút BOOT (SmartConfig)
+  if (digitalRead(BOOT_BUTTON_PIN) == LOW)
   {
-    lastSendTime = millis();
-    sendData();
-    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    if (!isPressing)
+    {
+      pressStartTime = now;
+      isPressing = true;
+    }
+    if (now - pressStartTime > 5000)
+    {
+      startSmartConfig();
+      isPressing = false;
+    }
   }
-  if (millis() - lastRegTime >= regInterval)
+  else
+    isPressing = false;
+
+  // 2. Tính lưu lượng (mỗi 1s)
+  if (now - lastFlowMillis > 1000)
   {
-    sendRegistration();
-    lastRegTime = millis();
+    detachInterrupt(FLOW_PIN);
+    unsigned long pulses = pulseCount;
+    pulseCount = 0;
+    lastFlowMillis = now;
+    attachInterrupt(digitalPinToInterrupt(FLOW_PIN), pulseCounter, FALLING);
+
+    currentFlowRate = (pulses / 7.5f);
+    Serial.printf("[FLOW] pulses=%lu, rate=%.2f L/min\n", pulses, currentFlowRate);
+    Serial.print();
+  }
+
+  // 3. Xử lý Timer
+  struct tm timeinfo;
+  if (getLocalTime(&timeinfo))
+  {
+    int curMin = timeinfo.tm_hour * 60 + timeinfo.tm_min;
+    for (int i = 0; i < timerCount; i++)
+    {
+      TimerJob &t = timers[i];
+      if (!t.enabled)
+        continue;
+      // Bắt đầu
+      if (!t.running && t.lastRunDay != timeinfo.tm_yday && curMin == t.startMinutes)
+      {
+        t.running = true;
+        t.lastRunDay = timeinfo.tm_yday;
+        t.endMillis = now + (t.durationSec * 1000);
+        setRelayState(t.relayIndex, true, true);
+      }
+      // Kết thúc
+      if (t.running && now >= t.endMillis)
+      {
+        t.running = false;
+        setRelayState(t.relayIndex, false, true);
+      }
+    }
+  }
+
+  // 4. Upload dữ liệu & Sync Timer
+  if (now - lastFirebaseUpload > 30000)
+  {
+    if (Firebase.ready())
+    {
+      FirebaseJson update;
+      update.set("flowrate", currentFlowRate);
+      update.set("node3_mcu_temp", temperatureRead());
+      update.set("node3_state", true);
+      Firebase.updateNode(fbdo_action, "/smart_farm_iot/data/node3", update);
+      fetchTimers();
+    }
+    lastFirebaseUpload = now;
   }
 }
