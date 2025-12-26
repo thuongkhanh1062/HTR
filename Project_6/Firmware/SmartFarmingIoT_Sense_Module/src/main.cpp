@@ -1,152 +1,230 @@
-#include <DHT.h>
+#include <Arduino.h>
 #include <WiFi.h>
-#include <stdint.h>
-#include <rom/rtc.h>
-#include <esp_now.h>
-#include <esp_system.h>
+#include <DHT.h>
+#include <FirebaseESP32.h>
+#include <addons/TokenHelper.h>
+#include <addons/RTDBHelper.h>
 
-// Cấu hình Cảm biến
+// --- CẤU HÌNH PIN ---
+#define BOOT_BUTTON_PIN 0
 #define RAIN_PIN 25
 #define SOIL_PIN 32
 #define LIGHT_PIN 33
-#define ANALOG2_PIN 34
 #define DHT_PIN 14
 #define DHT_TYPE DHT11
 
-unsigned long intervalSend = 1000;
-unsigned long lastInterval = 0;
-const float K_FACTOR = 0.1;
+bool isPressing = false;
+unsigned long pressStartTime = 0;
+unsigned long lastFirebaseUpload = 0;
+unsigned long lastSensorupdate = 0;
 
-float lightEstimated = 0.0;
-float soilEstimated = 0.0;
-float tempEstimated = 0.0;
-float humidEstimated = 0.0;
+String deviceMac = "";
+String deviceChipID = "";
 
-unsigned long lastRegTime = 0;
-const unsigned long regInterval = 30000;
+// --- CẤU HÌNH FIREBASE ---
+#define API_KEY "AIzaSyAgVge-VC6S9RocrJQibOWFqY1De7nz3eM"
+#define DATABASE_URL "https://smartfarmingiot-78911-default-rtdb.asia-southeast1.firebasedatabase.app"
+#define USER_EMAIL "admin@gmail.com"
+#define USER_PASS "admins"
 
-uint32_t chipId = 0;
-uint8_t node_id = 1;
-
-// === Cấu trúc gói tin GỬI ĐI ===
-typedef struct
-{
-  float mcu_temp;
-  float temp;
-  float humid;
-  float light;
-  float soil;
-  uint8_t nodeID;
-} esp_struct_node1;
-esp_struct_node1 dataSend;
-
-// === Cấu trúc gói tin ĐĂNG KÝ ===
-typedef struct
-{
-  uint8_t nodeID;
-  uint8_t type; // 1: Registration
-} esp_struct_reg;
-esp_struct_reg regMsg = {node_id, 1};
-uint8_t MAC_NODE2[6] = {0x30, 0xAE, 0xA4, 0xF8, 0x08, 0x08};
-uint8_t BROADCAST_MAC[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+FirebaseData fbdo;
+FirebaseAuth auth;
+FirebaseConfig config;
 DHT dht(DHT_PIN, DHT_TYPE);
 
-float readInternalTemperature()
+// Cấu trúc dữ liệu
+struct SensorData
 {
-  return temperatureRead();
+  float humid;
+  float temp;
+  float light;
+  float mcu_temp;
+  bool rain;
+  float soil;
+} liveData;
+
+// --- HÀM SMARTCONFIG WIFI ---
+void startSmartConfig()
+{
+  Serial.println("\n[WIFI] Đang xóa cấu hình cũ...");
+  WiFi.disconnect(true, true);
+  delay(1000);
+
+  WiFi.beginSmartConfig();
+  Serial.println("[WIFI] Chờ SmartConfig từ điện thoại...");
+
+  while (!WiFi.smartConfigDone())
+  {
+    delay(500);
+    Serial.print("#");
+    yield(); // Cho watchdog nghỉ
+  }
+
+  Serial.println("\n[WIFI] Đã nhận cấu hình!");
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+    yield();
+  }
+  Serial.println("\n[WIFI] Kết nối thành công!");
 }
 
-void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status)
+// --- HÀM THIẾT LẬP WIFI & LƯU THÔNG TIN ---
+void setupWiFi()
 {
-  Serial.print("Trạng thái gửi: ");
-  if (status == ESP_NOW_SEND_SUCCESS)
+  WiFi.mode(WIFI_AP_STA);
+  WiFi.setAutoConnect(true);
+  WiFi.setAutoReconnect(true);
+
+  Serial.println("Kiểm tra wifi đã lưu Flash...");
+
+  WiFi.begin();
+
+  int timeout = 0;
+  while (WiFi.status() != WL_CONNECTED && timeout < 20)
   {
-    Serial.print("Thành công\t");
+    delay(500);
+    Serial.print(".");
+    timeout++;
+  }
+
+  if (WiFi.status() == WL_CONNECTED)
+  {
+    Serial.println("\n[THÀNH CÔNG] Đã kết nối WiFi");
+    Serial.print("IP: ");
+    Serial.println(WiFi.localIP());
   }
   else
   {
-    Serial.print("Thất bại\t");
+    Serial.println("\n[KHÔNG TÌM THẤY] Bắt đầu chế độ SmartConfig...");
+    WiFi.beginSmartConfig();
+
+    while (!WiFi.smartConfigDone())
+    {
+      delay(500);
+      Serial.print("#");
+    }
+    Serial.println("\n[OK] SmartConfig nhận được thông tin!");
+    while (WiFi.status() != WL_CONNECTED)
+    {
+      delay(500);
+      Serial.print(".");
+    }
+    Serial.println("\n[Đã lưu] WiFi đã được thiết lập vào Flash.");
   }
 }
-
-float kalmanFilter(float measurement, float &estimatedState)
+// --- HÀM LẤY THÔNG TIN THIẾT BỊ ---
+void getDeviceInfo()
 {
-  estimatedState = K_FACTOR * measurement + (1.0 - K_FACTOR) * estimatedState;
-  return estimatedState;
-}
+  deviceMac = WiFi.macAddress();
+  uint64_t chipid = ESP.getEfuseMac();
+  deviceChipID = String((uint32_t)(chipid >> 32), HEX);
+  deviceChipID += String((uint32_t)chipid, HEX);
+  deviceChipID.toUpperCase();
 
-// ************************ HÀM GỬI ĐĂNG KÝ ************************
-void sendRegistration()
-{
-  esp_now_send(BROADCAST_MAC, (uint8_t *)&regMsg, sizeof(regMsg));
-  Serial.printf("Node 1: Sent registration (ID: %d) to Broadcast.\n", node_id);
+  Serial.println("--- THÔNG TIN THIẾT BỊ ---");
+  Serial.print("MAC Address: ");
+  Serial.println(deviceMac);
+  Serial.print("Chip ID: ");
+  Serial.println(deviceChipID);
+  Serial.println("--------------------------");
 }
-
 void setup()
 {
   Serial.begin(115200);
   dht.begin();
-  WiFi.mode(WIFI_STA);
 
-  if (esp_now_init() != ESP_OK)
-  {
-    Serial.println("Lỗi khởi tạo ESP-NOW");
-    return;
-  }
-
-  esp_now_register_send_cb(OnDataSent);
-
-  esp_now_peer_info_t peer2 = {};
-  memcpy(peer2.peer_addr, MAC_NODE2, 6);
-  peer2.channel = 0;
-  peer2.encrypt = false;
-  if (esp_now_add_peer(&peer2) != ESP_OK)
-  {
-    Serial.println("Thêm peer Master thất bại");
-  }
-
-  esp_now_peer_info_t peer_bcast = {};
-  memcpy(peer_bcast.peer_addr, BROADCAST_MAC, 6);
-  peer_bcast.channel = 0;
-  peer_bcast.encrypt = false;
-  esp_now_add_peer(&peer_bcast);
-
+  pinMode(RAIN_PIN, INPUT);
   pinMode(LIGHT_PIN, INPUT);
   pinMode(SOIL_PIN, INPUT);
-  lightEstimated = (float)analogRead(LIGHT_PIN);
-  soilEstimated = (float)analogRead(SOIL_PIN);
-  tempEstimated = dht.readTemperature();
-  humidEstimated = dht.readHumidity();
+  pinMode(BOOT_BUTTON_PIN, INPUT_PULLUP);
 
-  sendRegistration();
-  lastRegTime = millis();
+  Serial.println("[WIFI] Cấu hình WiFi...");
+  setupWiFi();
+
+  Serial.println("[FIREBASE] Cấu hình Firebase...");
+  config.api_key = API_KEY;
+  config.database_url = DATABASE_URL;
+  auth.user.email = "admin@gmail.com";
+  auth.user.password = "admins";
+  Serial.println("[FIREBASE] Đang kết nối...");
+  Firebase.begin(&config, &auth);
+
+  Serial.println("========================================");
+  Serial.println("[SYSTEM] ✓ Khởi động hoàn tất!");
+  Serial.printf("[SYSTEM] Free Heap: %d bytes\n", ESP.getFreeHeap());
+  Serial.println("========================================\n");
 }
 
 void loop()
-{
-  if (millis() - lastInterval >= intervalSend)
+{ // --- KIỂM TRA NHẤN GIỮ NÚT BOOT 5 GIÂY ---
+
+  unsigned long now = millis();
+
+  // 2. XỬ LÝ NÚT BẤM (SmartConfig)
+  if (digitalRead(BOOT_BUTTON_PIN) == LOW)
   {
-    int rawLight = analogRead(LIGHT_PIN);
-    int rawSoil = analogRead(SOIL_PIN);
+    if (!isPressing)
+    {
+      pressStartTime = now;
+      isPressing = true;
+    }
+    if (now - pressStartTime > 5000)
+    {
+      Serial.println("[BOOT] Khởi động SmartConfig!");
+      startSmartConfig();
+      isPressing = false;
+    }
+  }
+  else
+  {
+    isPressing = false;
+  }
+  if (millis() - lastSensorupdate > 1000)
+  {
+    float h = dht.readHumidity();
+    float t = dht.readTemperature();
 
-    dataSend.temp = dht.readTemperature();
-    dataSend.humid = dht.readHumidity();
-    dataSend.light = map(rawLight, 0, 4095, 100, 0);
-    dataSend.soil = map(rawSoil, 0, 4095, 0, 100);
-    dataSend.mcu_temp = readInternalTemperature();
+    if (!isnan(h) && !isnan(t))
+    {
+      liveData.humid = h;
+      liveData.temp = t;
+    }
 
-    dataSend.nodeID = node_id;
-
-    Serial.printf("mcu: %.1f\ttemp: %.1f\thumid: %.1f\tChipID:%u\n",
-                  dataSend.mcu_temp, dataSend.temp, dataSend.humid, dataSend.nodeID);
-
-    esp_now_send(MAC_NODE2, (uint8_t *)&dataSend, sizeof(dataSend));
-    lastInterval = millis();
+    liveData.light = map(analogRead(LIGHT_PIN), 0, 4095, 100, 0);
+    liveData.soil = map(analogRead(SOIL_PIN), 0, 4095, 100, 0);
+    liveData.rain = (digitalRead(RAIN_PIN) == LOW);
+    liveData.mcu_temp = temperatureRead();
+    Serial.printf("DHT Temp: %f C, Humid: %f %% MCU_Temp: %f light: %f soil: %f rain: %s\n", liveData.temp, liveData.humid, liveData.mcu_temp, liveData.light, liveData.soil, liveData.rain ? "YES" : "NO");
+    lastSensorupdate = millis();
   }
 
-  if (millis() - lastRegTime >= regInterval)
+  if (millis() - lastFirebaseUpload > 5000)
   {
-    sendRegistration();
-    lastRegTime = millis();
+    lastFirebaseUpload = millis();
+    bool success = Firebase.setFloat(fbdo, "/smart_farm_iot/data/node1/node1_dht_humid", liveData.humid);
+    if (success)
+    {
+      Serial.println("[FIREBASE]Gửi Firebase THÀNH CÔNG");
+    }
+    else
+    {
+      Serial.print("[FIREBASE]Gửi THẤT BẠI. Lý do: ");
+      Serial.println(fbdo.errorReason());
+    }
+    Firebase.setFloat(fbdo, F("/smart_farm_iot/data/node1/node1_dht_humid"), liveData.humid);
+    Firebase.setFloat(fbdo, F("/smart_farm_iot/data/node1/node1_dht_temp"), liveData.temp);
+    Firebase.setFloat(fbdo, F("/smart_farm_iot/data/node1/node1_light"), liveData.light);
+    Firebase.setFloat(fbdo, F("/smart_farm_iot/data/node1/node1_mcu_temp"), liveData.mcu_temp);
+    Firebase.setBool(fbdo, F("/smart_farm_iot/data/node1/node1_rain"), liveData.rain);
+    Firebase.setFloat(fbdo, F("/smart_farm_iot/data/node1/node1_soil"), liveData.soil);
+    Firebase.setBool(fbdo, F("/smart_farm_iot/data/node1/node1_state"), true);
+    Firebase.setString(fbdo, F("/smart_farm_iot/data/node1/device_mac"), deviceMac);
+    Firebase.setString(fbdo, F("/smart_farm_iot/data/node1/device_chipid"), deviceChipID);
+    Firebase.setString(fbdo, F("/smart_farm_iot/data/node1/node1_ssid"), WiFi.SSID());
+
+    Serial.printf("node1_dht_temp: %f\n", Firebase.getFloat(fbdo, F("/smart_farm_iot/data/node1/node1_dht_temp")));
+    lastFirebaseUpload = millis();
   }
 }
