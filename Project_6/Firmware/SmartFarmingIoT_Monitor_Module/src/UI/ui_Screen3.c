@@ -192,8 +192,9 @@ void ui_Screen3_screen_init(void)
     ui_LabelAirQuality = lv_label_create(ui_Panel6);
     lv_obj_set_width(ui_LabelAirQuality, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_LabelAirQuality, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_LabelAirQuality, 20);
-    lv_obj_set_y(ui_LabelAirQuality, lv_pct(35));
+    lv_obj_set_x(ui_LabelAirQuality, -63);
+    lv_obj_set_y(ui_LabelAirQuality, lv_pct(36));
+    lv_obj_set_align(ui_LabelAirQuality, LV_ALIGN_TOP_MID);
     lv_label_set_text(ui_LabelAirQuality, "0%");
     lv_obj_set_style_text_align(ui_LabelAirQuality, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
 

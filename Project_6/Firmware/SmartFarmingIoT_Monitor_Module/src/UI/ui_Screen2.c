@@ -11,16 +11,11 @@ lv_obj_t * ui_Panel2 = NULL;
 lv_obj_t * ui_LabelNode3 = NULL;
 lv_obj_t * ui_LabelNode3State = NULL;
 lv_obj_t * ui_LabelNode3MCU = NULL;
-lv_obj_t * ui_LabelNode3Temp = NULL;
-lv_obj_t * ui_LabelNode3Humid = NULL;
 lv_obj_t * ui_LabelNode3Flow = NULL;
-lv_obj_t * ui_ArcTempNode3 = NULL;
-lv_obj_t * ui_LabelTempNode3 = NULL;
-lv_obj_t * ui_Label3 = NULL;
 lv_obj_t * ui_ArcMCU3 = NULL;
 lv_obj_t * ui_LabelMCU3 = NULL;
 lv_obj_t * ui_Label1 = NULL;
-lv_obj_t * ui_ArcPWM = NULL;
+lv_obj_t * ui_ArcFlowrate = NULL;
 lv_obj_t * ui_LabelPWM = NULL;
 lv_obj_t * ui_Label2 = NULL;
 lv_obj_t * ui_Panel3 = NULL;
@@ -102,69 +97,19 @@ void ui_Screen2_screen_init(void)
     lv_obj_set_style_text_color(ui_LabelNode3MCU, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_LabelNode3MCU, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_LabelNode3Temp = lv_label_create(ui_Panel2);
-    lv_obj_set_width(ui_LabelNode3Temp, LV_SIZE_CONTENT);   /// 100
-    lv_obj_set_height(ui_LabelNode3Temp, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_LabelNode3Temp, 2);
-    lv_obj_set_y(ui_LabelNode3Temp, 60);
-    lv_label_set_text(ui_LabelNode3Temp, "Temp:0°C");
-    lv_obj_set_style_text_color(ui_LabelNode3Temp, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_LabelNode3Temp, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_LabelNode3Humid = lv_label_create(ui_Panel2);
-    lv_obj_set_width(ui_LabelNode3Humid, LV_SIZE_CONTENT);   /// 100
-    lv_obj_set_height(ui_LabelNode3Humid, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_LabelNode3Humid, 2);
-    lv_obj_set_y(ui_LabelNode3Humid, 80);
-    lv_label_set_text(ui_LabelNode3Humid, "Humi: 0 %");
-    lv_obj_set_style_text_color(ui_LabelNode3Humid, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_LabelNode3Humid, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-
     ui_LabelNode3Flow = lv_label_create(ui_Panel2);
     lv_obj_set_width(ui_LabelNode3Flow, LV_SIZE_CONTENT);   /// 100
     lv_obj_set_height(ui_LabelNode3Flow, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_LabelNode3Flow, 2);
-    lv_obj_set_y(ui_LabelNode3Flow, 100);
+    lv_obj_set_y(ui_LabelNode3Flow, 62);
     lv_label_set_text(ui_LabelNode3Flow, "Flow: 0%");
     lv_obj_set_style_text_color(ui_LabelNode3Flow, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_LabelNode3Flow, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_ArcTempNode3 = lv_arc_create(ui_Container2);
-    lv_obj_set_width(ui_ArcTempNode3, lv_pct(30));
-    lv_obj_set_height(ui_ArcTempNode3, lv_pct(30));
-    lv_obj_set_x(ui_ArcTempNode3, lv_pct(3));
-    lv_obj_set_y(ui_ArcTempNode3, lv_pct(30));
-    lv_obj_set_align(ui_ArcTempNode3, LV_ALIGN_LEFT_MID);
-    lv_obj_clear_flag(ui_ArcTempNode3, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_arc_set_value(ui_ArcTempNode3, 0);
-
-    lv_obj_set_style_pad_left(ui_ArcTempNode3, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui_ArcTempNode3, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui_ArcTempNode3, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui_ArcTempNode3, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-
-    ui_LabelTempNode3 = lv_label_create(ui_ArcTempNode3);
-    lv_obj_set_width(ui_LabelTempNode3, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_LabelTempNode3, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_LabelTempNode3, 0);
-    lv_obj_set_y(ui_LabelTempNode3, -10);
-    lv_obj_set_align(ui_LabelTempNode3, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LabelTempNode3, "0°C");
-    lv_obj_set_style_text_align(ui_LabelTempNode3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_LabelTempNode3, &lv_font_montserrat_10, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_Label3 = lv_label_create(ui_ArcTempNode3);
-    lv_obj_set_width(ui_Label3, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label3, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label3, 0);
-    lv_obj_set_y(ui_Label3, 30);
-    lv_obj_set_align(ui_Label3, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label3, "TEMP");
-
     ui_ArcMCU3 = lv_arc_create(ui_Container2);
     lv_obj_set_width(ui_ArcMCU3, lv_pct(30));
     lv_obj_set_height(ui_ArcMCU3, lv_pct(30));
-    lv_obj_set_x(ui_ArcMCU3, lv_pct(35));
+    lv_obj_set_x(ui_ArcMCU3, lv_pct(17));
     lv_obj_set_y(ui_ArcMCU3, lv_pct(30));
     lv_obj_set_align(ui_ArcMCU3, LV_ALIGN_LEFT_MID);
     lv_obj_clear_flag(ui_ArcMCU3, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
@@ -193,22 +138,22 @@ void ui_Screen2_screen_init(void)
     lv_obj_set_align(ui_Label1, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label1, "MCU3");
 
-    ui_ArcPWM = lv_arc_create(ui_Container2);
-    lv_obj_set_width(ui_ArcPWM, lv_pct(30));
-    lv_obj_set_height(ui_ArcPWM, lv_pct(30));
-    lv_obj_set_x(ui_ArcPWM, lv_pct(68));
-    lv_obj_set_y(ui_ArcPWM, lv_pct(30));
-    lv_obj_set_align(ui_ArcPWM, LV_ALIGN_LEFT_MID);
-    lv_obj_clear_flag(ui_ArcPWM, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE |
+    ui_ArcFlowrate = lv_arc_create(ui_Container2);
+    lv_obj_set_width(ui_ArcFlowrate, lv_pct(30));
+    lv_obj_set_height(ui_ArcFlowrate, lv_pct(30));
+    lv_obj_set_x(ui_ArcFlowrate, lv_pct(52));
+    lv_obj_set_y(ui_ArcFlowrate, lv_pct(30));
+    lv_obj_set_align(ui_ArcFlowrate, LV_ALIGN_LEFT_MID);
+    lv_obj_clear_flag(ui_ArcFlowrate, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE |
                       LV_OBJ_FLAG_SCROLLABLE);     /// Flags
-    lv_arc_set_value(ui_ArcPWM, 0);
+    lv_arc_set_value(ui_ArcFlowrate, 0);
 
-    lv_obj_set_style_pad_left(ui_ArcPWM, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui_ArcPWM, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui_ArcPWM, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui_ArcPWM, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui_ArcFlowrate, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui_ArcFlowrate, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui_ArcFlowrate, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui_ArcFlowrate, 0, LV_PART_KNOB | LV_STATE_DEFAULT);
 
-    ui_LabelPWM = lv_label_create(ui_ArcPWM);
+    ui_LabelPWM = lv_label_create(ui_ArcFlowrate);
     lv_obj_set_width(ui_LabelPWM, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_LabelPWM, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_LabelPWM, 0);
@@ -218,13 +163,13 @@ void ui_Screen2_screen_init(void)
     lv_obj_set_style_text_align(ui_LabelPWM, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_LabelPWM, &lv_font_montserrat_10, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_Label2 = lv_label_create(ui_ArcPWM);
+    ui_Label2 = lv_label_create(ui_ArcFlowrate);
     lv_obj_set_width(ui_Label2, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label2, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_Label2, 0);
     lv_obj_set_y(ui_Label2, 30);
     lv_obj_set_align(ui_Label2, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label2, "PWM");
+    lv_label_set_text(ui_Label2, "FLR");
 
     ui_Panel3 = lv_obj_create(ui_Container2);
     lv_obj_set_width(ui_Panel3, 70);
@@ -321,16 +266,11 @@ void ui_Screen2_screen_destroy(void)
     ui_LabelNode3 = NULL;
     ui_LabelNode3State = NULL;
     ui_LabelNode3MCU = NULL;
-    ui_LabelNode3Temp = NULL;
-    ui_LabelNode3Humid = NULL;
     ui_LabelNode3Flow = NULL;
-    ui_ArcTempNode3 = NULL;
-    ui_LabelTempNode3 = NULL;
-    ui_Label3 = NULL;
     ui_ArcMCU3 = NULL;
     ui_LabelMCU3 = NULL;
     ui_Label1 = NULL;
-    ui_ArcPWM = NULL;
+    ui_ArcFlowrate = NULL;
     ui_LabelPWM = NULL;
     ui_Label2 = NULL;
     ui_Panel3 = NULL;
