@@ -4,7 +4,7 @@
 #include <time.h>
 #include <Arduino.h>
 
-// --- Định nghĩa chân IO ---
+// --- Giữ nguyên các định nghĩa Pin và Config ---
 #define BOOT_BUTTON_PIN 0
 #define RL1_PIN 12
 #define RL2_PIN 14
@@ -16,35 +16,37 @@
 
 #define TIMEZONE_OFFSET_SEC (7 * 3600)
 #define DST_OFFSET_SEC 0
-#define NTP_MAX_RETRY 20
-
-#define DHT_PIN 5
-#define DHT_TYPE DHT11
 #define RELAY_ACTIVE_LOW false
 
-// --- Thông số cấu hình ---
 #define API_KEY "AIzaSyAgVge-VC6S9RocrJQibOWFqY1De7nz3eM"
 #define DATABASE_URL "https://smartfarmingiot-78911-default-rtdb.asia-southeast1.firebasedatabase.app"
 #define USER_EMAIL "admin@gmail.com"
 #define USER_PASS "admins"
 
-// --- Đối tượng Firebase & Biến hệ thống ---
-FirebaseData fbdo_stream;
-FirebaseData fbdo_action;
+#define SSID "FarmIot"
+#define PASS "12345678"
+
+FirebaseData fbdo_stream, fbdo_action, fbdo_cfg;
 FirebaseAuth auth;
 FirebaseConfig config;
 
 const int relay_pins[4] = {RL1_PIN, RL2_PIN, RL3_PIN, RL4_PIN};
-uint8_t relay_status[4] = {0, 0, 0, 0}; // Trạng thái thực tế trên chân Pin
+bool relay_status[4] = {false, false, false, false};
 
 volatile unsigned long pulseCount = 0;
 float currentFlowRate = 0;
 unsigned long lastFlowMillis = 0;
-unsigned long lastFirebaseUpload = 0;
-unsigned long lastTimerFetch = 0;
-unsigned long pressStartTime = 0;
-bool isPressing = false;
-bool smartConfigActive = false;
+
+float fbTemp = 0, fbLight = 0, fbSoil = 0;
+float fbTempThresh = 0, fbLightThresh = 0, fbSoilThresh = 0;
+bool fbTempEn = false, fbLightEn = false, fbSoilEn = false;
+int fbTempDur = 0, fbSoilDur = 0;
+int fbTempRelayIdx = 0, fbSoilRelayIdx = 1, fbLightRelayIdx = 2;
+
+unsigned long tempEndMillis = 0;
+bool tempIsRunning = false;
+unsigned long soilEndMillis = 0;
+bool soilIsRunning = false;
 
 struct TimerJob
 {
@@ -57,13 +59,13 @@ struct TimerJob
   bool running = false;
   unsigned long endMillis = 0;
 };
-
 TimerJob timers[12];
 uint8_t timerCount = 0;
 
-// =========================================================================
-//                                FUNCTIONS
-// =========================================================================
+unsigned long lastFirebaseUpload = 0;
+unsigned long lastConfigFetch = 0;
+unsigned long pressStartTime = 0;
+bool isPressing = false;
 
 void IRAM_ATTR pulseCounter() { pulseCount++; }
 
@@ -74,41 +76,17 @@ void startBuzzerBeep()
   ledcWrite(0, 0);
 }
 
-void syncTimeNTP()
-{
-  configTime(TIMEZONE_OFFSET_SEC, DST_OFFSET_SEC, "pool.ntp.org", "time.nist.gov");
-  struct tm timeinfo;
-  int retry = 0;
-  while (!getLocalTime(&timeinfo) && retry < NTP_MAX_RETRY)
-  {
-    delay(500);
-    retry++;
-  }
-  if (retry >= NTP_MAX_RETRY)
-  {
-    Serial.println("[TIME] NTP sync failed");
-  }
-  else
-  {
-    char buf[32];
-    strftime(buf, sizeof(buf), "%F %T", &timeinfo);
-    Serial.printf("[TIME] Synced: %s\n", buf);
-  }
-}
-
 void setRelayState(uint8_t index, bool on, bool syncFirebase = false)
 {
   if (index >= 4)
     return;
-  uint8_t desired = on ? (RELAY_ACTIVE_LOW ? LOW : HIGH) : (RELAY_ACTIVE_LOW ? HIGH : LOW);
-
-  if (digitalRead(relay_pins[index]) != desired)
+  uint8_t level = on ? (RELAY_ACTIVE_LOW ? LOW : HIGH) : (RELAY_ACTIVE_LOW ? HIGH : LOW);
+  if (digitalRead(relay_pins[index]) != level)
   {
-    digitalWrite(relay_pins[index], desired);
-    relay_status[index] = desired;
+    digitalWrite(relay_pins[index], level);
+    relay_status[index] = on;
     startBuzzerBeep();
-
-    if (syncFirebase)
+    if (syncFirebase && Firebase.ready())
     {
       String path = "/smart_farm_iot/data/node3/relay" + String(index + 1) + "_state";
       Firebase.setBool(fbdo_action, path, on);
@@ -116,13 +94,56 @@ void setRelayState(uint8_t index, bool on, bool syncFirebase = false)
   }
 }
 
+// Hàm lấy cấu hình (Chỉ gọi khi cần thiết, không gọi liên tục)
+void fetchControlConfig()
+{
+  if (!Firebase.ready())
+    return;
+  // Lấy dữ liệu cảm biến từ Node 1
+  if (Firebase.getFloat(fbdo_cfg, "/smart_farm_iot/data/node1/node1_dht_temp"))
+    fbTemp = fbdo_cfg.floatData();
+  if (Firebase.getFloat(fbdo_cfg, "/smart_farm_iot/data/node1/node1_light"))
+    fbLight = fbdo_cfg.floatData();
+  if (Firebase.getFloat(fbdo_cfg, "/smart_farm_iot/data/node1/node1_soil"))
+    fbSoil = fbdo_cfg.floatData();
+
+  // Lấy logic điều khiển
+  if (Firebase.getJSON(fbdo_cfg, "/smart_farm_iot/config/context_logic"))
+  {
+    FirebaseJson &json = fbdo_cfg.jsonObject();
+    FirebaseJsonData data;
+    json.get(data, "temp/enabled");
+    fbTempEn = data.boolValue;
+    json.get(data, "temp/threshold");
+    fbTempThresh = data.floatValue;
+    json.get(data, "temp/duration");
+    fbTempDur = data.intValue;
+    json.get(data, "temp/relay");
+    fbTempRelayIdx = data.intValue;
+    json.get(data, "soil/enabled");
+    fbSoilEn = data.boolValue;
+    json.get(data, "soil/threshold");
+    fbSoilThresh = data.floatValue;
+    json.get(data, "soil/duration");
+    fbSoilDur = data.intValue;
+    json.get(data, "soil/relay");
+    fbSoilRelayIdx = data.intValue;
+    json.get(data, "light/enabled");
+    fbLightEn = data.boolValue;
+    json.get(data, "light/threshold");
+    fbLightThresh = data.floatValue;
+    json.get(data, "light/relay");
+    fbLightRelayIdx = data.intValue;
+  }
+}
+
 void fetchTimers()
 {
   if (!Firebase.ready())
     return;
-  if (Firebase.getJSON(fbdo_action, "/smart_farm_iot/config/timers"))
+  if (Firebase.getJSON(fbdo_cfg, "/smart_farm_iot/config/timers"))
   {
-    FirebaseJson &json = fbdo_action.jsonObject();
+    FirebaseJson &json = fbdo_cfg.jsonObject();
     size_t len = json.iteratorBegin();
     String key, value;
     int type;
@@ -135,7 +156,6 @@ void fetchTimers()
         FirebaseJson timerObj;
         timerObj.setJsonData(value);
         FirebaseJsonData data;
-
         timers[timerCount].id = key;
         timerObj.get(data, "enabled");
         timers[timerCount].enabled = data.boolValue;
@@ -151,66 +171,89 @@ void fetchTimers()
         int colon = ts.indexOf(':');
         if (colon > 0)
           timers[timerCount].startMinutes = ts.substring(0, colon).toInt() * 60 + ts.substring(colon + 1).toInt();
-        timers[timerCount].running = false;
         timerCount++;
       }
     }
     json.iteratorEnd();
-    Serial.printf("[TIMER] Loaded %d jobs\n", timerCount);
   }
 }
 
+// --- HÀM SMARTCONFIG WIFI ---
 void startSmartConfig()
 {
-  smartConfigActive = true;
+  Serial.println("\n[WIFI] Đang xóa cấu hình cũ...");
   WiFi.disconnect(true, true);
   delay(1000);
+
   WiFi.beginSmartConfig();
-  Serial.println("[WIFI] SmartConfig Started...");
+  Serial.println("[WIFI] Chờ SmartConfig từ điện thoại...");
+
   while (!WiFi.smartConfigDone())
   {
-    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
-    delay(300);
+    delay(500);
+    Serial.print("#");
+    yield(); // Cho watchdog nghỉ
   }
+
+  Serial.println("\n[WIFI] Đã nhận cấu hình!");
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
+    Serial.print(".");
+    yield();
   }
-  smartConfigActive = false;
-  digitalWrite(LED_PIN, HIGH);
-  Serial.println("[WIFI] Connected via SmartConfig");
+  Serial.println("\n[WIFI] Kết nối thành công!");
 }
 
-void streamCallback(StreamData data)
+// --- HÀM THIẾT LẬP WIFI & LƯU THÔNG TIN ---
+void setupWiFi()
 {
-  String path = data.dataPath();
-  if (path.indexOf("relay") != -1)
+  WiFi.mode(WIFI_AP_STA);
+  WiFi.setAutoConnect(true);
+  WiFi.setAutoReconnect(true);
+
+  Serial.println("Kiểm tra wifi đã lưu Flash...");
+
+  WiFi.begin();
+
+  int timeout = 0;
+  while (WiFi.status() != WL_CONNECTED && timeout < 20)
   {
-    int idx = (path.indexOf("1") != -1) ? 0 : (path.indexOf("2") != -1) ? 1
-                                          : (path.indexOf("3") != -1)   ? 2
-                                          : (path.indexOf("4") != -1)   ? 3
-                                                                        : -1;
-    if (idx != -1)
+    delay(500);
+    Serial.print(".");
+    timeout++;
+  }
+
+  if (WiFi.status() == WL_CONNECTED)
+  {
+    Serial.println("\n[THÀNH CÔNG] Đã kết nối WiFi");
+    Serial.print("IP: ");
+    Serial.println(WiFi.localIP());
+  }
+  else
+  {
+    Serial.println("\n[KHÔNG TÌM THẤY] Bắt đầu chế độ SmartConfig...");
+    WiFi.beginSmartConfig();
+
+    while (!WiFi.smartConfigDone())
     {
-      bool val = data.boolData();
-      bool isLocked = false;
-      for (int i = 0; i < timerCount; i++)
-        if (timers[i].running && timers[i].relayIndex == idx)
-          isLocked = true;
-      if (!isLocked)
-        setRelayState(idx, val);
+      delay(500);
+      Serial.print("#");
     }
+    Serial.println("\n[OK] SmartConfig nhận được thông tin!");
+    while (WiFi.status() != WL_CONNECTED)
+    {
+      delay(500);
+      Serial.print(".");
+    }
+    Serial.println("\n[Đã lưu] WiFi đã được thiết lập vào Flash.");
   }
 }
-
-// =========================================================================
-//                               MAIN SETUP
-// =========================================================================
 
 void setup()
 {
+  
   Serial.begin(115200);
-
   for (int i = 0; i < 4; i++)
   {
     pinMode(relay_pins[i], OUTPUT);
@@ -220,24 +263,13 @@ void setup()
   pinMode(BOOT_BUTTON_PIN, INPUT_PULLUP);
   pinMode(FLOW_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(FLOW_PIN), pulseCounter, FALLING);
-
   ledcSetup(0, 2000, 8);
   ledcAttachPin(BUZZER_PIN, 0);
 
-  // WiFi & NTP
-  WiFi.begin();
-  int timeout = 0;
-  while (WiFi.status() != WL_CONNECTED && timeout < 20)
-  {
-    delay(500);
-    timeout++;
-  }
-  if (WiFi.status() == WL_CONNECTED)
-    digitalWrite(LED_PIN, HIGH);
+  Serial.println("[WIFI] Cấu hình WiFi...");
+  setupWiFi();
 
-  syncTimeNTP();
-
-  // Firebase
+  configTime(TIMEZONE_OFFSET_SEC, DST_OFFSET_SEC, "pool.ntp.org");
   config.api_key = API_KEY;
   config.database_url = DATABASE_URL;
   auth.user.email = USER_EMAIL;
@@ -247,52 +279,88 @@ void setup()
 
   if (Firebase.ready())
   {
+    // Bắt đầu luồng Stream để lắng nghe lệnh điều khiển Relay
     Firebase.beginStream(fbdo_stream, "/smart_farm_iot/data/node3");
-    Firebase.setStreamCallback(fbdo_stream, streamCallback, [](bool) {});
+    fetchControlConfig();
     fetchTimers();
   }
+  startBuzzerBeep();
 }
-
-// =========================================================================
-//                               MAIN LOOP
-// =========================================================================
 
 void loop()
 {
   unsigned long now = millis();
 
-  // 1. Kiểm tra nút BOOT (SmartConfig)
-  if (digitalRead(BOOT_BUTTON_PIN) == LOW)
+  // 1. Xử lý Stream (Nhận lệnh relay tức thời - KHÔNG NGHẼN)
+  if (Firebase.ready() && Firebase.readStream(fbdo_stream))
   {
-    if (!isPressing)
-    {
-      pressStartTime = now;
-      isPressing = true;
-    }
-    if (now - pressStartTime > 5000)
-    {
-      startSmartConfig();
-      isPressing = false;
-    }
-  }
-  else
-    isPressing = false;
+    if (fbdo_stream.streamTimeout())
+      Serial.println("Stream timeout, resuming...");
 
-  // 2. Tính lưu lượng (mỗi 1s)
+    // Kiểm tra nếu dữ liệu trả về là trạng thái các relay
+    String path = fbdo_stream.dataPath();
+    if (path.indexOf("relay1_state") >= 0)
+      setRelayState(0, fbdo_stream.boolData());
+    else if (path.indexOf("relay2_state") >= 0)
+      setRelayState(1, fbdo_stream.boolData());
+    else if (path.indexOf("relay3_state") >= 0)
+      setRelayState(2, fbdo_stream.boolData());
+    else if (path.indexOf("relay4_state") >= 0)
+      setRelayState(3, fbdo_stream.boolData());
+  }
+
+  // 2. Cập nhật cấu hình định kỳ (15 giây một lần để tránh nghẽn SSL)
+  if (now - lastConfigFetch > 15000)
+  {
+    fetchControlConfig();
+    lastConfigFetch = now;
+  }
+
+  // 3. Sensor Flow (1 giây)
   if (now - lastFlowMillis > 1000)
   {
-    detachInterrupt(FLOW_PIN);
-    unsigned long pulses = pulseCount;
+    currentFlowRate = (pulseCount / 7.5f);
     pulseCount = 0;
     lastFlowMillis = now;
-    attachInterrupt(digitalPinToInterrupt(FLOW_PIN), pulseCounter, FALLING);
-
-    currentFlowRate = (pulses / 7.5f);
-    Serial.printf("[FLOW] pulses=%lu, rate=%.2f L/min\n", pulses, currentFlowRate);
-    Serial.print();
   }
 
-  // 3. Xử lý Timer
+  // 4. Logic Temp/Soil/Light (Giữ nguyên logic của bạn)
+  if (fbTempEn)
+  {
+    if (fbTemp > fbTempThresh && !tempIsRunning)
+    {
+      tempIsRunning = true;
+      tempEndMillis = now + (fbTempDur * 1000);
+      setRelayState(fbTempRelayIdx, true, true);
+    }
+    if (tempIsRunning && now >= tempEndMillis)
+    {
+      tempIsRunning = false;
+      setRelayState(fbTempRelayIdx, false, true);
+    }
+  }
+  if (fbSoilEn)
+  {
+    if (fbSoil < fbSoilThresh && !soilIsRunning)
+    {
+      soilIsRunning = true;
+      soilEndMillis = now + (fbSoilDur * 1000);
+      setRelayState(fbSoilRelayIdx, true, true);
+    }
+    if (soilIsRunning && now >= soilEndMillis)
+    {
+      soilIsRunning = false;
+      setRelayState(fbSoilRelayIdx, false, true);
+    }
+  }
+  if (fbLightEn)
+  {
+    bool shouldLightOn = (fbLight > fbLightThresh);
+    if (relay_status[fbLightRelayIdx] != shouldLightOn)
+      setRelayState(fbLightRelayIdx, shouldLightOn, true);
+  }
+
+  // 5. Timer (Giữ nguyên logic)
   struct tm timeinfo;
   if (getLocalTime(&timeinfo))
   {
@@ -302,7 +370,6 @@ void loop()
       TimerJob &t = timers[i];
       if (!t.enabled)
         continue;
-      // Bắt đầu
       if (!t.running && t.lastRunDay != timeinfo.tm_yday && curMin == t.startMinutes)
       {
         t.running = true;
@@ -310,7 +377,6 @@ void loop()
         t.endMillis = now + (t.durationSec * 1000);
         setRelayState(t.relayIndex, true, true);
       }
-      // Kết thúc
       if (t.running && now >= t.endMillis)
       {
         t.running = false;
@@ -319,7 +385,7 @@ void loop()
     }
   }
 
-  // 4. Upload dữ liệu & Sync Timer
+  // 6. Upload dữ liệu (30 giây)
   if (now - lastFirebaseUpload > 30000)
   {
     if (Firebase.ready())
@@ -329,8 +395,36 @@ void loop()
       update.set("node3_mcu_temp", temperatureRead());
       update.set("node3_state", true);
       Firebase.updateNode(fbdo_action, "/smart_farm_iot/data/node3", update);
-      fetchTimers();
+      fetchTimers(); // Cập nhật timer mỗi 30s
     }
     lastFirebaseUpload = now;
+  }
+
+  // 7. Nút BOOT (Giữ nguyên)
+
+  // Xác định trạng thái WiFi
+  bool isSmartConfig = false;
+  static bool smartConfigStarted = false;
+  static bool wasConnected = true;
+  static unsigned long smartConfigStartTime = 0;
+  if (digitalRead(BOOT_BUTTON_PIN) == LOW)
+  {
+    if (!isPressing)
+    {
+      pressStartTime = now;
+      isPressing = true;
+    }
+    if (now - pressStartTime > 5000)
+    {
+      Serial.println("[BOOT] Khởi động SmartConfig!");
+      startSmartConfig();
+      isPressing = false;
+      smartConfigStarted = true;
+      smartConfigStartTime = millis();
+    }
+  }
+  else
+  {
+    isPressing = false;
   }
 }
