@@ -1,0 +1,990 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 17.2.0 d001Mar-04-2026 at 23:19:13 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='ESP32_X_FISHING';
+ POST_TIME='Nov 22 2016 17:05:28';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ B1 'BUZZER_BUZZER_TH_THROUGH HOLE':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUZZER@ESP32_X_FISHING.BUZZER(SCH_1):INS15851960@INDUCTOR.BUZZER.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):buzzer@esp32_x_fishing.buzzer(sch_1):ins15851960@inductor.\buzzer.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_buzzer@esp32_x_fishing.buzzer(sch_1):page1_ins15851960@inductor.\buzzer.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C1 'NPOL_CAP_C1206_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15940934@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15940934@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15940934@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C10 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15943056@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15943056@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15943056@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C11 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15934830@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15934830@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15934830@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C12 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15934854@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15934854@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15934854@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C13 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15934870@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15934870@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15934870@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C14 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15934886@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15934886@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15934886@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C15 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15938707@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15938707@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15938707@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C16 'POL_CAP_RAD_SIZE_F_220UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939343@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939343@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939343@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C17 'NPOL_CAP_C0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15936154@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15936154@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15936154@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C18 'NPOL_CAP_C0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15936170@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15936170@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15936170@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C19 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15936400@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15936400@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15936400@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C2 'POL_CAP_CASE_G_330UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15940950@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15940950@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15940950@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C20 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15936416@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15936416@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15936416@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'POL_CAP_CAP_THRU_5MM_220UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15939165@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15939165@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15939165@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939359@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939359@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939359@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939375@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939375@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939375@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'POL_CAP_CAP_THRU_5MM_220UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939545@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939545@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939545@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'NPOL_CAP_C0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939561@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939561@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939561@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C26 'NPOL_CAP_C0805_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939577@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939577@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939577@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C27 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15937431@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15937431@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15937431@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C28 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15937447@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15937447@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15937447@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C29 'POL_CAP_RAD_SIZE_C_100UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15924819@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15924819@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15924819@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C3 'POL_CAP_RAD_SIZE_F_470UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15942048@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15942048@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15942048@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C30 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15937582@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15937582@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15937582@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C31 'NPOL_CAP_C1206_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15945552@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15945552@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15945552@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C32 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15942305@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15942305@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15942305@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C33 'NPOL_CAP_C0603_33NF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15942479@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15942479@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15942479@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C34 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15929305@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15929305@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15929305@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C35 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15929367@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15929367@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15929367@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C36 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15929424@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15929424@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15929424@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C37 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15929482@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15929482@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15929482@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C38 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15929539@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15929539@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15929539@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C4 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15943542@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15943542@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15943542@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C5 'POL_CAP_RAD_SIZE_F_220UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15937295@CAPACITOR.POL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15937295@capacitor.\pol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15937295@capacitor.\pol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C6 'NPOL_CAP_C0603_1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876270@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876270@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876270@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C7 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15879705@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15879705@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15879705@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C8 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876842@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876842@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876842@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C9 'NPOL_CAP_C0603_0.1UF':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15881420@CAPACITOR.NPOL_CAP.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15881420@capacitor.\npol_cap.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15881420@capacitor.\npol_cap.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'DIODE_AC_DO_214AC_1N5819':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15943024@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15943024@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15943024@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D11 'DIODE_SOD_123_1N4148':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUZZER@ESP32_X_FISHING.BUZZER(SCH_1):INS15851181@BJT_FET.DIODE.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):buzzer@esp32_x_fishing.buzzer(sch_1):ins15851181@bjt_fet.\diode.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_buzzer@esp32_x_fishing.buzzer(sch_1):page1_ins15851181@bjt_fet.\diode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'DIODE_AC_DO_214AC_SS34/B360':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15941458@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15941458@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15941458@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15944739@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15944739@bjt_fet.\led.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15944739@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D4 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LED@ESP32_X_FISHING.LED(SCH_1):INS15870027@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):led@esp32_x_fishing.led(sch_1):ins15870027@bjt_fet.\led.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_led@esp32_x_fishing.led(sch_1):page1_ins15870027@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D5 'LED_D0603_0603':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15945199@BJT_FET.LED.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15945199@bjt_fet.\led.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15945199@bjt_fet.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D6 'DIODE_AC_DO_214AC_1N5819':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15946332@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15946332@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15946332@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D7 'DIODE_AC_DO_214AC_1N4007':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15937180@BJT_FET.DIODE_AC.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15937180@bjt_fet.\diode_ac.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15937180@bjt_fet.\diode_ac.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ DZ1 'ZENER_SOD_123_3.3V':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15945837@BJT_FET.ZENER.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15945837@bjt_fet.\zener.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15945837@bjt_fet.\zener.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'HEADER1X6_HEADER1X6BUS_HEADER1X':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15931745@HEADER_CONNECTOR.HEADER1X6.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15931745@header_connector.\header1x6.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15931745@header_connector.\header1x6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'HEADER1X4_DOMINO4_200_RA_DOMINO':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15944962@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15944962@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15944962@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER1X4_SHDRV4W110P0_254_1X4_':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):I2C@ESP32_X_FISHING.I2C(SCH_1):INS15846927@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):i2c@esp32_x_fishing.i2c(sch_1):ins15846927@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_i2c@esp32_x_fishing.i2c(sch_1):page1_ins15846927@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J4 'HEADER1X14_HEADER_1X14_254_THRU':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15938097@HEADER_CONNECTOR.HEADER1X14.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15938097@header_connector.\header1x14.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15938097@header_connector.\header1x14.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'HEADER1X6_HEADER1X6BUS_HEADER1X':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15928978@HEADER_CONNECTOR.HEADER1X6.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15928978@header_connector.\header1x6.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15928978@header_connector.\header1x6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'HEADER1X4_SHDRV4W110P0_254_1X4_':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15929343@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15929343@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15929343@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'HEADER1X4_SHDRV4W110P0_254_1X4_':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15929377@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15929377@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15929377@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J8 'HEADER1X4_SHDRV4W110P0_254_1X4_':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15936748@HEADER_CONNECTOR.HEADER1X4.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15936748@header_connector.\header1x4.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15936748@header_connector.\header1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'IND_FERRITE_DR127_SMD_IND_47UH':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15941430@INDUCTOR.IND_FERRITE.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15941430@inductor.\ind_ferrite.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15941430@inductor.\ind_ferrite.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q1 'MOSFET_P_DPAK_AOD407':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15945601@BJT_FET.MOSFET_P.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15945601@bjt_fet.\mosfet_p.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15945601@bjt_fet.\mosfet_p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Q3 'BJT_NPN_SOT_23_MMBT2222':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUZZER@ESP32_X_FISHING.BUZZER(SCH_1):INS15851241@BJT_FET.BJT_NPN.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):buzzer@esp32_x_fishing.buzzer(sch_1):ins15851241@bjt_fet.\bjt_npn.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_buzzer@esp32_x_fishing.buzzer(sch_1):page1_ins15851241@bjt_fet.\bjt_npn.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R1 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15870397@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15870397@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15870397@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R10 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876640@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876640@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876640@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R11 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876716@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876716@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876716@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R12 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876814@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876814@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876814@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R13 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876664@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876664@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876664@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R14 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15936661@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15936661@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15936661@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R15 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15936699@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15936699@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15936699@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R16 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LED@ESP32_X_FISHING.LED(SCH_1):INS15870007@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):led@esp32_x_fishing.led(sch_1):ins15870007@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_led@esp32_x_fishing.led(sch_1):page1_ins15870007@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R17 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15944812@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15944812@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15944812@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R18 'RES_R0603_4K7':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15937575@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15937575@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15937575@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R19 'RES_R0603_4K7':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15937591@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15937591@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15937591@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R2 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15936617@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15936617@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15936617@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R20 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15942413@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15942413@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15942413@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R21 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15942439@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15942439@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15942439@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R22 'RES_R0603_2.2K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15945179@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15945179@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15945179@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R23 'RES_R0603_47K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15945654@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15945654@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15945654@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R3 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15936601@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15936601@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15936601@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'RES_R0603_10':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUZZER@ESP32_X_FISHING.BUZZER(SCH_1):INS15851201@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):buzzer@esp32_x_fishing.buzzer(sch_1):ins15851201@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_buzzer@esp32_x_fishing.buzzer(sch_1):page1_ins15851201@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUZZER@ESP32_X_FISHING.BUZZER(SCH_1):INS15851265@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):buzzer@esp32_x_fishing.buzzer(sch_1):ins15851265@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_buzzer@esp32_x_fishing.buzzer(sch_1):page1_ins15851265@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUZZER@ESP32_X_FISHING.BUZZER(SCH_1):INS15851221@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):buzzer@esp32_x_fishing.buzzer(sch_1):ins15851221@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_buzzer@esp32_x_fishing.buzzer(sch_1):page1_ins15851221@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R4 'RES_R0603_2K2':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):LCD_TFT_TOUCH@ESP32_X_FISHING.LCD_TFT_TOUCH(SCH_1):INS15937546@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):ins15937546@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_lcd_tft_touch@esp32_x_fishing.lcd_tft_touch(sch_1):page1_ins15937546@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R5 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15870413@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15870413@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15870413@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R6 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15870429@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15870429@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15870429@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R7 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15870445@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15870445@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15870445@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R8 'RES_R0603_10K':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):BUTTON@ESP32_X_FISHING.BUTTON(SCH_1):INS15928440@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):button@esp32_x_fishing.button(sch_1):ins15928440@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_button@esp32_x_fishing.button(sch_1):page1_ins15928440@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R9 'RES_R0603_0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):INS15936645@RESISTOR.RES.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):ins15936645@resistor.\res.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_ins15936645@resistor.\res.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ S1 'DS01C_254_L_03_SW_DS01C-254_DS0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS15937912@OTHER_IC.DS01C_254_L_03.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins15937912@other_ic.\ds01c_254_l_03.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins15937912@other_ic.\ds01c_254_l_03.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ S2 'DS01C_254_L_03_SW_DS01C-254_DS0':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS15939655@OTHER_IC.DS01C_254_L_03.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins15939655@other_ic.\ds01c_254_l_03.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins15939655@other_ic.\ds01c_254_l_03.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW1 'SW_PUSHBUTTON_SPST_2P_BUTTON_SM':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876960@HEADER_CONNECTOR.SW_PUSHBUTTON_SPST_2P.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876960@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876960@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ SW2 'SW_PUSHBUTTON_SPST_2P_BUTTON_SM':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876866@HEADER_CONNECTOR.SW_PUSHBUTTON_SPST_2P.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876866@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876866@header_connector.\sw_pushbutton_spst_2p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T1 'TESTPOINT_TEST_POINT_PWR_5V':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15943196@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15943196@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15943196@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T10 'TESTPOINT_TESTPOINT_SIG_+3.3V':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15934710@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15934710@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15934710@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T3 'TESTPOINT_TEST_POINT_PWR_5V':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15938214@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15938214@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15938214@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T4 'TESTPOINT_TEST_POINT_PWR_5V':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15938236@HEADER_CONNECTOR.TESTPOINT.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15938236@header_connector.\testpoint.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15938236@header_connector.\testpoint.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U2 'LM1086_0_DPAK_LM1086':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15934748@LINEFOLLOWER.LM1086_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15934748@linefollower.\lm1086_0.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15934748@linefollower.\lm1086_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U3 'ESP32_WROOM_32U_ESP32_WROOM_32U':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):ESP32@ESP32_X_FISHING.ESP32(SCH_1):INS15876108@OTHER_IC.ESP32_WROOM_32U.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):esp32@esp32_x_fishing.esp32(sch_1):ins15876108@other_ic.\esp32_wroom_32u.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_esp32@esp32_x_fishing.esp32(sch_1):page1_ins15876108@other_ic.\esp32_wroom_32u.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U4 'DRV_A4988_MODULE_A4988_DRV_A498':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 4988@ESP32_X_FISHING.DRIVER 4988(SCH_1):INS54@OTHER_IC.DRV_A4988.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):ins54@other_ic.\drv_a4988.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 4988\@esp32_x_fishing.\driver 4988\(sch_1):page1_ins54@other_ic.\drv_a4988.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'DRV8825_IC_DRV8825_DRV8825':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):DRIVER 8825@ESP32_X_FISHING.DRIVER 8825(SCH_1):INS54@OTHER_IC.DRV8825.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):\driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):ins54@other_ic.\drv8825.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):\page1_driver 8825\@esp32_x_fishing.\driver 8825\(sch_1):page1_ins54@other_ic.\drv8825.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'XL4015_0_TO_263_5_XL4015':;
+
+SECTION_NUMBER 1
+ '@ESP32_X_FISHING.TOP(SCH_1):POWER@ESP32_X_FISHING.POWER(SCH_1):INS15939634@ESP32_X_FISHING.XL4015_0.NORMAL(CHIPS)':
+ C_PATH='@esp32_x_fishing.top(sch_1):power@esp32_x_fishing.power(sch_1):ins15939634@esp32_x_fishing.\xl4015_0.normal\(chips)',
+ P_PATH='@esp32_x_fishing.top(sch_1):page1_power@esp32_x_fishing.power(sch_1):page1_ins15939634@esp32_x_fishing.\xl4015_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.
