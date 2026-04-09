@@ -93,33 +93,35 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\linefollower.dsn")
-      (Path "Design Resources" ".\linefollower.dsn" "TOP")
-      (Path "Design Resources" ".\linefollower.dsn" "DRIVER")
-      (Path "Design Resources" ".\linefollower.dsn" "IR")
-      (Path "Design Resources" ".\linefollower.dsn" "MCU")
-      (Path "Design Resources" ".\linefollower.dsn" "POWER")
-      (Path "Design Resources" ".\linefollower.dsn" "SENSOR")
-      (Path "Design Resources" ".\linefollower.dsn" "SERVO")
       (Path "Layout")
       (Path "Outputs")
-      (Select "Design Resources" ".\linefollower.dsn"))
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 713"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 250 0 690"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 5 1674 24 783")
-        (Scroll "0 253")
+        (Placement "44 0 1 -1 -1 -8 -31 5 1561 24 783")
+        (Scroll "-113 110")
         (Zoom "132")
         (Occurrence "/"))
       (Path "D:\HTR\PROJECT_5\LAYOUT\MAIN\LINEFOLLOWER.DSN")
       (Schematic "TOP")
-      (Page "TOP"))) >>>>>>> 476df232df45deb247864e08984255c89725d963
+      (Page "TOP"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 973 0 335")
+        (Scroll "0 80")
+        (Zoom "100")
+        (Occurrence "/POWER"))
+      (Path "D:\HTR\PROJECT_5\LAYOUT\MAIN\LINEFOLLOWER.DSN")
+      (Schematic "POWER")
+      (Page "POWER"))) >>>>>>> 476df232df45deb247864e08984255c89725d963
   (HierarchyView)
   (Doc
     (Type "COrCapturePMDoc")

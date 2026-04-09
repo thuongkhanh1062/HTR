@@ -59,10 +59,13 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\slt_power.dsn")
-      (Path "Design Resources" ".\slt_power.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "D:\HTR\Project_2\Power_Transformer\slt_power.dsn")
+      (Path "Design Resources"
+         "D:\HTR\Project_2\Power_Transformer\slt_power.dsn" "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources" ".\slt_power.dsn" "SCHEMATIC1" "PAGE1"))
+      (Select "Design Resources"
+         "D:\HTR\Project_2\Power_Transformer\slt_power.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -72,9 +75,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 52 1717 52 544")
-        (Scroll "0 190")
-        (Zoom "100")
+        (Placement "44 0 1 -1 -1 -8 -31 78 1308 78 413")
+        (Scroll "1481 1867")
+        (Zoom "184")
         (Occurrence "/"))
       (Path "D:\HTR\PROJECT_2\POWER_TRANSFORMER\SLT_POWER.DSN")
       (Schematic "SCHEMATIC1")

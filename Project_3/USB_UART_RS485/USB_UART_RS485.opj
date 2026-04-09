@@ -43,7 +43,14 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "d:\htr\project_3\usb_uart_rs485\usb_uart_rs485.dsn")
+      (Path "Design Resources"
+         "d:\htr\project_3\usb_uart_rs485\usb_uart_rs485.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "d:\htr\project_3\usb_uart_rs485\usb_uart_rs485.dsn" "SCHEMATIC1"
+         "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -53,9 +60,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 104 1334 104 462")
-        (Scroll "-305 -3")
-        (Zoom "49")
+        (Placement "44 2 3 -1 -1 -8 -31 52 1282 52 387")
+        (Scroll "0 291")
+        (Zoom "100")
         (Occurrence "/"))
       (Path "D:\HTR\PROJECT_3\USB_UART_RS485\USB_UART_RS485.DSN")
       (Schematic "SCHEMATIC1")
