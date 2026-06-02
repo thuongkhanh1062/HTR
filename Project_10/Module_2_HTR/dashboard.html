@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -394,6 +394,7 @@
                 <div class="field-group">
                     <label for="selectedModuleInput">Selected Module</label>
                     <select id="selectedModuleInput" onchange="changeSelectedModule()">
+                        <option value="esp32_node_sht30_bh1750_soil30">ESP32 Sensor Node (30-char)</option>
                         <option value="esp_module_1">ESP Module 1</option>
                         <option value="esp_module_2">ESP Module 2</option>
                     </select>
@@ -479,12 +480,19 @@
         let client = null;
         let isConnected = false;
         const topicBase = 'home';
-        let selectedModule = 'esp_module_1';
+        let selectedModule = 'esp32_node_sht30_bh1750_soil30';
         let subscribedTopics = [];
         let showBoth = false;
 
         // Store state per module
         const stateByModule = {
+            'esp32_node_sht30_bh1750_soil30': {
+                relay: [false, false, false, false],
+                moisture: { adc: 0, percentage: 0 },
+                sht30: { temperature: 0, humidity: 0 },
+                light: { lux: 0 },
+                moduleId: 'esp32_node_sht30_bh1750_soil30'
+            },
             'esp_module_1': {
                 relay: [false, false, false, false],
                 moisture: { adc: 0, percentage: 0 },
@@ -508,6 +516,7 @@
             moisture: 'sensors/moisture',
             sht30: 'sensors/sht30',
             light: 'sensors/light',
+            sensors: 'sensors',
             module_id: 'status/module_id',
             wifi_status: 'status/wifi'
         };
@@ -569,11 +578,11 @@
             brokerChip.querySelector('strong').nextSibling.textContent = document.getElementById('brokerInput').value ? ' Broker set' : ' Not set';
             const moduleChip = document.getElementById('moduleChip');
             const currentModuleId = stateByModule[selectedModule]?.moduleId || selectedModule;
-            moduleChip.className = `chip ${currentModuleId.startsWith('esp_module_') ? 'connected' : 'disconnected'}`;
+            moduleChip.className = `chip connected`;
             moduleChip.querySelector('strong').nextSibling.textContent = ` ${currentModuleId}`;
 
             // Toggle visibility depending on view mode
-            if (showBoth) {
+            if (showBoth || !currentModuleId.startsWith('esp_module_')) {
                 document.getElementById('module1Card').classList.remove('hidden');
                 document.getElementById('module2Card').classList.remove('hidden');
             } else {
@@ -590,19 +599,20 @@
             });
 
             // Update module cards from stateByModule
-            const m1 = stateByModule['esp_module_1'];
-            const m2 = stateByModule['esp_module_2'];
+            const currentModuleState = stateByModule[selectedModule];
+            const mMoisture = showBoth ? (stateByModule['esp_module_1'] || currentModuleState) : currentModuleState;
+            const mEnv = showBoth ? (stateByModule['esp_module_2'] || currentModuleState) : currentModuleState;
 
-            document.getElementById('moisturePercent').textContent = `${m1.moisture.percentage}%`;
-            document.getElementById('moistureAdc').textContent = m1.moisture.adc;
-            document.getElementById('moistureMeter').style.width = `${m1.moisture.percentage}%`;
+            document.getElementById('moisturePercent').textContent = `${mMoisture.moisture.percentage}%`;
+            document.getElementById('moistureAdc').textContent = mMoisture.moisture.adc;
+            document.getElementById('moistureMeter').style.width = `${mMoisture.moisture.percentage}%`;
 
-            document.getElementById('temperatureValue').textContent = `${m2.sht30.temperature.toFixed(1)}°C`;
-            document.getElementById('humidityValue').textContent = `${m2.sht30.humidity.toFixed(1)}%`;
-            document.getElementById('lightValue').textContent = `${m2.light.lux.toFixed(1)} lx`;
+            document.getElementById('temperatureValue').textContent = `${mEnv.sht30.temperature.toFixed(1)}°C`;
+            document.getElementById('humidityValue').textContent = `${mEnv.sht30.humidity.toFixed(1)}%`;
+            document.getElementById('lightValue').textContent = `${mEnv.light.lux.toFixed(1)} lux`;
 
-            document.getElementById('moduleIdDisplay').textContent = m1.moduleId;
-            document.getElementById('moduleIdDisplay2').textContent = m2.moduleId;
+            document.getElementById('moduleIdDisplay').textContent = mMoisture.moduleId;
+            document.getElementById('moduleIdDisplay2').textContent = mEnv.moduleId;
         }
 
         function log(message) {
@@ -696,6 +706,7 @@
                 topicsToSub.push(`${topicBase}/${mod}/${topicSuffix.moisture}`);
                 topicsToSub.push(`${topicBase}/${mod}/${topicSuffix.sht30}`);
                 topicsToSub.push(`${topicBase}/${mod}/${topicSuffix.light}`);
+                topicsToSub.push(`${topicBase}/${mod}/${topicSuffix.sensors}`);
                 topicsToSub.push(`${topicBase}/${mod}/${topicSuffix.module_id}`);
                 topicsToSub.push(`${topicBase}/${mod}/${topicSuffix.wifi_status}`);
             });
@@ -732,6 +743,15 @@
             if (!stateByModule[moduleId]) {
                 // initialize if unknown
                 stateByModule[moduleId] = { relay: [false, false, false, false], moisture: {adc:0,percentage:0}, sht30:{temperature:0,humidity:0}, light:{lux:0}, moduleId };
+                
+                // Add to dropdown list dynamically
+                const selectEl = document.getElementById('selectedModuleInput');
+                if (selectEl) {
+                    const opt = document.createElement('option');
+                    opt.value = moduleId;
+                    opt.textContent = moduleId;
+                    selectEl.appendChild(opt);
+                }
             }
 
             const suffix = parts.slice(2).join('/');
@@ -757,6 +777,14 @@
                 }
             } else if (suffix.endsWith('sensors/light')) {
                 if (payloadObj) {
+                    stateByModule[moduleId].light.lux = payloadObj.lux ?? stateByModule[moduleId].light.lux;
+                }
+            } else if (suffix === 'sensors') {
+                if (payloadObj) {
+                    stateByModule[moduleId].moisture.adc = payloadObj.moisture_adc ?? stateByModule[moduleId].moisture.adc;
+                    stateByModule[moduleId].moisture.percentage = payloadObj.moisture_percentage ?? stateByModule[moduleId].moisture.percentage;
+                    stateByModule[moduleId].sht30.temperature = payloadObj.temperature ?? stateByModule[moduleId].sht30.temperature;
+                    stateByModule[moduleId].sht30.humidity = payloadObj.humidity ?? stateByModule[moduleId].sht30.humidity;
                     stateByModule[moduleId].light.lux = payloadObj.lux ?? stateByModule[moduleId].light.lux;
                 }
             } else if (suffix.endsWith('status/module_id')) {
