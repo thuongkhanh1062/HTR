@@ -1,0 +1,11 @@
+{
+  "C_Cpp.files.exclude": {
+    "**/.pio": true
+  },
+  "search.exclude": {
+    "**/.pio": true
+  },
+  "files.watcherExclude": {
+    "**/.pio/**": true
+  }
+}
